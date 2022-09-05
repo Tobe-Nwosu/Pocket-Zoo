@@ -1,0 +1,2 @@
+class FindingsController < ApplicationController
+end

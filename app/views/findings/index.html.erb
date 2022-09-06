@@ -1,0 +1,10 @@
+<h1>Profile</h1>
+
+<ul>
+  <% @my_findings.each do |finding| %>
+    <li><%= finding.animal.name %></li>
+    <li><%= finding.animal.details %></li>
+    <li><%= finding.date %></li>
+    <li><%= finding.picture %></li>
+  <% end %>
+</ul>

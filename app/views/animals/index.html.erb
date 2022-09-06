@@ -4,7 +4,7 @@
   <div class="cards">
     <% @animals.each do |animal| %>
       <div class="card-animal">
-        <%= animal.photo %>
+        <img src="<%=animal.photo%>" >
         <div class="card-animal-infos">
           <h2><%= animal.name %></h2>
           <%= link_to "See details", animal_path(animal), :class => "btn btn-ghost text-center mt-3" %>

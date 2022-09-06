@@ -1,7 +1,7 @@
 <div class="container">
-  <div class="card" style="">
-    <%= @animal.photo %>
-    <div class="card-body">
+  <div class="card-animal" style="">
+    <img src="<%=@animal.photo%>" >
+    <div class="card-animal-infos">
       <div>
         <h3 class="card-title text-center"><%= @animal.name %></h2>
         <p class="card-text text-center"><%= @animal.details %></p>

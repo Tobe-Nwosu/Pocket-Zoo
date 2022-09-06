@@ -1,10 +1,30 @@
 <h1>Profile</h1>
 
-<ul>
-  <% @my_findings.each do |finding| %>
-    <li><%= finding.animal.name %></li>
-    <li><%= finding.animal.details %></li>
-    <li><%= finding.date %></li>
-    <li><%= finding.picture %></li>
-  <% end %>
-</ul>
+<div data-controller="tabs">
+  <ul class="list-inline tabs-underlined" >
+    <li data-action="click->tabs#changeTab">
+      <span class="tab-underlined active">My finds</span>
+    </li>
+    <li data-action="click->tabs#changeTab">
+      <span class="tab-underlined">Map</span>
+    </li>
+    <li data-action="click->tabs#changeTab">
+      <span class="tab-underlined">Achievements</span>
+    </li>
+  </ul>
+
+
+  <ul data-tabs-target="findings">
+    <% @my_findings.each do |finding| %>
+      <li><%= finding.animal.name %></li>
+      <li><%= finding.animal.details %></li>
+      <li><%= finding.date %></li>
+      <li><%= finding.picture %></li>
+    <% end %>
+  </ul>
+
+  <div data-tabs-target="map" class="border d-flex justify-content-center align-items-center" id="map" style="height: 300px">
+    Map
+  </div>
+
+</div>

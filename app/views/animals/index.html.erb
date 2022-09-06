@@ -1,5 +1,19 @@
-<h1> View all the animals here</h1>
+<div class="container text-center">
+  <h1> View all the animals here</h1>
 
-<% @animals.each do |animal| %>
-  <p> <%= animal.name %> </p>
-<% end %>
+  <div class="cards">
+    <% @animals.each do |animal| %>
+      <div class="" style="">
+        <%= cl_image_tag animal.photo.key, crop: :fill %>
+        <div class="card-body">
+          <div class="d-flex justify-content-around">
+            <div>
+            <h5 class="card-title"><%= animal.name %></h5>
+            </div>
+            <%= link_to "See details", animal_path(animal), :class => "btn btn-ghost text-center mt-3" %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

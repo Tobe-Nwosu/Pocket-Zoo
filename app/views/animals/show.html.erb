@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="card" style="">
+    <% if @animal.photo.attached? %>
+      <%= cl_image_tag @animal.photo.key, crop: :fill %>
+     <% else %>
+      <%= image_tag @animal.photo, class: "card-img-top" %>
+     <% end %>
+    <div class="card-body">
+      <div>
+        <h3 class="card-title text-center"><%= @animal.name %></h2>
+        <p class="card-text text-center"><%= @animal.details %></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container d-flex justify-content-center">
+    <%= link_to "See all animals", animals_path, class: "btn btn-ghost" %>
+  </div>
+</div>

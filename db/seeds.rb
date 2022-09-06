@@ -22,13 +22,13 @@ user2 = User.create!(username: "T0b3", email: "even@more.com", password: '5b9cIX
 user3 = User.create!(username: "Ch4r1y", email: "random@even.com", password: 'WBvDylx03hqH5625ngroa4AaIvbz2C', avatar: "Boul.jpg")
 user4 = User.create!(username: "DuckLover123", email: "iamtheone@neo.com", admin: true, password: 'LauraGotBetter!', avatar: "Bil.jpg")
 
-Animal.create!(name: "shoebill", details: "Angry bird.", photo: "shoebill.jpg")
-Animal.create!(name: "bat", details: "Admit it, you'll let it suck your blood", photo: "bat.jpg")
-Animal.create!(name: "polecat", details: "Looks cute, but will definitely eat you alive", photo: "polecat.jpg")
+animal0 = Animal.new(name: "shoebill", details: "Angry bird.", photo: "shoebill.jpg")
+animal1 = Animal.create!(name: "bat", details: "Admit it, you'll let it suck your blood", photo: "bat.jpg")
+animal2 = Animal.create!(name: "polecat", details: "Looks cute, but will definitely eat you alive", photo: "polecat.jpg")
 
 # Animal.all.each do |animal|
-  Finding.create!(picture: "random1.jpg", date: "2020-12-14",longitude: -3.947579, latitude: 51.619028 )
-  Finding.create!(picture: "random2.jpg", date: "2020-12-14",longitude: -3.947579, latitude: 51.619028 )
-  Finding.create!(picture: "random3.jpg", date: "2020-12-14",longitude: -3.947579, latitude: 51.619028 )
+Finding.create!(picture: "random1.jpg", date: "2020-12-14", longitude: -3.947579, latitude: 51.619028, user: user0, animal: animal0)
+Finding.create!(picture: "random2.jpg", date: "2020-12-14", longitude: -3.947579, latitude: 51.619028, user: user1, animal: animal1)
+Finding.create!(picture: "random3.jpg", date: "2020-12-14", longitude: -3.947579, latitude: 51.619028, user: user2, animal: animal2)
 
 puts "All went well."

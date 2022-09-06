@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+  get '/animals/match', to: 'animals#match', as: 'match'
   resources :users
   resources :animals, only: [:index, :match, :show] do
     resources :findings, only: [:new, :create]

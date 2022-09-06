@@ -1,11 +1,15 @@
 .footer {
-  background: #F4F4F4;
+  background: white;
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 100px;
   padding: 0px 50px;
   color: rgba(0,0,0,0.3);
+  background-color: transparent;
+  transition: 0.5s background-color ease;
+  margin-top: 20px;
+
 }
 .footer-links {
   display: flex;
@@ -23,4 +27,10 @@
 }
 .footer .fa-heart {
   color: #D23333;
+}
+
+.footer-copyright{
+
+  margin: auto 0;
+
 }

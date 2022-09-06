@@ -1,10 +1,6 @@
 <div class="container">
   <div class="card" style="">
-    <% if @animal.photo.attached? %>
-      <%= cl_image_tag @animal.photo.key, crop: :fill %>
-     <% else %>
-      <%= image_tag @animal.photo, class: "card-img-top" %>
-     <% end %>
+    <%= @animal.photo %>
     <div class="card-body">
       <div>
         <h3 class="card-title text-center"><%= @animal.name %></h2>

@@ -27,7 +27,7 @@ Animal.create!(name: "bat", description: "Admit it, you'll let it suck your bloo
 Animal.create!(name: "polecat", description: "Looks cute, but will definitely eat you alive", photo:"polecat.jpg")
 
 Animal.all.each do |beast|
-  Finding.create!(picture: beat.photo, date: "2020-12-14",longitude: -3.947579, latitude: 51.619028 )
+  Finding.create!(picture: beast.photo, date: "2020-12-14",longitude: -3.947579, latitude: 51.619028 )
 end
 
 puts "All went well."

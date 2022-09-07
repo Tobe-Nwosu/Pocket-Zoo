@@ -1,0 +1,41 @@
+
+<h1 class="text-center my-4">My profile</h1>
+
+<div data-controller="tabs">
+  <ul class="list-inline tabs-underlined mb-5" >
+    <li data-action="click->tabs#changeTab" data-tabs-target="tablink" class="tab-underlined active" id="findings">
+      <span>My finds</span>
+    </li>
+    <li data-action="click->tabs#changeTab" data-tabs-target="tablink"  class="tab-underlined" id="map">
+      <span>Map</span>
+    </li>
+    <li data-action="click->tabs#changeTab" data-tabs-target="tablink" class="tab-underlined" id="achievements">
+      <span>Achievements</span>
+    </li>
+  </ul>
+
+  <div data-tabs-target="tabcontent findings">
+    <h5 class="text-center">Here's all the animals you've found!</h5>
+    <% @my_findings.each do |finding| %>
+      <div class="card-horizontal">
+        <%= image_tag finding.picture %>
+        <div class="card-horizontal-infos">
+          <h2><%= finding.animal.name %></h2>
+          <p><%= finding.animal.details %></p>
+          <span><%= finding.date %></span>
+        </div>
+        <%# TODO - change path %>
+        <%= link_to "See more!", findings_path, :class => "btn btn-highlight text-center mt-3" %>
+
+      </div>
+    <% end %>
+  </div>
+
+  <div data-tabs-target="tabcontent map" class="border d-none" id="map" style="height: 300px">
+    Map
+  </div>
+
+  <div data-tabs-target="tabcontent achievements" class="border d-none" id="map" style="height: 300px">
+    Achievements
+  </div>
+</div>

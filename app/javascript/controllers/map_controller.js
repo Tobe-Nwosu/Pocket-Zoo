@@ -2,7 +2,10 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="map"
 export default class extends Controller {
-  static values = { apiKey: String }
+  static values = {
+    apiKey: String,
+    markers: Array
+  }
   connect() {
     mapboxgl.accessToken = this.apiKeyValue;
     this.map = new mapboxgl.Map({
@@ -15,8 +18,10 @@ export default class extends Controller {
   }
 
   #addMarkersToMap() {
-    new mapboxgl.Marker()
-      .setLngLat([-65.017, -16.457])
+    this.markersValue.forEach((marker) => {
+      new mapboxgl.Marker()
+      .setLngLat([marker.lng, marker.lat])
       .addTo(this.map);
+    })
   }
 }

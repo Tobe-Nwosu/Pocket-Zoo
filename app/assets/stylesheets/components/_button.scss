@@ -1,0 +1,26 @@
+.btn-highlight {
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background-color: #3F7D20;
+  // transition: background 0.3s ease;
+  text-align: center;
+}
+.btn-highlight:hover {
+  color: white ;
+  background: #3F7D20;
+  opacity: 0.6;
+}
+
+.btn-ghost {
+  color: #454955;
+  padding: 8px 24px;
+  border: 1px solid #454955;
+  background-color: white;
+  font-weight: lighter;
+  transition: opacity 0.3s ease;
+}
+
+.btn-ghost:hover {
+  opacity: 0.9;
+}

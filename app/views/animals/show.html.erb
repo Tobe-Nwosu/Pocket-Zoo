@@ -1,0 +1,18 @@
+<div class="container">
+
+  <div class="card-vertical">
+    <%= image_tag @animal.photo, crop: :fill, class: "card-animal img" %>
+    <div class="card-vertical-infos">
+      <div class="card-vertical-description">
+        <h2><%= @animal.name %></h2>
+        <p><%= @animal.details %></p>
+      </div>
+      <%= link_to "Add animal to library", animals_path, class: "btn btn-highlight" %>
+    </div>
+
+  </div>
+
+  <div>
+  <%= link_to "Back to all animal", animals_path, class: "btn btn-ghost" %>
+  </div>
+</div>

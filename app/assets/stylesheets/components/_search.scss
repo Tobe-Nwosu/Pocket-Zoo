@@ -4,10 +4,9 @@
 
 .search-form-control .btn {
   position: absolute;
-  top: 8px;
-  bottom: 8px;
-  right: 8px;
   border-radius: 20px;
+  margin-top: 20px;
+  margin-left: 130px;
 }
 
 .search-form-control .form-control {
@@ -29,4 +28,21 @@
 .form-control{
 
   border-radius: 30px;
+}
+
+@media only screen and (max-device-width: 415px) {
+
+  .search-form-control .btn {
+    border-radius: 20px;
+    width: 300px;
+    margin: 20px auto 0;
+    position: unset;
+
+  }
+
+  .search-form-control {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }

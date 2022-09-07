@@ -6,10 +6,13 @@
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
+  text-align: right;
+
 }
 
 .navbar-lewagon .navbar-brand img {
   width: 41px;
+  color: white;
 }
 
 .nav-link {
@@ -20,4 +23,9 @@
   &:hover{
     color: grey;
   }
+}
+
+.navbar-toggler{
+
+  background-color: white;
 }

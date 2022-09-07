@@ -16,7 +16,7 @@ export default class extends Controller {
     if (event.currentTarget.id === 'findings') {
       this.findingsTarget.classList.remove('d-none')
     } else if (event.currentTarget.id === 'locations') {
-      this.mapTarget.classList.remove('d-none')
+      this.locationsTarget.classList.remove('d-none')
     } else {
       this.achievementsTarget.classList.remove('d-none')
     }

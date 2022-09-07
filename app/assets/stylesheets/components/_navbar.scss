@@ -17,7 +17,7 @@
 
 .nav-link {
   color: white;
-  font-size: 20px;
+  font-size: 30px;
   text-align: top;
   float: top;
   &:hover{
@@ -28,4 +28,12 @@
 .navbar-toggler{
 
   background-color: white;
+}
+
+.nav-item{
+
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+
 }

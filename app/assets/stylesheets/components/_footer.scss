@@ -1,5 +1,5 @@
 .footer {
-  background: white;
+  background: rgba(165, 42, 42, 0.43);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -20,9 +20,6 @@
   text-decoration: none;
   font-size: 24px;
   padding: 0px 10px;
-}
-.footer-links a:hover {
-
 }
 .footer .fa-heart {
   color: #D23333;

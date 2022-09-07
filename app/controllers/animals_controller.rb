@@ -1,6 +1,12 @@
 class AnimalsController < ApplicationController
   def index
-    @animals = Animal.all
+    if params.has_key?(:animal)
+      @animals = Animal.where(classification: params[:animal][:classification],
+                              habitat: params[:animal][:habitat],
+                              features: params[:animal][:features])
+    else
+      @animals = Animal.all
+    end
   end
 
   def show

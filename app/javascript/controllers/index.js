@@ -7,5 +7,8 @@ import { application } from "./application"
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 
+import INaturalistApiController from "./i_naturalist_api_controller"
+application.register("i-naturalist-api", INaturalistApiController)
+
 import TabsController from "./tabs_controller"
 application.register("tabs", TabsController)

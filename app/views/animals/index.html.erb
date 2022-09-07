@@ -1,7 +1,7 @@
 <div class="container">
   <h1> View all the animals here</h1>
 
-  <div class="cards">
+  <div class="cards" data-controller="i-naturalist-api">
     <% @animals.each do |animal| %>
       <div class="card-horizontal">
         <%= image_tag animal.photo, class: "card-horizontal img" %>

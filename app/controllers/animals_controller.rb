@@ -1,4 +1,6 @@
 class AnimalsController < ApplicationController
+
+
   def index
     @animals = Animal.all
   end
@@ -9,4 +11,5 @@ class AnimalsController < ApplicationController
 
   def match
   end
+
 end

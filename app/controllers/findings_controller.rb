@@ -2,6 +2,13 @@ class FindingsController < ApplicationController
 
   def index
     @my_findings = Finding.where(user: current_user)
+    @findings = Finding.all
+    @markers = @findings.geocoded.map do |finding|
+      {
+        lat: finding.latitude,
+        lng: finding.longitude
+      }
+    end
   end
 
   def show

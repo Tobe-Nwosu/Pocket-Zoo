@@ -24,7 +24,10 @@
   </ul>
 
   <div data-tabs-target="map" class="border d-flex justify-content-center align-items-center" id="map" style="height: 300px">
-    Map
+    <div data-controller="map"
+      id='map'
+      data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"
+      style='width: 400px; height: 300px;'></div>
   </div>
 
 </div>

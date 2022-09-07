@@ -1,0 +1,7 @@
+
+
+<% if @finding.photo.attached? %>
+<%= cl_image_tag @finding.photo.key, crop: :fill %>
+<% else %>
+<%= image_tag("too_slow.jpg") %>
+<% end %>

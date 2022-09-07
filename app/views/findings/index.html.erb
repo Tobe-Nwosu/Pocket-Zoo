@@ -3,18 +3,18 @@
 <div data-controller="tabs">
   <ul class="list-inline tabs-underlined" >
     <li data-action="click->tabs#changeTab">
-      <span class="tab-underlined active">My finds</span>
+      <span data-tabs-target="tablink" class="tab-underlined active">My finds</span>
     </li>
     <li data-action="click->tabs#changeTab">
-      <span class="tab-underlined">Map</span>
+      <span data-tabs-target="tablink" class="tab-underlined">Map</span>
     </li>
     <li data-action="click->tabs#changeTab">
-      <span class="tab-underlined">Achievements</span>
+      <span data-tabs-target="tablink" class="tab-underlined">Achievements</span>
     </li>
   </ul>
 
 
-  <ul data-tabs-target="findings">
+  <ul data-tabs-target="tabcontent findings">
     <% @my_findings.each do |finding| %>
       <li><%= finding.animal.name %></li>
       <li><%= finding.animal.details %></li>
@@ -23,8 +23,12 @@
     <% end %>
   </ul>
 
-  <div data-tabs-target="map" class="border d-flex justify-content-center align-items-center" id="map" style="height: 300px">
+  <div data-tabs-target="tabcontent map" class="border d-none" id="map" style="height: 300px">
     Map
+  </div>
+
+  <div data-tabs-target="tabcontent achievements" class="border d-none" id="map" style="height: 300px">
+    Achievements
   </div>
 
 </div>

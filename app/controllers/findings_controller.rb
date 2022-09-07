@@ -6,7 +6,8 @@ class FindingsController < ApplicationController
     @markers = @findings.geocoded.map do |finding|
       {
         lat: finding.latitude,
-        lng: finding.longitude
+        lng: finding.longitude,
+        info_window: render_to_string(partial: "info_window", locals: {finding: finding})
       }
     end
   end

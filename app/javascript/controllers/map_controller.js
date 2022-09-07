@@ -12,8 +12,8 @@ export default class extends Controller {
     this.map = new mapboxgl.Map({
       container: this.element,
       style: 'mapbox://styles/mapbox/streets-v11', // style URL
-      // center: [-74.5, 40], // starting position [lng, lat]
-      // zoom: 9, // starting zoom
+      // center: [49, 2.3], // starting position [lng, lat]
+      // zoom: 3, // starting zoom
     });
     this.#addMarkersToMap()
     this.#fitMapToMarkers()
@@ -23,6 +23,7 @@ export default class extends Controller {
     this.markersValue.forEach((marker) => {
       new mapboxgl.Marker()
       .setLngLat([ marker.lng, marker.lat ])
+      .setPopup(popup)
       .addTo(this.map);
     })
   }

@@ -4,7 +4,7 @@
   <div class="cards">
     <% @animals.each do |animal| %>
       <div class="card-horizontal">
-        <%= image_tag animal.photo, class: "card-horizontal img" %>
+        <%= cl_image_tag animal.photo.key, crop: :fill, class: "card-horizontal img" %>
         <div class="card-horizontal-infos">
           <h2><%= animal.name %></h2>
           <p><%= animal.details%></p>

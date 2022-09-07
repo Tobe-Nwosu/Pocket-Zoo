@@ -15,7 +15,7 @@
   //align on top
   position: absolute;
   top: 0.5rem;
-  left: 8rem;
+  left: 7.5rem;
 }
 
 .card-horizontal h2 {
@@ -34,10 +34,11 @@
 
 .card-horizontal img {
   height: 100%;
-  width: 100px;
+  width: 120px;
   object-fit: cover;
   position: absolute;
   left: 0;
+  margin: 0;
 }
 
 .card-horizontal .btn {

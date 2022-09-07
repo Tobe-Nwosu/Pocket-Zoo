@@ -2,7 +2,7 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="tabs"
 export default class extends Controller {
-  static targets = ["tabcontent", "tablink", "findings", "map", "achievements"]
+  static targets = ["tabcontent", "tablink", "findings", "locations", "achievements"]
   connect() {
   }
 
@@ -15,8 +15,8 @@ export default class extends Controller {
     event.currentTarget.classList.add('active')
     if (event.currentTarget.id === 'findings') {
       this.findingsTarget.classList.remove('d-none')
-    } else if (event.currentTarget.id === 'map') {
-      this.mapTarget.classList.remove('d-none')
+    } else if (event.currentTarget.id === 'locations') {
+      this.locationsTarget.classList.remove('d-none')
     } else {
       this.achievementsTarget.classList.remove('d-none')
     }

@@ -1,24 +1,24 @@
 <h1 class="text-center">Search for your animal!</h1>
 
-<form action="#">
+<form action="/animals">
   <fieldset>
     <legend class="text-center">What is it like?</legend>
       <div class="match-form-radios row">
         <div class="col py-2">
-          <input type="radio" id="mammal" name="classification" autocomplete="off" />
+          <input type="radio" id="mammal" value="mammal" name="animal[classification]" autocomplete="off" />
           <label for="mammal">Furry</label>
         </div>
         <div class="col py-2">
-          <input type="radio" id="reptile" name="classification" autocomplete="off" />
+          <input type="radio" id="reptile" value="reptile" name="animal[classification]" autocomplete="off" />
           <label for="reptile">Scaly</label>
         </div>
         <div class="w-100"></div>
         <div class="col py-2">
-          <input type="radio" id="bird" name="classification" autocomplete="off" />
+          <input type="radio" id="bird" value="bird" name="animal[classification]" autocomplete="off" />
           <label for="bird">Feathery</label>
         </div>
         <div class="col py-2">
-          <input type="radio" id="insect" name="classification" autocomplete="off" />
+          <input type="radio" id="insect" value="insect" name="animal[classification]" autocomplete="off" />
           <label for="insect">Creepy-crawly</label>
         </div>
       </div>
@@ -29,20 +29,20 @@
     <legend class="text-center">Where does it live?</legend>
       <div class="match-form-radios row">
         <div class="col py-2">
-          <input type="radio" id="trees" name="habitat" autocomplete="off" />
+          <input type="radio" id="trees" value="trees" name="animal[habitat]" autocomplete="off" />
           <label for="trees">In the trees</label>
         </div>
         <div class="col py-2">
-          <input type="radio" id="beach" name="habitat" autocomplete="off" />
+          <input type="radio" id="beach" value="beach" name="animal[habitat]" autocomplete="off" />
           <label for="beach">By the seaside</label>
         </div>
         <div class="w-100"></div>
         <div class="col py-2">
-          <input type="radio" id="water" name="habitat" autocomplete="off" />
+          <input type="radio" id="water" value="water" name="animal[habitat]" autocomplete="off" />
           <label for="water">In the water</label>
         </div>
         <div class="col py-2">
-          <input type="radio" id="air" name="habitat" autocomplete="off" />
+          <input type="radio" id="air" value="air" name="animal[habitat]" autocomplete="off" />
           <label for="air">In the sky</label>
         </div>
       </div>
@@ -53,25 +53,25 @@
     <legend class="text-center">What does it have?</legend>
       <div class="match-form-radios row">
         <div class="col py-2">
-          <input type="radio" id="wings" name="features" autocomplete="off" />
+          <input type="radio" id="wings" value="wings" name="animal[features]" autocomplete="off" />
           <label for="wings">Wings</label>
         </div>
         <div class="col py-2">
-          <input type="radio" id="hooves" name="features" autocomplete="off" />
+          <input type="radio" id="hooves" value="hooves" name="animal[features]" autocomplete="off" />
           <label for="hooves">Hooves</label>
         </div>
         <div class="w-100"></div>
         <div class="col py-2">
-          <input type="radio" id="claws" name="features" autocomplete="off" />
+          <input type="radio" id="claws" value="claws" name="animal[features]" autocomplete="off" />
           <label for="claws">Claws</label>
         </div>
         <div class="col py-2">
-          <input type="radio" id="None" name="features" autocomplete="off" />
+          <input type="radio" id="None" value="none" name="animal[features]" autocomplete="off" />
           <label for="None">None</label>
         </div>
       </div>
   </fieldset>
   <div class="d-flex justify-content-center">
-    <button type="submit" class="btn btn-primary">Search</button>
+    <button type="submit" class="btn btn-highlight">Search</button>
   </div>
 </form>

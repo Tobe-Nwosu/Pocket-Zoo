@@ -1,3 +1,21 @@
+.btn-flat {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: black;
+  transition: background 0.3s ease;
+  margin-right: 355px;
+}
+
+.btn-flat:hover {
+  background: #4D04C4;
+  color: white;
+}
+
+.btn-gradient:hover {
+  background: linear-gradient(#147EFF, #0F67DA);
+  color: white;
+  
 .btn-highlight {
   color: white;
   padding: 4px 8px;

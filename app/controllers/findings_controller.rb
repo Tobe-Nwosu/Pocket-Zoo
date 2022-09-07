@@ -7,7 +7,7 @@ class FindingsController < ApplicationController
       {
         lat: finding.latitude,
         lng: finding.longitude,
-        info_window: render_to_string(partial: "info_window", locals: {finding: finding})
+        info_window: render_to_string(partial: "popup", locals: { finding: finding })
       }
     end
   end

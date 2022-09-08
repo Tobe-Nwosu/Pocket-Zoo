@@ -9,7 +9,7 @@
         <p><%= @finding.comment %></p>
       </div>
       <%= link_to "Edit finding", animals_path, class: "btn btn-highlight" %>
-      <%= link_to "Delete finding", finding_path(finding), class: "btn btn-ghost", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
+      <%= link_to "Delete finding", findings_path(@finding), class: "btn btn-ghost", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
     </div>
   </div>
 
@@ -18,7 +18,13 @@
     <div class="card-vertical-infos">
       <div class="card-vertical-description">
         <h2><%= @finding.animal.name %></h2>
+        <br>
         <p><%= @finding.animal.details %></p>
+        <br>
+        <p>The <%= @finding.animal.name %> is a <%= @finding.animal.classification %>.</p>
+        <p>It lives at the <%= @finding.animal.habitat %> and likes to <%= @finding.animal.behaviour %></p>
+        <p>The <%= @finding.animal.name %>'s colour is <%= @finding.animal.colour %>.
+          His tail is very <%= @finding.animal.tail %> and its legs are <%= @finding.animal.legs %>.</p>
       </div>
     </div>
   </div>
@@ -27,4 +33,3 @@
   <%= link_to "Back to all findings", findings_path, class: "btn btn-ghost" %>
   </div>
 </div>
-

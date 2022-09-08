@@ -7,7 +7,8 @@
         <%= cl_image_tag animal.photo.key, crop: :fill, class: "card-horizontal img" %>
         <div class="card-horizontal-infos">
           <h2><%= animal.name %></h2>
-          <p><%= animal.details%></p>
+          <p>The <%= animal.name %> is a <%= animal.classification%>.</p>
+          <p>It likes to <%= animal.behaviour%>.</p>
         </div>
         <%= link_to "See details", animal_path(animal), :class => "btn btn-highlight text-center mt-3" %>
       </div>

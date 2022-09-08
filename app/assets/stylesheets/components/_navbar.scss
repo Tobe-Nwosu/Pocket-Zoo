@@ -16,12 +16,12 @@
 }
 
 .nav-link {
-  color: white;
   font-size: 30px;
   text-align: top;
   float: top;
+  color: black;
   &:hover{
-    color: grey;
+    color: black;
   }
 }
 
@@ -34,6 +34,18 @@
 
   color: white;
   font-weight: bold;
-  font-size: 30px;
+  font-size: 20px;
 
+}
+
+
+.dropdown-item{
+  font-weight: bold;
+  font-size: 30px;
+  text-align: top;
+  float: top;
+  color:black;
+  &:hover{
+    color: black;
+  }
 }

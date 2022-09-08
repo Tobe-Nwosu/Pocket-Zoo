@@ -43,8 +43,8 @@
 
 .card-horizontal .btn {
   position: absolute;
-  right: 1rem;
-  bottom: 1rem;
+  right: 0.3rem;
+  bottom: 0.3rem;
 }
 
 //***This span is for the date in /findings***
@@ -73,7 +73,7 @@
   padding: 16px;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
   position: relative;
 }
 

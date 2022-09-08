@@ -6,7 +6,10 @@ class AnimalsController < ApplicationController
     if params.has_key?(:animal)
       @animals = Animal.where(classification: params[:animal][:classification],
                               habitat: params[:animal][:habitat],
-                              features: params[:animal][:features])
+                              behaviour: params[:animal][:behaviour],
+                              colour: params[:animal][:colour],
+                              tail: params[:animal][:tail],
+                              legs: params[:animal][:legs])
     else
       @animals = Animal.all
     end

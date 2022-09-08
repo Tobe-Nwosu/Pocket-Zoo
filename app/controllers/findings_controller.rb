@@ -38,6 +38,8 @@ class FindingsController < ApplicationController
 
   def destroy
     authorize @finding
+    @finding.destroy
+    redirect_to findings_path, status: :see_other
   end
 
   private

@@ -9,7 +9,7 @@
         <p><%= @finding.comment %></p>
       </div>
       <%= link_to "Edit finding", animals_path, class: "btn btn-highlight" %>
-      <%= link_to "Delete finding", animals_path, class: "btn btn-ghost" %>
+      <%= link_to "Delete finding", finding_path(finding), class: "btn btn-ghost", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
     </div>
   </div>
 

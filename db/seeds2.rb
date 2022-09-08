@@ -2,8 +2,6 @@
 # picture missing from all findings
 # location missing from findings
 
-
-
 # Red fox
 red_fox = Animal.new(
   name: "Red fox",
@@ -107,7 +105,7 @@ capybara.save!
 sea_otter = Animal.new(
   name: "Sea otter",
   details: "The sea otter doesn't need to come to land, it can live only in the ocean.
-    To stay warm in the water, it has a thick layer of fur, the thickest amongst all animals.";
+    To stay warm in the water, it has a thick layer of fur, the thickest amongst all animals.",
   classification: "mammal",
   habitat: "beach",
   behaviour: "swim",
@@ -123,7 +121,7 @@ sea_otter.save!
 mink = Animal.new(
   name: "American mink",
   details: "The American mink lives all across Europe, Asia and America.
-    It feeds on fish, frogs and even birds like sea gulls and cormorants, by drowning them. ";
+    It feeds on fish, frogs and even birds like sea gulls and cormorants, by drowning them. ",
   classification: "mammal",
   habitat: "beach",
   behaviour: "walk",
@@ -139,7 +137,7 @@ mink.save!
 nutria = Animal.new(
   name: "Nutria",
   details: "The Nutria lives all over the world, but is most common in South America.
-    In some regions, it is uhunted and trapped for its fur.";
+    In some regions, it is uhunted and trapped for its fur.",
   classification: "mammal",
   habitat: "beach",
   behaviour: "walk",
@@ -156,7 +154,7 @@ ferret = Animal.new(
   name: "Ferret",
   details: "The ferret is a relative of the weasel and lives in Europe.
     Ferrets have been raised to live with humans for thousands of years.
-    They were also bred to hunt rabbits, rats and mice.";
+    They were also bred to hunt rabbits, rats and mice.",
   classification: "mammal",
   habitat: "forest",
   behaviour: "walk",
@@ -174,7 +172,7 @@ rat = Animal.new(
   details: "Rats live almost everywhere humans are.
     Rats are not very popular, because they can carry diseases.
     But they are actually very clean and smart animals.
-    A rat can get as big as 28cm long and 1.5kg heavy.";
+    A rat can get as big as 28cm long and 1.5kg heavy.",
   classification: "mammal",
   habitat: "forest",
   behaviour: "walk",

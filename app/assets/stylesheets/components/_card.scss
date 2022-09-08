@@ -2,7 +2,7 @@
 
 .card-horizontal {
   height: 8rem;
-  width: 23rem;
+  width: 20.5rem;
   background-color: white;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   display: flex;
@@ -13,12 +13,12 @@
 
 .card-horizontal-infos {
   height: 8rem;
-  padding: 8px 8px 8px 16px;
+  padding: 16px;
   //align on top
   position: absolute;
-  top: 0.5rem;
   left: 7.5rem;
-  width: 15.5rem;
+  width: 13rem;
+  position:relative;
 }
 
 .card-horizontal h2 {
@@ -46,6 +46,9 @@
 
 .card-horizontal .btn {
   margin: 0;
+  //align at the bottom
+  position: absolute;
+  bottom: 1rem;
 }
 
 .card-horizontal-bottom {

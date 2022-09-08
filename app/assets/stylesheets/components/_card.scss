@@ -13,7 +13,7 @@
 
 .card-horizontal-infos {
   height: 8rem;
-  padding: 16px;
+  padding: 16px 8px 8px 16px;
   //align on top
   position: absolute;
   left: 7.5rem;
@@ -28,7 +28,7 @@
 }
 
 .card-horizontal p {
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.4;
   opacity: .7;
   margin-bottom: 0;
@@ -46,9 +46,8 @@
 
 .card-horizontal .btn {
   margin: 0;
-  //align at the bottom
   position: absolute;
-  bottom: 1rem;
+  bottom: 0.5rem;
 }
 
 .card-horizontal-bottom {
@@ -60,7 +59,7 @@
 //***This span is for the date in /findings***
 .card-horizontal span {
   position: absolute;
-  top: -8px;
+  top: 0;
   right: 0px;
   font-size: 13px;
   color: white;

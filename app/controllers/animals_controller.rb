@@ -1,6 +1,6 @@
 class AnimalsController < ApplicationController
   # TODO: when we have good API, add columns to animal model, change the form name and value
-  # in match.html.erb, and update the index here.
+  # in match.html.erb, and update the index here. Update pundit for index
 
   def index
     if params.has_key?(:animal)
@@ -11,14 +11,16 @@ class AnimalsController < ApplicationController
                               tail: params[:animal][:tail],
                               legs: params[:animal][:legs])
     else
-      @animals = Animal.all
+      @animals = policy_scope(Animal)
     end
   end
 
   def show
     @animal = Animal.find(params[:id])
+    authorize @animal
   end
 
   def match
+    authorize Animal
   end
 end

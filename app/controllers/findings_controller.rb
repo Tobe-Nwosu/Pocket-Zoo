@@ -43,6 +43,12 @@ class FindingsController < ApplicationController
 
   def update
     @finding = Finding.find(params[:id])
+    @finding.update(finding_params)
+    if @finding.save
+      redirect_to finding_path(@finding)
+    else
+      render :new, status: :unprocessable_entity
+    end
     authorize @finding
   end
 

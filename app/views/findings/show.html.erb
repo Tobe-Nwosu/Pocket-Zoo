@@ -4,11 +4,12 @@
     <%= image_tag @finding.picture, crop: :fill, class: "card-vertical-cover-img" %>
     <div class="card-vertical-infos">
       <div class="card-vertical-description">
-        <p>You found this animal on <strong><%= @finding.date %></strong></p>
-        <p>This animal was found at <strong><%= @finding.address %></strong></p>
-        <p><%= @finding.comment %></p>
+        <p>You found this animal on <strong><%= @finding.date %></strong>.</p>
+        <p>This animal was found at <strong><%= @finding.address %></strong>.</p>
+        <br>
+        <p>You also added a comment: <br><%= @finding.comment %></p>
       </div>
-      <%= link_to "Edit finding", animals_path, class: "btn btn-highlight" %>
+      <%= link_to "Edit finding", edit_finding_path(@finding), class: "btn btn-highlight" %>
       <%= link_to "Delete finding", finding_path(@finding), class: "btn btn-ghost", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
     </div>
   </div>

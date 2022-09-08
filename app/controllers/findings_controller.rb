@@ -16,8 +16,20 @@ class FindingsController < ApplicationController
   end
 
   def new
-    # @animal = Animal.find(params[:id])
+    @animal = Animal.find(params[:animal_id])
     @finding = Finding.new
+  end
+
+  def create
+    @finding = Finding.new(finding_params)
+    @finding.user = current_user
+    @animal = Animal.find(params[:animal_id])
+    @finding.animal = @animal
+    if @finding.save
+      redirect_to finding_path(@finding)
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 
   def finding_params

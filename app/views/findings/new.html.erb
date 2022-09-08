@@ -1,12 +1,16 @@
 
+
 <div class="container mt-5">
   <h1 class = "mb-5">New finding</h1>
 
   <div class="container">
-    <%= simple_form_for(@finding) do |f| %>
-      <%= f.input :date %>
+
+  <p> You saw a <%= @animal.name %> and didnt faint</p>
+   <%= cl_image_tag @animal.photo.key,:width => 300, crop: :fill %>
+    <%= simple_form_for([@animal, @finding]) do |f| %>
+      <%= Date.today.strftime("%a, %e %b %Y") %>
       <%= f.input :comment %>
-      <%# <%= f.input :location %>
+      <%= f.input :address %>
       <%= f.input :photo %>
       <%= f.button :submit, class: "btn btn-flat mb-5" %>
     <% end %>
@@ -14,4 +18,3 @@
 
   <%= link_to "Back to the finding list", findings_path, class: "btn btn-ghost"  %>
 </div>
-

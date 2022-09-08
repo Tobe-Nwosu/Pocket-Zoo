@@ -2,8 +2,12 @@
   <h1>Edit my finding</h1>
 
   <div class="container">
-    <%= simple_form_for([@finding]) do |f| %>
-<%# Add this %>
+    <%= simple_form_for([@animal, @finding]) do |f| %>
+      <%= Date.today.strftime("%a, %e %b %Y") %>
+      <%= f.input :comment %>
+      <%= f.input :address %>
+      <%= f.input :photo %>
+      <%= f.button :submit, class: "btn btn-highlight mb-5" %>
     <% end %>
   </div>
 

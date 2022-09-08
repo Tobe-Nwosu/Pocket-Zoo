@@ -15,7 +15,7 @@
   //align on top
   position: absolute;
   top: 0.5rem;
-  left: 8rem;
+  left: 7.5rem;
 }
 
 .card-horizontal h2 {
@@ -34,16 +34,17 @@
 
 .card-horizontal img {
   height: 100%;
-  width: 100px;
+  width: 120px;
   object-fit: cover;
   position: absolute;
   left: 0;
+  margin: 0;
 }
 
 .card-horizontal .btn {
   position: absolute;
-  right: 1rem;
-  bottom: 1rem;
+  right: 0.3rem;
+  bottom: 0.3rem;
 }
 
 //***This span is for the date in /findings***
@@ -72,7 +73,7 @@
   padding: 16px;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
   position: relative;
 }
 

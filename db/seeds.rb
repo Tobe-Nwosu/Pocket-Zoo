@@ -40,8 +40,8 @@ animal2 = Animal.new(name: "polecat", details: "No Theo, it's not a cat, i know.
 animal2.photo.attach(io: file, filename: "polecat.jpg", content_type: "image/jpg")
 
 # Animal.all.each do |animal|
-Finding.create!(picture: "random1.jpg", date: "2020-12-14", longitude: -3.947579, latitude: 51.619028, user: user0, animal: animal0)
-Finding.create!(picture: "random2.jpg", date: "2020-12-14", longitude: -3.947579, latitude: 51.619028, user: user1, animal: animal1)
-Finding.create!(picture: "random3.jpg", date: "2020-12-14", longitude: -3.947579, latitude: 51.619028, user: user2, animal: animal2)
+Finding.create!(picture: "random1.jpg", date: "2020-12-14", address: "Attica, Plymouth Street, Swansea", latitude: 51.619028, longitude: -3.947579, user: user0, animal: animal0)
+Finding.create!(picture: "random2.jpg", date: "2020-12-14", address: "The Mall, London", latitude: 51.503104, longitude: -0.138606, user: user1, animal: animal1)
+Finding.create!(picture: "random3.jpg", date: "2020-12-14", address: "Route de Sivry, 54610 Belleau, France", latitude: 48.82743645256504, longitude: 6.187593494395434, user: user2, animal: animal2)
 
 puts "All went according to plan, carry on"

@@ -2,6 +2,7 @@
 
 .card-horizontal {
   height: 8rem;
+  width: 20.5rem;
   background-color: white;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   display: flex;
@@ -11,21 +12,23 @@
 }
 
 .card-horizontal-infos {
-  padding: 8px 16px;
+  height: 8rem;
+  padding: 16px;
   //align on top
   position: absolute;
-  top: 0.5rem;
   left: 7.5rem;
+  width: 13rem;
+  position:relative;
 }
 
 .card-horizontal h2 {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
   margin: 0;
 }
 
 .card-horizontal p {
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.4;
   opacity: .7;
   margin-bottom: 0;
@@ -42,10 +45,17 @@
 }
 
 .card-horizontal .btn {
+  margin: 0;
+  //align at the bottom
   position: absolute;
-  right: 0.3rem;
-  bottom: 0.3rem;
+  bottom: 1rem;
 }
+
+.card-horizontal-bottom {
+  display: flex;
+  justify-content: flex-end;
+}
+
 
 //***This span is for the date in /findings***
 .card-horizontal span {
@@ -60,30 +70,30 @@
   border-radius: 0px 0px 0px 5px;
 }
 
+
+// Cards with the picture on the left
 .card-vertical {
   background-color: white;
   margin: 4em 2em 2em 2em;;
   // add shadow
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  display: flex;
-  flex-direction: column;
+  position: relative;
 }
 
 .card-vertical-infos {
-  padding: 16px;
-  display: flex;
-  justify-content: space-between;
+  padding: 14px;
   align-items: center;
-  position: relative;
+  // position: relative;
 }
 
 .card-vertical-description {
   display: block;
   padding: 0px 1rem 0px 0px;
+  margin-bottom: 0.6rem;
 }
 
 .card-vertical h2 {
-  font-size: 16px;
+  font-size: 24px;
   font-weight: bold;
   margin: 0;
 }
@@ -95,13 +105,22 @@
 }
 
 .card-vertical p {
-  font-size: 12px;
+  font-size: 16px;
   opacity: .7;
   margin: 0;
+  text-align: justify;
 }
 
 .card-vertical-cover-img {
   height: 200px;
   width: 100%;
   object-fit: cover;
+}
+
+.card-vertical .btn {
+}
+
+.card-vertical-bottom {
+  display: flex;
+  justify-content: flex-end;
 }

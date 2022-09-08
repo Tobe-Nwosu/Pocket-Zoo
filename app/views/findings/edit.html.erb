@@ -1,11 +1,7 @@
-
-
-<div class="container mt-5">
-  <h1 class = "mb-5">New finding</h1>
+<div class="container">
+  <h1>Edit my finding</h1>
 
   <div class="container">
-    <p> You saw a <%= @animal.name %> and didnt faint</p>
-    <%= cl_image_tag @animal.photo.key,:width => 300, crop: :fill %>
     <%= simple_form_for([@animal, @finding]) do |f| %>
       <%= Date.today.strftime("%a, %e %b %Y") %>
       <%= f.input :comment %>
@@ -15,5 +11,6 @@
     <% end %>
   </div>
 
-  <%= link_to "Back to the finding list", findings_path, class: "btn btn-ghost"  %>
+  <%= link_to "Back to the finding", findings_path, class: "btn btn-ghost"  %>
+  </div>
 </div>

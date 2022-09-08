@@ -37,15 +37,20 @@ class FindingsController < ApplicationController
   end
 
   def edit
+    @finding = Finding.find(params[:id])
     authorize @finding
   end
 
   def update
+    @finding = Finding.find(params[:id])
     authorize @finding
   end
 
   def destroy
+    @finding = Finding.find(params[:id])
     authorize @finding
+    @finding.destroy
+    redirect_to findings_path, status: :see_other
   end
 
   private

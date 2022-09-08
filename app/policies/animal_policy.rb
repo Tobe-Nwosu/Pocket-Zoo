@@ -5,11 +5,12 @@ class AnimalPolicy < ApplicationPolicy
       scope.all
     end
   end
-    def show?
-      true
-    end
 
-    def match?
-      true
-    end
+  def show?
+    true
+  end
+
+  def match?
+    true
+  end
 end

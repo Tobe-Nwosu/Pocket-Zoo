@@ -1,12 +1,12 @@
 .footer {
-  background: rgba(165, 42, 42, 0.43);
+  background: #55381a63;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100px;
   padding: 0px 50px;
   color: rgba(0,0,0,0.3);
-  background-color: transparent;
+  // background-color: transparent;
   transition: 0.5s background-color ease;
   flex-direction: column;
 }

@@ -1,8 +1,9 @@
 class FindingsController < ApplicationController
   def index
+    # if findings is empty, show something else
     @my_findings = policy_scope(Finding)
     @findings = Finding.all
-    @markers = @findings.geocoded.map do |finding|
+    @markers = @my_findings.geocoded.map do |finding|
       {
         lat: finding.latitude,
         lng: finding.longitude,

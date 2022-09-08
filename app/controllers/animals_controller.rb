@@ -3,6 +3,7 @@ class AnimalsController < ApplicationController
   # in match.html.erb, and update the index here. Update pundit for index
 
   def index
+    # I have Charly's blessing to skip pundit
     if params.has_key?(:animal)
       @animals = Animal.where(classification: params[:animal][:classification],
                               habitat: params[:animal][:habitat],
@@ -11,8 +12,9 @@ class AnimalsController < ApplicationController
                               tail: params[:animal][:tail],
                               legs: params[:animal][:legs])
     else
-      @animals = policy_scope(Animal)
+      @animals = Animal.all
     end
+    skip_policy_scope
   end
 
   def show

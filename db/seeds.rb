@@ -54,10 +54,10 @@ grasssnake = Animal.new(name: "Grass snake", details: "Our largest snake, the gr
 grasssnake.photo.attach(io: file, filename: "grasssnake.jpg", content_type: "image/jpg")
 grasssnake.save!
 
-file = URI.open("https://www.new-forest-national-park.com/wp-content/uploads/2021/06/Smooth-snake-fact-file.jpeg")
-smoothsnake = Animal.new(name: "Smooth snake", details: "The rare smooth snake can only be found in a few places, often alongside the rare sand lizard because they both favour the same kind of sandy heathland habitat.", classification: 'reptile', habitat: 'forest', behaviour: 'slither', colour: 'brown', tail: 'scaly', legs: 'none')
-smoothsnake.photo.attach(io: file, filename: "smoothsnake.jpg", content_type: "image/jpg")
-smoothsnake.save!
+# file = URI.open("https://www.new-forest-national-park.com/wp-content/uploads/2021/06/Smooth-snake-fact-file.jpeg")
+# smoothsnake = Animal.new(name: "Smooth snake", details: "The rare smooth snake can only be found in a few places, often alongside the rare sand lizard because they both favour the same kind of sandy heathland habitat.", classification: 'reptile', habitat: 'forest', behaviour: 'slither', colour: 'brown', tail: 'scaly', legs: 'none')
+# smoothsnake.photo.attach(io: file, filename: "smoothsnake.jpg", content_type: "image/jpg")
+# smoothsnake.save!
 
 file = URI.open("https://www.first-nature.com/reptiles/images/lacerta-agilis2.jpg")
 sandlizard = Animal.new(name: "Sand lizard", details: "The sand lizard is the UK's rarest reptile. It favours sandy heathland habitats and sand dunes, and can be spotted basking on bare patches of sand. Sand lizards are confined to a few sites as destruction of their habitat has reduced their range.", classification: 'reptile', habitat: 'beach', behaviour: 'run', colour: 'green', tail: 'scaly', legs: 'short')
@@ -83,6 +83,12 @@ file = URI.open("https://www.allaboutbirds.org/guide/assets/photo/308074031-480p
 pigeon = Animal.new(name: "Pigeon", details: "All pigeons strut about with a characteristic bobbing of the head. Because of their long wings and powerful flight muscles, they are strong, swift fliers. ", classification: 'bird', habitat: 'forest', behaviour: 'fly', colour: 'brown', tail: 'pointy', legs: 'short')
 pigeon.photo.attach(io: file, filename: "pigeon.jpg", content_type: "image/jpg")
 pigeon.save!
+
+file = URI.open("https://i.pinimg.com/originals/e9/36/86/e93686f5032a6ae439c93ac880b0e6e5.jpg")
+goose = Animal.new(name: "Thug Goose", details: "You better watch how you're talkin', and where you're walkin'..Or you and your homies might be lined in chalk ", classification: 'bird', habitat: 'forest', behaviour: 'fly', colour: 'brown', tail: 'pointy', legs: 'short')
+goose.photo.attach(io: file, filename: "Thug_Goose.jpg", content_type: "image/jpg")
+goose.save!
+
 
 red_fox = Animal.new(
   name: "Red fox",
@@ -269,5 +275,5 @@ Finding.create!(picture: "mypigeon.jpg", date: "2021-11-05", address: "Attica, P
 Finding.create!(picture: "mysheep.jpg", date: "2021-12-10", address: "Rhossili Bay", latitude: 51.5780, longitude: -4.3002, user: user1, animal: sheep)
 Finding.create!(picture: "myslug.jpg", date: "2022-06-08", address: "Attica, Plymouth Street, Swansea", latitude: 51.619028, longitude: -3.947579, user: user1, animal: slug)
 Finding.create!(picture: "myslowworm.jpg", date: "2022-09-07", address: "Rhossili Bay", latitude: 51.5780, longitude: -4.3002, user: user1, animal: slowworm)
-
+Finding.create!(photo: "Thug_Goose.jpg", date: "2021-11-05", address: "Attica, Plymouth Street, Swansea", latitude: 51.619028, longitude: -3.947579, user: user3, animal: pigeon)
 puts "All went according to plan, carry on"

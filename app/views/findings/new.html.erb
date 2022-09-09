@@ -6,8 +6,6 @@
   <div class="container">
   <p> You saw a <%= @animal.name %> and didnt faint</p>
    <%= cl_image_tag @animal.photo.key,:width => 300, crop: :fill %>
-    <p> You saw a <%= @animal.name %> and didnt faint</p>
-    <%= cl_image_tag @animal.photo.key,:width => 300, crop: :fill %>
 
     <%= simple_form_for([@animal, @finding]) do |f| %>
       <%= Date.today.strftime("%a, %e %b %Y") %>

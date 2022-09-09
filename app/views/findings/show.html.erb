@@ -1,7 +1,7 @@
 <div class="container">
 
   <div class="card-vertical">
-    <%= image_tag @finding.picture, crop: :fill, class: "card-vertical-cover-img" %>
+    <%=cl_image_tag @finding.photo.key, crop: :fill, class: "card-vertical-cover-img" %>
     <div class="card-vertical-infos">
       <div class="card-vertical-description">
         <p>You found this animal on <strong><%= @finding.date %></strong>.</p>

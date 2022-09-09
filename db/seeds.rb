@@ -84,12 +84,6 @@ pigeon = Animal.new(name: "Pigeon", details: "All pigeons strut about with a cha
 pigeon.photo.attach(io: file, filename: "pigeon.jpg", content_type: "image/jpg")
 pigeon.save!
 
-file = URI.open("https://i.pinimg.com/originals/e9/36/86/e93686f5032a6ae439c93ac880b0e6e5.jpg")
-goose = Animal.new(name: "Thug Goose", details: "You better watch how you're talkin', and where you're walkin'..Or you and your homies might be lined in chalk ", classification: 'bird', habitat: 'forest', behaviour: 'fly', colour: 'brown', tail: 'pointy', legs: 'short')
-goose.photo.attach(io: file, filename: "Thug_Goose.jpg", content_type: "image/jpg")
-goose.save!
-
-
 red_fox = Animal.new(
   name: "Red fox",
   details: "The red fox can be seen all across Europe, North America and Asia.
@@ -275,5 +269,4 @@ Finding.create!(picture: "mypigeon.jpg", date: "2021-11-05", address: "Attica, P
 Finding.create!(picture: "mysheep.jpg", date: "2021-12-10", address: "Rhossili Bay", latitude: 51.5780, longitude: -4.3002, user: user1, animal: sheep)
 Finding.create!(picture: "myslug.jpg", date: "2022-06-08", address: "Attica, Plymouth Street, Swansea", latitude: 51.619028, longitude: -3.947579, user: user1, animal: slug)
 Finding.create!(picture: "myslowworm.jpg", date: "2022-09-07", address: "Rhossili Bay", latitude: 51.5780, longitude: -4.3002, user: user1, animal: slowworm)
-Finding.create!(photo: "Thug_Goose.jpg", date: "2021-11-05", address: "Attica, Plymouth Street, Swansea", latitude: 51.619028, longitude: -3.947579, user: user3, animal: pigeon)
 puts "All went according to plan, carry on"

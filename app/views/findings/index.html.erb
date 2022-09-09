@@ -19,12 +19,12 @@
     <div class="cards">
       <% @my_findings.each do |finding| %>
         <div class="card-horizontal">
-        <% if @finding.photo.attached? %>
-        <%= cl_image_tag @finding.photo.key, crop: :fill %>
+        <% if finding.photo.attached? %>
+        <%= cl_image_tag finding.photo.key, crop: :fill %>
         <% else %>
-        <%= image_tag @finding.picture, class: "card-img-top" %>
+        <%= image_tag finding.picture, class: "card-img-top" %>
         <% end %>
-          <%= image_tag finding.picture %>
+          <%# <%= image_tag finding.picture %>
           <div class="card-horizontal-infos">
             <h2><%= finding.animal.name %></h2>
             <p><%= finding.address %></p>

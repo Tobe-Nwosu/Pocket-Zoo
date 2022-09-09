@@ -1,25 +1,23 @@
-<div class="container">
 
-  <div class="card-vertical">
-    <%= cl_image_tag @animal.photo.key, crop: :fill, class: "card-vertical-cover-img" %>
-    <div class="card-vertical-infos">
-      <div class="card-vertical-description">
-        <h2><%= @animal.name %></h2>
-        <br>
-        <p><%= @animal.details %></p>
-        <br>
-        <p>The <%= @animal.name %> is a <%= @animal.classification %>.</p>
-        <p>It lives at the <%= @animal.habitat %> and likes to <%= @animal.behaviour %></p>
-        <p>The <%= @animal.name %>'s colour is <%= @animal.colour %>.
-          His tail is very <%= @animal.tail %> and its legs are <%= @animal.legs %>.</p>
-      </div>
-      <div class="card-vertical-bottom">
-        <%= link_to "Save animal", animals_path, class: "btn btn-highlight" %>
-      </div>
+<div class="card-vertical">
+  <%= cl_image_tag @animal.photo.key, crop: :fill, class: "card-vertical-cover-img" %>
+  <div class="card-vertical-infos">
+    <div class="card-vertical-description">
+      <h2><%= @animal.name %></h2>
+      <br>
+      <p><%= @animal.details %></p>
+      <br>
+      <p>The <%= @animal.name %> is a <%= @animal.classification %>.</p>
+      <p>It lives at the <%= @animal.habitat %> and likes to <%= @animal.behaviour%></p>
+      <p>The <%= @animal.name %>'s colour is <%= @animal.colour %>.
+        His tail is very <%= @animal.tail %> and its legs are <%= @animal.legs %>.</p>
+    </div>
+    <div class="card-vertical-bottom">
+      <%= link_to "Save animal", new_animal_finding_path(@animal), class: "btn btn-highlight" %>
     </div>
   </div>
+</div>
 
-  <div>
-  <%= link_to "Back to all animal", animals_path, class: "btn btn-ghost" %>
-  </div>
+<div>
+<%= link_to "Back to all animal", animals_path, class: "btn btn-nav" %>
 </div>

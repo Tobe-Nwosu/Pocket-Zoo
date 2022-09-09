@@ -1,13 +1,17 @@
 
 <div class="banner" style="background-image: url(<%= asset_path "wallpaperflare.com_wallpaper.jpg"%>)">
-    <p>Let's Explore!</p>
-    <%= simple_form_for :search, url: root_path, method: :get do |f| %>
+    <h1 class="text-center">Let's Explore!</h1>
+    <form action="/animals">
       <div class="search-form-control form-group">
-        <input class="form-control string required" type="text" name="search[query]" id="search_query" />
+        <p> Search below if you know your animal</p>
+        <input class="form-control string required" type="text" name="direct[query]" id="search_query" />
         <button name="button" type="submit" class="btn btn-flat">
           <i class="fas fa-search"></i> Search
         </button>
-        <%= link_to "Find your animal", match_path, :class => "btn btn-flat" %>
       </div>
-    <% end %>
+    </form>
+    <div class="search-form-control form-group">
+    <p class="mt-5 mb-0"> Not sure? Search here</p>
+      <%= link_to "Discover your animal", match_path, :class => "btn btn-flat mt-1" %>
+    </div>
 </div>

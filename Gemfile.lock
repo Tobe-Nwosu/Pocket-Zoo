@@ -123,6 +123,7 @@ GEM
     geocoder (1.8.0)
     globalid (1.0.0)
       activesupport (>= 5.0)
+    headshot (0.1.6)
     http-accept (1.7.0)
     http-cookie (1.0.5)
       domain_name (~> 0.5)
@@ -289,6 +290,7 @@ DEPENDENCIES
   dotenv-rails
   font-awesome-sass (~> 6.1)
   geocoder
+  headshot (~> 0.1.4)
   jbuilder
   jsbundling-rails
   pg (~> 1.1)

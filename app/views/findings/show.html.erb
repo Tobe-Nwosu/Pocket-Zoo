@@ -1,6 +1,12 @@
 
 <div class="card-vertical">
-  <%= cl_image_tag @finding.photo.key, crop: :fill, class: "card-vertical-cover-img" %>
+
+  <% if @finding.photo.attached? %>
+        <%= cl_image_tag @finding.photo.key, crop: :fill, class: "card-vertical-cover-img" %>
+        <% else %>
+        <%= image_tag @finding.picture, class: "card-img-top card-vertical-cover-img", crop: :fill %>
+        <% end %>
+
   <div class="card-vertical-infos">
     <div class="card-vertical-description">
       <p>You found this animal on <strong><%= @finding.date %></strong>.</p>

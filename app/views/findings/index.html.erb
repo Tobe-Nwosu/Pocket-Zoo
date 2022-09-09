@@ -22,12 +22,11 @@
           <%= image_tag finding.picture %>
           <div class="card-horizontal-infos">
             <h2><%= finding.animal.name %></h2>
-            <p>Found at <%= finding.address %></p>
+            <p><%= finding.address %></p>
             <span><%= finding.date %></span>
-          </div>
-          <%# TODO - change path %>
-          <div class="card-vertical-bottom">
-            <%= link_to "See more!", findings_path, :class => "btn btn-highlight text-center mt-3" %>
+            <div class="card-vertical-bottom">
+              <%= link_to "See more!", finding_path(finding), :class => "btn btn-highlight" %>
+            </div>
           </div>
         </div>
       <% end %>

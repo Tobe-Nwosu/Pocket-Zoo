@@ -38,7 +38,8 @@ arctic_fox.save!
 
 # Gray fox
 gray_fox = Animal.new(
-  name: "Gray fox",
+  name: "You can find the grey fox in the forests of North and Central America.
+    With its strong, hooked claws, it can climb trees and rocks of up to 18 meters.",
   details: "Angry bird.",
   classification: "mammal",
   habitat: "forest",

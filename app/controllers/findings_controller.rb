@@ -1,8 +1,9 @@
 class FindingsController < ApplicationController
   def index
+    # if findings is empty, show something else
     @my_findings = policy_scope(Finding)
     @findings = Finding.all
-    @markers = @findings.geocoded.map do |finding|
+    @markers = @my_findings.geocoded.map do |finding|
       {
         lat: finding.latitude,
         lng: finding.longitude,
@@ -36,15 +37,26 @@ class FindingsController < ApplicationController
   end
 
   def edit
+    @finding = Finding.find(params[:id])
     authorize @finding
   end
 
   def update
+    @finding = Finding.find(params[:id])
+    @finding.update(finding_params)
+    if @finding.save
+      redirect_to finding_path(@finding)
+    else
+      render :new, status: :unprocessable_entity
+    end
     authorize @finding
   end
 
   def destroy
+    @finding = Finding.find(params[:id])
     authorize @finding
+    @finding.destroy
+    redirect_to findings_path, status: :see_other
   end
 
   private

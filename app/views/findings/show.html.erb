@@ -1,24 +1,31 @@
 <div class="container">
 
   <div class="card-vertical">
-    <%= image_tag @finding.picture, crop: :fill, class: "card-animal img" %>
+    <%= image_tag @finding.picture, crop: :fill, class: "card-vertical-cover-img" %>
     <div class="card-vertical-infos">
       <div class="card-vertical-description">
-        <p>You found this animal on <strong><%= @finding.date %></strong></p>
-        <p>This animal was found at <strong><%= @finding.address %></strong></p>
-        <p><%= @finding.comment %></p>
+        <p>You found this animal on <strong><%= @finding.date %></strong>.</p>
+        <p>This animal was found at <strong><%= @finding.address %></strong>.</p>
+        <br>
+        <p>You also added a comment: <br><%= @finding.comment %></p>
       </div>
-      <%= link_to "Edit finding", animals_path, class: "btn btn-highlight" %>
-      <%= link_to "Delete finding", animals_path, class: "btn btn-ghost" %>
+      <%= link_to "Edit finding", edit_finding_path(@finding), class: "btn btn-highlight" %>
+      <%= link_to "Delete finding", finding_path(@finding), class: "btn btn-ghost", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
     </div>
   </div>
 
   <div class="card-vertical">
-    <%= cl_image_tag @finding.animal.photo.key, crop: :fill, class: "card-animal img" %>
+    <%= cl_image_tag @finding.animal.photo.key, crop: :fill, class: "card-vertical-cover-img" %>
     <div class="card-vertical-infos">
       <div class="card-vertical-description">
         <h2><%= @finding.animal.name %></h2>
+        <br>
         <p><%= @finding.animal.details %></p>
+        <br>
+        <p>The <%= @finding.animal.name %> is a <%= @finding.animal.classification %>.</p>
+        <p>It lives at the <%= @finding.animal.habitat %> and likes to <%= @finding.animal.behaviour %></p>
+        <p>The <%= @finding.animal.name %>'s colour is <%= @finding.animal.colour %>.
+          His tail is very <%= @finding.animal.tail %> and its legs are <%= @finding.animal.legs %>.</p>
       </div>
     </div>
   </div>
@@ -27,4 +34,3 @@
   <%= link_to "Back to all findings", findings_path, class: "btn btn-ghost" %>
   </div>
 </div>
-

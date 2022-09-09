@@ -4,18 +4,17 @@
   <h1 class = "mb-5">New finding</h1>
 
   <div class="container">
-   <%= headshot_default_config(Rails.application.config.session_options[:key], headshot_capture_path) %>
-  <%= headshot_camera %>
-  <%= headshot_snap_button('Shoot') %>
-
   <p> You saw a <%= @animal.name %> and didnt faint</p>
    <%= cl_image_tag @animal.photo.key,:width => 300, crop: :fill %>
+    <p> You saw a <%= @animal.name %> and didnt faint</p>
+    <%= cl_image_tag @animal.photo.key,:width => 300, crop: :fill %>
+
     <%= simple_form_for([@animal, @finding]) do |f| %>
       <%= Date.today.strftime("%a, %e %b %Y") %>
       <%= f.input :comment %>
       <%= f.input :address %>
       <%= f.input :photo %>
-      <%= f.button :submit, class: "btn btn-flat mb-5" %>
+      <%= f.button :submit, class: "btn btn-highlight mb-5" %>
     <% end %>
   </div>
 

@@ -1,21 +1,19 @@
-<div class="container">
-  <h1> View all the animals here</h1>
+<h1 class="text-center my-4">View all the animals here</h1>
 
-  <div class="cards">
-    <% @animals.each do |animal| %>
-      <div class="card-horizontal">
-        <%= cl_image_tag animal.photo.key, crop: :fill, class: "card-horizontal img" %>
-        <div class="card-horizontal-infos">
-          <h2><%= animal.name %></h2>
-          <p><%= animal.details%></p>
+<div class="cards">
+  <% @animals.each do |animal| %>
+    <div class="card-horizontal">
+      <%= cl_image_tag animal.photo.key, crop: :fill, class: "card-horizontal img" %>
+      <div class="card-horizontal-infos">
+        <h2><%= animal.name %></h2>
+        <p>The <%= animal.name %> is a <%= animal.classification%>.</p>
+        <div class="card-horizontal-bottom">
+          <%= link_to "See details", animal_path(animal), :class => "btn btn-highlight" %>
         </div>
-        <%= link_to "See details", animal_path(animal), :class => "btn btn-highlight text-center mt-3" %>
       </div>
-    <% end %>
-  </div>
-
-  <div>
-  <%= link_to "Look for another animal", root_path, class: "btn btn-ghost" %>
-  </div>
-
+    </div>
+  <% end %>
+</div>
+<div>
+<%= link_to "Look for another animal", root_path, class: "btn btn-ghost" %>
 </div>

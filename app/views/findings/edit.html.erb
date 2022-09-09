@@ -1,13 +1,18 @@
 <h1 class= "text-center">Edit your finding</h1>
 
-<div class="container">
-  <%= simple_form_for([@animal, @finding]) do |f| %>
-    <%= Date.today.strftime("%a, %e %b %Y") %>
-    <%= f.input :comment %>
-    <%= f.input :address %>
-    <%= f.input :photo %>
-    <%= f.button :submit, class: "btn btn-highlight mb-5" %>
-  <% end %>
+<div class="card-vertical">
+  <div class="card-vertical-infos">
+    <%# insert photo here if possible %>
+    <div class="card-vertical-description">
+      <%= simple_form_for([@animal, @finding]) do |f| %>
+      <%= Date.today.strftime("%a, %e %b %Y") %>
+      <%= f.input :comment %>
+      <%= f.input :address %>
+      <%= f.input :photo %>
+      <%= f.button :submit, class: "btn btn-highlight card-vertical-bottom" %>
+    <% end %>
+    </div>
+  </div>
 </div>
 
 <%= link_to "Back to the finding", findings_path, class: "btn btn-nav"  %>

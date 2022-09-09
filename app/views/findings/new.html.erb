@@ -1,16 +1,26 @@
 
-<h1 class = "text-center">New finding</h1>
-
-<div class="container">
-  <p> You saw a <%= @animal.name %> and didnt faint</p>
-  <%= cl_image_tag @animal.photo.key,:width => 300, crop: :fill %>
-  <%= simple_form_for([@animal, @finding]) do |f| %>
-    <%= Date.today.strftime("%a, %e %b %Y") %>
-    <%= f.input :comment %>
-    <%= f.input :address %>
-    <%= f.input :photo %>
-    <%= f.button :submit, class: "btn btn-highlight mb-5" %>
-  <% end %>
+<div class = "text-center">
+  <h1>You found a new animal!</h1>
+  <p>You saw a <%= @animal.name %> and didnt faint</p>
 </div>
 
-<%= link_to "Back to the finding list", findings_path, class: "btn btn-nav"  %>
+<div class="card-vertical">
+  <%= cl_image_tag @animal.photo.key, class: "card-vertical-cover-img", crop: :fill %>
+  <div class="card-vertical-infos">
+    <div class="card-vertical-description">
+      <%= simple_form_for([@animal, @finding]) do |f| %>
+      <%= Date.today.strftime("%a, %e %b %Y") %>
+      <%= f.input :comment %>
+      <%= f.input :address %>
+      <%= f.input :photo %>
+      <%= f.button :submit, class: "btn btn-highlight card-vertical-bottom" %>
+    <% end %>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<%= link_to "Back to the animal", findings_path, class: "btn btn-nav"  %>

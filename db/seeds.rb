@@ -91,8 +91,8 @@ adder = Animal.new(
   tail: 'scaly',
   legs: 'none'
 )
-adder.photo.attach(io: file, filename: "adder.jpg", content_type: "image/jpg")
 file = URI.open("https://www.nhm.ac.uk/content/dam/nhmwww/discover/british-snakes/summer-snakebite-adder-3-two-column.jpg.thumb.768.768.jpg")
+adder.photo.attach(io: file, filename: "adder.jpg", content_type: "image/jpg")
 adder.save!
 
 grasssnake = Animal.new(

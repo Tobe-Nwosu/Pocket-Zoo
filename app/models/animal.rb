@@ -4,4 +4,10 @@ class Animal < ApplicationRecord
 
   validates :name, uniqueness: true
   # validates :photo, presence: true
+  include PgSearch::Model
+  pg_search_scope :search_by_name_and_details,
+    against: [ :name, :details ],
+    using: {
+      tsearch: { prefix: true }
+    }
 end

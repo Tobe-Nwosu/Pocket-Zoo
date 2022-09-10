@@ -9,10 +9,10 @@
   <div class="card-vertical-infos">
     <div class="card-vertical-description">
       <%= simple_form_for([@animal, @finding]) do |f| %>
-      <%= Date.today.strftime("%a, %e %b %Y") %>
       <%= f.input :comment %>
       <%= f.input :address %>
       <%= f.input :photo %>
+      <%= f.input :date, :as => :hidden, :input_html => { :value => Date.today.strftime("%a, %e %b %Y")} %>
       <%= f.button :submit, class: "btn btn-highlight card-vertical-bottom" %>
     <% end %>
     </div>

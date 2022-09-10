@@ -5,7 +5,7 @@ class AnimalsController < ApplicationController
   def index
     # I have Charly's blessing to skip pundit
     if params.has_key?(:direct)
-      @animals = Animal.where(name: params[:direct][:query].capitalize)
+      @animals = Animal.search_by_name_and_details(params[:direct][:query])
     elsif params.has_key?(:animal)
       @animals = Animal.where(classification: params[:animal][:classification],
                               habitat: params[:animal][:habitat],

@@ -445,7 +445,6 @@ file = URI.open("https://en.wikipedia.org/wiki/Tarantula#/media/File:Brachypelma
 tanrantula.photo.attach(io: file, filename: "Tanrantula.jpg", content_type: "image/jpg")
 tanrantula.save!
 
-
 Finding.create!(picture: "red_fox_spotting.jpg", date: "2020-12-14", address: "Schlosspark Heltorf, Heltorfer Schlossallee, Duesseldorf, Germany", latitude: 51.336731, longitude: 6.769210, user: user0, animal: red_fox)
 Finding.create!(picture: "gray_fox_spotting.jpg", date: "2021-12-14", address: "Hermannsdenkmal, Grotenburg 5, Detmold, Germany", latitude: 51.910070, longitude: 8.840930, user: user0, animal: gray_fox)
 Finding.create!(picture: "rat_spotting.jpg", date: "2021-12-14", address: "Palito Restaurant, Berger Str. 14, Duesseldorf, Germany", latitude: 51.224450, longitude: 6.772480, user: user0, animal: rat)

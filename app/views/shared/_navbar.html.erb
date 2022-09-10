@@ -20,7 +20,7 @@
           </li>
           <li class="nav-item dropdown">
           <%= link_to findings_path, class: "navbar-brand" do %>
-            <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier"%>
+            <%= image_tag current_user.avatar%>
             <% end%>
           </li>
         <% else %>

@@ -13,11 +13,16 @@
         His tail is very <%= @animal.tail %> and its legs are <%= @animal.legs %>.</p>
     </div>
     <div class="card-vertical-bottom">
-      <%= link_to "Save animal", new_animal_finding_path(@animal), class: "btn btn-highlight" %>
+      <%= link_to(new_animal_finding_path(@animal)) do %>
+        <button class="btn btn-highlight px-3"><i class="fa-solid fa-plus"></i></button>
+      <% end %>
     </div>
   </div>
 </div>
 
-<div>
-<%= link_to "Search for another animal", root_path, class: "btn btn-nav" %>
+<div class="d-flex flex-column align-items-center">
+  <%= link_to(:back) do %>
+    <button class="btn btn-nav px-5"><i class="fa-solid fa-arrow-left text-black"></i></button>
+  <% end %>
+  <%= link_to "Search for another animal", root_path, class: "text-black mb-3" %>
 </div>

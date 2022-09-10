@@ -2,11 +2,13 @@
   position: relative;
 }
 
-.search-form-control .btn {
+.search-form-control .one {
   position: absolute;
   border-radius: 20px;
-  margin-top: 20px;
-  margin-left: 130px;
+  margin-top: -50px;
+  margin-left: 280px;
+  background:rgb(55, 52, 52);
+  padding: 8px 30px 10px 20px;
 }
 
 .search-form-control .form-control {
@@ -30,12 +32,20 @@
   border-radius: 30px;
 }
 
+.search-form-control .two{
+  margin-left:86vw;
+  margin-bottom:70vh;
+  width:20px;
+  padding: 8px 30px 10px 20px;
+  border-radius: 50px;
+ }
+
 @media only screen and (max-device-width: 415px) {
 
-  .search-form-control .btn {
+  .search-form-control .one{
     border-radius: 20px;
-    width: 300px;
-    margin: 20px auto 0;
+    width: 30px;
+    margin: 0px, 40px, 0px, 0px;
     position: unset;
 
   }

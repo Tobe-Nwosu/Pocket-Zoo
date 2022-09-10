@@ -377,6 +377,75 @@ file = URI.open("https://images.newscientist.com/wp-content/uploads/2017/07/1415
 rat.photo.attach(io: file, filename: "rat.jpg", content_type: "image/jpg")
 rat.save!
 
+# Koala
+koala = Animal.new(
+  name: "Koala",
+  details: "Koalas typically inhabit open Eucalyptus woodland, as the leaves of these trees make up most of their diet.
+  Because this eucalypt diet has limited nutritional and caloric content, koalas are largely sedentary and sleep
+  up to twenty hours a day. They are asocial animals and their claws can scar you for life",
+  classification: "mammal",
+  habitat: "forest",
+  behaviour: "walk",
+  colour: "grey",
+  tail: "fluffy",
+  legs: "short"
+)
+file = URI.open("https://en.wikipedia.org/wiki/Koala#/media/File:Koala_climbing_tree.jpg")
+koala.photo.attach(io: file, filename: "koala.jpg", content_type: "image/jpg")
+koala.save!
+
+# Kangaroo
+kangaroo = Animal.new(
+  name: "Kangaroo",
+  details: "Kangaroos have large, powerful hind legs, large feet adapted for leaping, a long muscular tail for balance,
+  and a small head. Like most marsupials, female kangaroos have a pouch called a
+  marsupium in which joeys complete postnatal development.",
+  classification: "mammal",
+  habitat: "forest",
+  behaviour: "jump",
+  colour: "light brown",
+  tail: "long",
+  legs: "long"
+)
+file = URI.open("https://media.npr.org/assets/img/2018/12/10/roger-the-kangaroo-sanctuary-alice-springs-2_custom-e0dfceba6d2665cc8cc0daa5a57eae2bcda46ad8-s1100-c50.jpg")
+kangaroo.photo.attach(io: file, filename: "Kangaroo.jpg", content_type: "image/jpg")
+kangaroo.save!
+
+# Aedes albopictus
+aedes_albopictus = Animal.new(
+  name: "Aedes albopictus",
+  details: "This mosquito has become a significant pest in many communities because it closely associates with humans
+  (rather than living in wetlands), and typically flies and feeds in the daytime in addition to at dusk and dawn.
+  The insect is called a tiger mosquito for its striped appearance, which resembles that of the tiger. ",
+  classification: "insect",
+  habitat: "everywhere",
+  behaviour: "fly",
+  colour: "black",
+  tail: "none",
+  legs: "long"
+)
+file = URI.open("https://en.wikipedia.org/wiki/Aedes_albopictus#/media/File:CDC-Gathany-Aedes-albopictus-1.jpg")
+aedes_albopictus.photo.attach(io: file, filename: "Aedes_albopictus.jpg", content_type: "image/jpg")
+aedes_albopictus.save!
+
+# Tarantula
+tanrantula = Animal.new(
+  name: "Tarantula",
+  details: "Like all arthropods, the tarantula is an invertebrate that relies on an exoskeleton for muscular support.
+  Tarantula sizes can range from as small as the size of a marble to as large as a dinner plate when the legs
+  are fully extended.",
+  classification: "arthropod",
+  habitat: "everywhere",
+  behaviour: "crawl",
+  colour: "black",
+  tail: "none",
+  legs: "hairy"
+)
+file = URI.open("https://en.wikipedia.org/wiki/Tarantula#/media/File:Brachypelma_klaasi_2009_G01_cropped.jpg")
+tanrantula.photo.attach(io: file, filename: "Tanrantula.jpg", content_type: "image/jpg")
+tanrantula.save!
+
+
 Finding.create!(picture: "red_fox_spotting.jpg", date: "2020-12-14", address: "Schlosspark Heltorf, Heltorfer Schlossallee, Duesseldorf, Germany", latitude: 51.336731, longitude: 6.769210, user: user0, animal: red_fox)
 Finding.create!(picture: "gray_fox_spotting.jpg", date: "2021-12-14", address: "Hermannsdenkmal, Grotenburg 5, Detmold, Germany", latitude: 51.910070, longitude: 8.840930, user: user0, animal: gray_fox)
 Finding.create!(picture: "rat_spotting.jpg", date: "2021-12-14", address: "Palito Restaurant, Berger Str. 14, Duesseldorf, Germany", latitude: 51.224450, longitude: 6.772480, user: user0, animal: rat)

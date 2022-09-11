@@ -390,7 +390,7 @@ koala = Animal.new(
   tail: "fluffy",
   legs: "short"
 )
-file = URI.open("https://en.wikipedia.org/wiki/Koala#/media/File:Koala_climbing_tree.jpg")
+file = URI.open("https://fac.img.pmdstatic.net/fit/https.3A.2F.2Fi.2Epmdstatic.2Enet.2Ffac.2F2022.2F08.2F12.2F84d69884-bdcd-44a9-90c9-d3be0c414bf0.2Ejpeg/1120x747/quality/80/thumbnail.jpg")
 koala.photo.attach(io: file, filename: "koala.jpg", content_type: "image/jpg")
 koala.save!
 
@@ -408,7 +408,7 @@ kangaroo = Animal.new(
   legs: "long"
 )
 file = URI.open("https://media.npr.org/assets/img/2018/12/10/roger-the-kangaroo-sanctuary-alice-springs-2_custom-e0dfceba6d2665cc8cc0daa5a57eae2bcda46ad8-s1100-c50.jpg")
-kangaroo.photo.attach(io: file, filename: "Kangaroo.jpg", content_type: "image/jpg")
+kangaroo.photo.attach(io: file, filename: "kangaroo.jpg", content_type: "image/jpg")
 kangaroo.save!
 
 # Aedes albopictus
@@ -424,8 +424,8 @@ aedes_albopictus = Animal.new(
   tail: "none",
   legs: "long"
 )
-file = URI.open("https://en.wikipedia.org/wiki/Aedes_albopictus#/media/File:CDC-Gathany-Aedes-albopictus-1.jpg")
-aedes_albopictus.photo.attach(io: file, filename: "Aedes_albopictus.jpg", content_type: "image/jpg")
+file = URI.open("https://www.insectecran.com/thumbs/600%C3%97400%C3%97c%C3%97png/entries/moustique-tigre.jpg")
+aedes_albopictus.photo.attach(io: file, filename: "aedes_albopictus.jpg", content_type: "image/jpg")
 aedes_albopictus.save!
 
 # Tarantula
@@ -441,9 +441,76 @@ tanrantula = Animal.new(
   tail: "none",
   legs: "hairy"
 )
-file = URI.open("https://en.wikipedia.org/wiki/Tarantula#/media/File:Brachypelma_klaasi_2009_G01_cropped.jpg")
-tanrantula.photo.attach(io: file, filename: "Tanrantula.jpg", content_type: "image/jpg")
+file = URI.open("https://www.peta.org/wp-content/uploads/2021/12/tarantula-red-knee-1536x864.jpg")
+tanrantula.photo.attach(io: file, filename: "tarantula.jpg", content_type: "image/jpg")
 tanrantula.save!
+
+# Thug Goose
+thug_goose = Animal.new(
+  name: "Thug Goose",
+  details: "You better watch how you're talkin', and where you're walkin'
+  Or you and your homies might be lined in chalk",
+  classification: "Bird",
+  habitat: "behind you",
+  behaviour: "fly",
+  colour: "white",
+  tail: "fluffy",
+  legs: "short"
+)
+file = URI.open("https://i.pinimg.com/736x/df/69/2e/df692e9e2c3953d543832a7defe41f46.jpg")
+thug_goose.photo.attach(io: file, filename: "thug_goose.jpg", content_type: "image/jpg")
+thug_goose.save!
+
+# Goat
+goat = Animal.new(
+  name: "Goat",
+  details: "The goat or domestic goat (Capra hircus) is a domesticated species of goat-antelope
+  typically kept as livestock. Goats have been used for milk, meat, fur, and skins across much of the world.
+  And they are probably better than you at Parkour.",
+  classification: "Mammal",
+  habitat: "fields",
+  behaviour: "jump",
+  colour: "white",
+  tail: "fluffy",
+  legs: "short"
+)
+file = URI.open("https://static.dw.com/image/57228240_303.jpeg")
+goat.photo.attach(io: file, filename: "goat.jpg", content_type: "image/jpg")
+goat.save!
+
+# Chameleon
+chameleon = Animal.new(
+  name: "Chameleon",
+  details: "Chameleons are distinguished by their zygodactylous feet, their prehensile tail, their laterally
+   compressed bodies, their head casques, their projectile tongues that can go up to 30 cm
+    and crests or horns on their brow and snout.Some chameleon species are able to change their skin coloration.",
+  classification: "Reptile",
+  habitat: "forest",
+  behaviour: "walk",
+  colour: "green",
+  tail: "long",
+  legs: "short"
+)
+file = URI.open("https://fac.img.pmdstatic.net/fit/https.3A.2F.2Fi.2Epmdstatic.2Enet.2Ffac.2F2021.2F08.2F03.2Fbf7d6121-2ec7-41d0-b98b-270f5f9df5ba.2Ejpeg/650x324/quality/80/crop-from/center/focus-point/594%2C260/tout-savoir-sur-le-cameleon.jpeg")
+chameleon.photo.attach(io: file, filename: "chameleon.jpg", content_type: "image/jpg")
+chameleon.save!
+
+# Tardigrade
+tardigrade = Animal.new(
+  name: "Tardigrade",
+  details: "Tardigrades also known as water bears. They are among the most resilient animals known with individual
+  species able to survive extreme conditions such as exposure to extreme temperatures, pressures, air deprivation,
+  radiation, dehydration, and starvation. Tardigrades are usually about 0.5 mm long when fully grown.",
+  classification: "???",
+  habitat: "???",
+  behaviour: "???",
+  colour: "???",
+  tail: "???",
+  legs: "short"
+)
+file = URI.open("https://www.science-et-vie.com/wp-content/uploads/scienceetvie/2017/07/le-tardigrade-comment-fait-pour-resister-tout.jpg")
+tardigrade.photo.attach(io: file, filename: "tardigrade.jpg", content_type: "image/jpg")
+tardigrade.save!
 
 Finding.create!(picture: "red_fox_spotting.jpg", date: "2020-12-14", address: "Schlosspark Heltorf, Heltorfer Schlossallee, Duesseldorf, Germany", latitude: 51.336731, longitude: 6.769210, user: user0, animal: red_fox)
 Finding.create!(picture: "gray_fox_spotting.jpg", date: "2021-12-14", address: "Hermannsdenkmal, Grotenburg 5, Detmold, Germany", latitude: 51.910070, longitude: 8.840930, user: user0, animal: gray_fox)
@@ -454,4 +521,5 @@ Finding.create!(picture: "mypigeon.jpg", date: "2021-11-05", address: "Attica, P
 Finding.create!(picture: "mysheep.jpg", date: "2021-12-10", address: "Rhossili Bay", latitude: 51.5780, longitude: -4.3002, user: user1, animal: sheep)
 Finding.create!(picture: "myslug.jpg", date: "2022-06-08", address: "Attica, Plymouth Street, Swansea", latitude: 51.619028, longitude: -3.947579, user: user1, animal: slug)
 Finding.create!(picture: "myslowworm.jpg", date: "2022-09-07", address: "Rhossili Bay", latitude: 51.5780, longitude: -4.3002, user: user1, animal: slowworm)
+Finding.create!(picture: "random3.jpg", date: "2022-09-07", address: "Basilique Fourvière lyon", user: user3, animal: thug_goose)
 puts "All went according to plan, carry on"

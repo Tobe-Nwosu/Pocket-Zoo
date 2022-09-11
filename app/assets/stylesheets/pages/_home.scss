@@ -1,5 +1,7 @@
 // Specific CSS for your home-page
+// Banner
 .banner {
+  position: relative;
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -8,7 +10,7 @@
 }
 
 .banner h1 {
-  margin: 0px 0px 80px 0px;
+  margin: 0px 0px 20px 0px;
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   font-size: 32px;
@@ -22,16 +24,40 @@
   text-align: center;
 }
 
+// Logo and user picture
 
-.search-form-control {
-  position: relative;
+.top_container{
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-.search-form-control .one {
+.top_container img{
+  width: 70px;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.h1_container{
+  width:100%;
+  position:absolute;
+  top:140px;
+  margin:0 auto;
+}
+
+// Search Bar
+.search_container{
   position: absolute;
+  display: flex;
+  flex-direction: row;
+  top:190px;
+}
+
+.lens .one{
   border-radius: 20px;
-  margin-top: -50px;
-  margin-left: 280px;
   background:rgb(55, 52, 52);
   padding: 8px 30px 10px 20px;
 }
@@ -44,6 +70,7 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
+  border-radius: 30px;
 }
 
 .search-form-control .form-control:focus {
@@ -52,17 +79,15 @@
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
 }
 
-.form-control{
 
-  border-radius: 30px;
-}
-
-.search-form-control .two{
-  margin-left:86vw;
-  margin-bottom:70vh;
+.two{
   width:20px;
   padding: 8px 30px 10px 20px;
   border-radius: 50px;
+ }
+
+ .search-form-control .form-alone{
+  margin-top: 70vh;
  }
 
 @media only screen and (max-device-width: 415px) {
@@ -80,4 +105,19 @@
     flex-direction: column;
     justify-content: center;
   }
+}
+
+.bottom_container{
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.bottom_container img{
+  width: 70px;
+  border-radius: 50%;
+  padding: 10px;
 }

@@ -8,7 +8,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%# <%= favicon_link_tag "Pocket-Zoo-1.png" %>
+    <%= favicon_link_tag "Pocket-Zoo-1.png" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
     <link href="https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css" rel="stylesheet">
     <script src="https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js"></script>
@@ -18,14 +18,16 @@
 
   <body>
   <div class="d-flex flex-column min-vh-100">
-    <%= render "shared/navbar" %>
+    <% if current_page?(root_path) %>
+    <%= render "shared/homepage_navbar" %>
+    <% else %>
+      <%= render "shared/navbar" %>
+    <% end %>
     <%# <%= render "shared/flashes" %>
     <article class="flex-grow-1">
       <%= yield %>
     </article>
-    <% if current_page?(root_path) %>
-      <%= render "shared/homepage_footer" %>
-    <% else %>
+    <% unless current_page?(root_path) %>
       <%= render "shared/footer" %>
     <% end %>
   </div>

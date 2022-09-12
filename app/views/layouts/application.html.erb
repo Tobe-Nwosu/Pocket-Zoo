@@ -21,7 +21,11 @@
 
   <body>
   <div class="d-flex flex-column min-vh-100">
-    <%= render "shared/navbar" %>
+    <% if current_page?(root_path) %>
+      <%= render "shared/homepage_navbar" %>
+    <% else %>
+      <%= render "shared/navbar" %>
+    <% end %>
     <%= render "shared/flashes" %>
     <article class="flex-grow-1">
       <%= yield %>

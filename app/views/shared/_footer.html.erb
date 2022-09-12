@@ -1,12 +1,20 @@
 <div class="footer">
   <div class="footer-links">
-    <a href="#"><i class="fab fa-github"></i></a>
-    <a href="#"><i class="fab fa-instagram"></i></a>
-    <a href="#"><i class="fab fa-facebook"></i></a>
-    <a href="#"><i class="fab fa-twitter"></i></a>
-    <a href="#"><i class="fab fa-linkedin"></i></a>
-  </div>
-  <div class="footer-copyright">
-    © Copyright 2022 Pocket-Zoo<i class></i>
+    <%= link_to '<i class="fa-solid fa-user-group"></i>'.html_safe,
+      '#',
+      class: "px-3 d-flex align-items-center ms-0"
+    %>
+    <%= link_to '<i class="fa-solid fa-house"></i>'.html_safe,
+      root_path,
+      class: "px-3 d-flex align-items-center ms-0"
+    %>
+    <%= link_to '<i class="fa-solid fa-user"></i>'.html_safe,
+      findings_path,
+      class: "px-3 d-flex align-items-center ms-0"
+    %>
+    <%= link_to '<i class="fa-solid fa-camera"></i>'.html_safe,
+      '#',
+      class: "px-3 d-flex align-items-center ms-0"
+    %>
   </div>
 </div>

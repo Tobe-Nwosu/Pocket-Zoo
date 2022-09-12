@@ -1,7 +1,8 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background-color: transparent;
-  transition: 0.5s background-color ease;
+  background-image: url("header.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -48,4 +49,9 @@
   &:hover{
     color: black;
   }
+}
+
+.navbar-transparent {
+  background-image: none;
+  background-color: #312f2f;
 }

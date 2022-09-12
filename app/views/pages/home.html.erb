@@ -1,7 +1,63 @@
 
 <div class="banner" style="background-image: url(<%= asset_path "wallpaperflare.com_wallpaper.jpg"%>)">
   <h1 class="text-center">Let's Explore!</h1>
-
+  <div id="findingsFeed" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner slideshow-bg">
+      <div class="carousel-item active">
+        <div class="d-block w-100 d-flex justify-content-center">
+          <div class="card-horizontal card-slideshow w-75 my-0">
+            <% finding = Finding.all.sample %>
+            <%= link_to(finding_path(finding)) do %>
+              <% if finding.photo.attached? %>
+                <%= cl_image_tag finding.photo.key, crop: :fill %>
+              <% else %>
+                <%= image_tag finding.picture, class: "card-img-top" %>
+              <% end %>
+              <div class="card-horizontal-infos">
+                <p>
+                  <%= finding.user.username %> found a
+                  <br> <strong><%= finding.animal.name.downcase %> </strong>
+                  <br> in <%= finding.address %>
+                </p>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+      <% 5.times do %>
+        <div class="carousel-item">
+          <div class="d-block w-100 d-flex justify-content-center">
+            <div class="card-horizontal card-slideshow w-75 my-0">
+              <% finding = Finding.all.sample %>
+              <%= link_to(finding_path(finding)) do %>
+                <% if finding.photo.attached? %>
+                  <%= cl_image_tag finding.photo.key, crop: :fill %>
+                <% else %>
+                  <%= image_tag finding.picture, class: "card-img-top" %>
+                <% end %>
+                <div class="card-horizontal-infos">
+                  <p>
+                    <%= finding.user.username %> found a
+                    <br> <strong><%= finding.animal.name.downcase %> </strong>
+                    <br> in <%= finding.address %>
+                  </p>
+                </div>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+     <button class="carousel-control-prev" type="button" data-bs-target="#findingsFeed" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#findingsFeed" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+  </div>
+</div>
 
   <%= link_to "Discover your animal", match_path, :class => "btn btn-flat mt-1" %>
 

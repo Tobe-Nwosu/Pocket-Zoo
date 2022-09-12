@@ -6,7 +6,10 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
   get '/match', to: 'animals#match', as: 'match'
-  resources :users
+  resources :users do
+    resources :friendships, only: %i[new create]
+  end
+  resources :friendships, only: %i[new create index show destroy]
   resources :animals, only: %i[index match show] do
     resources :findings, only: %i[new create]
   end

@@ -1,0 +1,8 @@
+<% @friendships.each do |f| %>
+<%= f.receiver.username%>
+<% if f.status %>
+<p><%= f.receiver.username%> is your friend<p>
+<% else %>
+<p><%= f.receiver.username%> is thinking about being your friend but has'nt decided yet<p>
+<% end %>
+<% end %>

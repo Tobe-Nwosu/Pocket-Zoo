@@ -1,5 +1,9 @@
 
 <div class="banner" style="background-image: url(<%= asset_path "wallpaperflare.com_wallpaper.jpg"%>)">
+
+<%= link_to "Friendslist", friendships_path, class: "btn btn-nav" %>
+<%= link_to "users", users_path, class: "btn btn-nav" %>
+
     <h1 class="text-center">Let's Explore!</h1>
     <form action="/animals">
       <div class="search-form-control form-group">

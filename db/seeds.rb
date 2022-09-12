@@ -22,10 +22,10 @@ puts " (-_-)    Huh ? !"
 puts "(     )                       *BANG* "
 puts '(") (") '
 
-user0 = User.create!(username: "L4ur4", email: "random@mail.com", password: 'oVGyU8OkLscwtOLiq', avatar: "Bel.jpg")
-user1 = User.create!(username: "N1c0l4", email: "nic@fie.com", password: 'p5VQO2p6NYOOdMP6E94Qmu', avatar: "Bol.jpg")
-user2 = User.create!(username: "T0b3", email: "even@more.com", password: '5b9cIXNwREWE5vpVJiRYwXb', avatar: "Bal.jpg")
-user3 = User.create!(username: "Ch4r1y", email: "random@even.com", password: 'WBvDylx03hqH5625ngro', avatar: "Boul.jpg")
+user0 = User.create!(username: "L4ur4", email: "random@mail.com", password: 'you', avatar: "Bel.png")
+user1 = User.create!(username: "N1c0l4", email: "nic@fie.com", password: 'were', avatar: "Bol.jpg")
+user2 = User.create!(username: "T0b3", email: "even@more.com", password: 'right', avatar: "Bal.jpg")
+user3 = User.create!(username: "Ch4r1y", email: "random@even.com", password: 'Imnevergettinghackedtho', avatar: "Boul.jpg")
 user4 = User.create!(username: "DuckLover123", email: "iamtheone@neo.com", admin: true, password: 'LauraGotBetter!', avatar: "Bil.jpg")
 
 slowworm = Animal.new(
@@ -492,7 +492,7 @@ tardigrade = Animal.new(
   colour: "???",
   tail: "???",
   legs: "short"
-  
+)
 Finding.create!(picture: "red_fox_spotting.jpg", date: "2020-12-14", address: "Schlosspark Heltorf, Heltorfer Schlossallee, Duesseldorf, Germany", latitude: 51.336731, longitude: 6.769210, user: user0, animal: red_fox)
 Finding.create!(picture: "gray_fox_spotting.jpg", date: "2021-12-14", address: "Hermannsdenkmal, Grotenburg 5, Detmold, Germany", latitude: 51.910070, longitude: 8.840930, user: user0, animal: gray_fox)
 Finding.create!(picture: "rat_spotting.jpg", date: "2021-12-14", address: "Palito Restaurant, Berger Str. 14, Duesseldorf, Germany", latitude: 51.224450, longitude: 6.772480, user: user0, animal: rat)

@@ -24,7 +24,7 @@ module Merit
       # If it creates user, grant badge
       # Should be "current_user" after registration for badge to be granted.
       # Find badge by badge_id, badge_id takes presidence over badge
-      # grant_on 'users#create', badge_id: 7, badge: 'just-registered', to: :itself
+      grant_on 'users#create', badge_id: 7, badge: 'just-registered', to: :itself
 
       # If it has 10 comments, grant commenter-10 badge
       # grant_on 'comments#create', badge: 'commenter', level: 10 do |comment|
@@ -34,16 +34,46 @@ module Merit
       # If it has 5 votes, grant relevant-commenter badge
       # grant_on 'comments#vote', badge: 'relevant-commenter',
       #   to: :user do |comment|
-      #
       #   comment.votes.count == 5
       # end
 
       # Changes his name by one wider than 4 chars (arbitrary ruby code case)
       # grant_on 'registrations#update', badge: 'autobiographer',
       #   temporary: true, model_name: 'User' do |user|
-      #
       #   user.name.length > 4
       # end
+
+      grant_on 'findings#create', badge_id: 2, badge: 'Junior Explorer', to: :itself do |finding|
+        finding.user.findings.count == 10
+      end
+
+      grant_on 'findings#create', badge_id: 3, badge: 'Explorer', to: :itself do |finding|
+        finding.user.findings.count == 50
+      end
+
+      grant_on 'findings#create', badge_id: 4, badge: 'Senior Explorer', to: :itself do |finding|
+        finding.user.findings.count == 100
+      end
+
+      grant_on 'findings#create', badge_id: 5, badge: 'Mammal Master', to: :itself do |finding|
+        finding.animal.category == 'mammal'
+      end
+
+      grant_on 'findings#create', badge_id: 6, badge: 'Reptile Ruler', to: :itself do |finding|
+        finding.animal.category == 'reptile'
+      end
+
+      grant_on 'findings#create', badge_id: 7, badge: 'Bird Baron', to: :itself do |finding|
+        finding.animal.category == 'bird'
+      end
+
+      grant_on 'findings#create', badge_id: 8, badge: 'Insect Inspector', to: :itself do |finding|
+        finding.animal.category == 'insect'
+      end
+
+      grant_on 'findings#destroy', badge_id: 9, badge: 'Serial killer', to: :itself do |finding|
+        finding.user.findings.count == 3
+      end
     end
   end
 end

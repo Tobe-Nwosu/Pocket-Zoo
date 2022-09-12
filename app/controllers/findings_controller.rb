@@ -62,6 +62,6 @@ class FindingsController < ApplicationController
   private
 
   def finding_params
-    params.require(:finding).permit(:date, :photo, :comment)
+    params.require(:finding).permit(:date, :photo, :comment, :address)
   end
 end

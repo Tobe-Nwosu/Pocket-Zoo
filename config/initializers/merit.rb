@@ -21,51 +21,73 @@ Rails.application.reloader.to_prepare do
   [{
     id: 1,
     name: 'just-registered',
+    custom_fields: {
+      category: 'animal_category',
+      icon_name: 'fa-baby'
+    },
     description: 'You have registered on PocketZoo!',
   }, {
     id: 2,
     name: 'Junior Explorer',
-    custom_fields: { category: 'animal_count' },
+    custom_fields: {
+      category: 'animal_category',
+      icon_name: 'magnifying-glass'
+    },
     description: 'You have found 10 animals!'
   }, {
     id: 3,
     name: 'Explorer',
-    custom_fields: { category: 'animal_count' },
+    custom_fields: {
+      category: 'animal_category',
+      icon_name: 'magnifying-glass'
+    },
     description: 'You have found 50 animals!'
   }, {
     id: 4,
     name: 'Senior Explorer',
-    custom_fields: { category: 'animal_count' },
+    custom_fields: {
+      category: 'animal_category',
+      icon_name: 'magnifying-glass'
+    },
     description: 'You have found 100 animals!'
   }, {
     id: 5,
     name: 'Mammal Master',
-    custom_fields: { category: 'animal_category' },
+    custom_fields: {
+      category: 'animal_category',
+      icon_name: 'fa-otter'
+    },
     description: 'You have found the first mammal!'
   }, {
     id: 6,
     name: 'Reptile Ruler',
     custom_fields: {
       category: 'animal_category',
-      icon_url: '<i class="fa-solid fa-worm"></i>',
+      icon_name: 'fa-worm'
     },
     description: 'You have found the first reptile!'
   }, {
     id: 7,
     name: 'Bird Baron',
-    custom_fields: { category: 'animal_category' },
+    custom_fields: {
+      category: 'animal_category',
+      icon_name: 'fa-duck'
+    },
     description: 'You have found the first bird!'
   }, {
     id: 8,
     name: 'Insect Inspector',
-    custom_fields: { category: 'animal_category' },
+    custom_fields: {
+      category: 'animal_category',
+      icon_name: 'fa-worm'
+    },
     description: 'You have found the first insect!'
   }, {
     id: 9,
     name: 'Serial killer',
     custom_fields: {
-      category: 'animal_killer',
-      icon_type: 'baby',
+      category: 'animal_category',
+      icon_name: 'fa-skull'
     },
     description: 'You have deleted 3 animals you found!'
   }, {
@@ -73,7 +95,7 @@ Rails.application.reloader.to_prepare do
     name: 'Darwin',
     custom_fields: {
       category: 'animal_category',
-      icon_url: '<i class="fa-solid fa-worm"></i>'
+      icon_name: 'fa-dna'
     },
     description: 'You have collected 42 mammals, 42 insects, 42 birds and 42 reptiles!'
   }].each do |attrs|

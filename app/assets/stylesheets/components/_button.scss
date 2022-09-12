@@ -2,7 +2,7 @@
   color: white;
   padding: 8px 24px;
   border-radius: 4px;
-  background: black;
+  background: #0D0A0B;
   //transition: background 0.3s ease;
   margin-right: 355px;
 }
@@ -61,4 +61,17 @@
 
 .btn-nav:hover {
   opacity: 0.9;
+}
+
+.home-add {
+  a {
+    border-radius: 10px;
+    padding: 30px;
+  }
+    i {
+    font-size: 40px;
+    font-weight: 400;
+    color: rgb(188, 187, 187);
+  }
+
 }

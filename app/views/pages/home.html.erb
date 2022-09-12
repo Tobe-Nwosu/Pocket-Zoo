@@ -57,8 +57,10 @@
         <span class="visually-hidden">Next</span>
       </button>
   </div>
-</div>
-
-  <%= link_to "Discover your animal", match_path, :class => "btn btn-flat mt-1" %>
-
+  <div class="d-flex justify-content-center flex-column align-items-center">
+    <h2 class="my-5">Spotted something? Add it here</h2>
+    <div class="home-add">
+      <%= link_to '<i class="fa-solid fa-plus home-add"></i>'.html_safe, match_path, :class => "btn btn-flat mt-1 mx-0" %>
+    </div>
+  </div>
 </div>

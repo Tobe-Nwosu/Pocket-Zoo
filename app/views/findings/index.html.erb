@@ -45,10 +45,16 @@
   </div>
 
   <div data-tabs-target="tabcontent achievements" class="d-none">
-    <ul>
+    <div class="badges">
       <% current_user.badges.each do |badge| %>
-        <li><%= badge.name %></li>
+        <div class="badge">
+          <%# insert photo here, class="badge-cover-img" %>
+          <%= badge.custom_fields[:icon_url] %>
+          <div class="badge-infos">
+            <h2><%= badge.name %></h2>
+            <br>
+            <p><%= badge.description %></p>
+          </div>
+        </div>
       <% end %>
-    </ul>
-  </div>
-</div>
+    </div>

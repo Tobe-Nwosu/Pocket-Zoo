@@ -1,0 +1,53 @@
+.badges {
+  color: black;
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+// Cards with the picture on the top
+.badge {
+  background-color: white;
+  color: black;
+  margin: 0em 0em 2em 0em;
+  width: 9rem;
+  // add shadow
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  position: relative;
+  white-space: normal;
+}
+
+.badge-cover-img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: white 1px solid;
+}
+
+.badge-infos {
+  width: 100%;
+  padding: 14px;
+  align-items: center;
+  // display: block;
+  padding: 1em;
+  // margin-bottom: 0.6rem;
+  // position: relative;
+}
+
+.badge h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.badge p {
+  font-size: 14px;
+  opacity: .7;
+  margin: 0;
+  // text-align: justify;
+  font-weight: normal;
+}

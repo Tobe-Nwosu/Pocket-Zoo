@@ -21,52 +21,61 @@ Rails.application.reloader.to_prepare do
   [{
     id: 1,
     name: 'just-registered',
-    description: 'User has registered on the site'
+    description: 'You have registered on PocketZoo!',
   }, {
     id: 2,
     name: 'Junior Explorer',
     custom_fields: { category: 'animal_count' },
-    description: 'User has found 10 animals'
+    description: 'You have found 10 animals!'
   }, {
     id: 3,
     name: 'Explorer',
     custom_fields: { category: 'animal_count' },
-    description: 'User has found 50 animals'
+    description: 'You have found 50 animals!'
   }, {
     id: 4,
     name: 'Senior Explorer',
     custom_fields: { category: 'animal_count' },
-    description: 'User has found 100 animals'
+    description: 'You have found 100 animals!'
   }, {
     id: 5,
     name: 'Mammal Master',
     custom_fields: { category: 'animal_category' },
-    description: 'User has found the first mammal'
+    description: 'You have found the first mammal!'
   }, {
     id: 6,
     name: 'Reptile Ruler',
-    custom_fields: { category: 'animal_category' },
-    description: 'User has found the first reptile'
+    custom_fields: {
+      category: 'animal_category',
+      icon_url: '<i class="fa-solid fa-worm"></i>',
+    },
+    description: 'You have found the first reptile!'
   }, {
     id: 7,
     name: 'Bird Baron',
     custom_fields: { category: 'animal_category' },
-    description: 'User has found the first bird'
+    description: 'You have found the first bird!'
   }, {
     id: 8,
     name: 'Insect Inspector',
     custom_fields: { category: 'animal_category' },
-    description: 'User has found the first insect'
+    description: 'You have found the first insect!'
   }, {
     id: 9,
     name: 'Serial killer',
-    custom_fields: { category: 'animal_killer' },
-    description: 'User has deleted 3 findings'
+    custom_fields: {
+      category: 'animal_killer',
+      icon_type: 'baby',
+    },
+    description: 'You have deleted 3 animals you found!'
   }, {
     id: 10,
     name: 'Darwin',
-    custom_fields: { category: 'animal_category' },
-    description: 'User has collected 42 mammals, 42 insects, 42 birds and 42 reptiles'
+    custom_fields: {
+      category: 'animal_category',
+      icon_url: '<i class="fa-solid fa-worm"></i>'
+    },
+    description: 'You have collected 42 mammals, 42 insects, 42 birds and 42 reptiles!'
   }].each do |attrs|
     Merit::Badge.create! attrs
   end

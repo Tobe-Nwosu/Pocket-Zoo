@@ -23,7 +23,7 @@ Rails.application.reloader.to_prepare do
     name: 'just-registered',
     custom_fields: {
       category: 'animal_category',
-      icon_name: 'fa-baby'
+      icon_name: 'baby'
     },
     description: 'You have registered on PocketZoo!',
   }, {
@@ -55,7 +55,7 @@ Rails.application.reloader.to_prepare do
     name: 'Mammal Master',
     custom_fields: {
       category: 'animal_category',
-      icon_name: 'fa-otter'
+      icon_name: 'otter'
     },
     description: 'You have found the first mammal!'
   }, {
@@ -63,7 +63,7 @@ Rails.application.reloader.to_prepare do
     name: 'Reptile Ruler',
     custom_fields: {
       category: 'animal_category',
-      icon_name: 'fa-worm'
+      icon_name: 'worm'
     },
     description: 'You have found the first reptile!'
   }, {
@@ -71,7 +71,7 @@ Rails.application.reloader.to_prepare do
     name: 'Bird Baron',
     custom_fields: {
       category: 'animal_category',
-      icon_name: 'fa-duck'
+      icon_name: 'feather'
     },
     description: 'You have found the first bird!'
   }, {
@@ -79,7 +79,7 @@ Rails.application.reloader.to_prepare do
     name: 'Insect Inspector',
     custom_fields: {
       category: 'animal_category',
-      icon_name: 'fa-worm'
+      icon_name: 'spider'
     },
     description: 'You have found the first insect!'
   }, {
@@ -87,7 +87,7 @@ Rails.application.reloader.to_prepare do
     name: 'Serial killer',
     custom_fields: {
       category: 'animal_category',
-      icon_name: 'fa-skull'
+      icon_name: 'skull'
     },
     description: 'You have deleted 3 animals you found!'
   }, {
@@ -95,7 +95,7 @@ Rails.application.reloader.to_prepare do
     name: 'Darwin',
     custom_fields: {
       category: 'animal_category',
-      icon_name: 'fa-dna'
+      icon_name: 'dna'
     },
     description: 'You have collected 42 mammals, 42 insects, 42 birds and 42 reptiles!'
   }].each do |attrs|

@@ -15,8 +15,10 @@
       <p>You also added a comment: <br><%= @finding.comment %></p>
 
     </div>
-    <%= link_to "Edit finding", edit_finding_path(@finding), class: "btn btn-highlight" %>
-    <%= link_to "Delete finding", finding_path(@finding), class: "btn btn-ghost", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+    <div class="d-flex justify-content-between">
+      <%= link_to '<i class="fa-solid fa-trash text-black"></i>'.html_safe, finding_path(@finding), class: "btn btn-ghost px-3 d-flex align-items-center ms-0", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+      <%= link_to '<i class="fa-solid fa-pen-to-square"></i>'.html_safe, edit_finding_path(@finding), class: "btn btn-highlight px-3 py-2 m-0" %>
+    </div>
   </div>
 </div>
 
@@ -36,6 +38,9 @@
   </div>
 </div>
 
-<div>
-<%= link_to "Not the right animal?", findings_path, class: "btn btn-nav" %>
+<div class="d-flex justify-content-center align-items-center flex-column">
+  <%= link_to "All finds", findings_path, class: "btn btn-highlight px-5" %>
+  <%= link_to(:back) do %>
+    <button class="btn btn-nav px-5"><i class="fa-solid fa-arrow-left text-black"></i></button>
+  <% end %>
 </div>

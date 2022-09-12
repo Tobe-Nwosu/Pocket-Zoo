@@ -13,7 +13,7 @@ red_fox = Animal.new(
     behaviour: "run",
     colour: "red",
     tail: "bushy",
-    legs: "long",
+    legs: "long"
 )
 file = URI.open("https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Fox_-_British_Wildlife_Centre_%2817429406401%29.jpg/800px-Fox_-_British_Wildlife_Centre_%2817429406401%29.jpg")
 red_fox.photo.attach(io: file, filename: "red_fox.jpg", content_type: "image/jpg")
@@ -29,7 +29,7 @@ arctic_fox = Animal.new(
   behaviour: "run",
   colour: "white",
   tail: "bushy",
-  legs: "long",
+  legs: "long"
 )
 file = URI.open("image.png")
 arctic_fox.photo.attach(io: file, filename: "arctic_fox.jpg", content_type: "image/jpg")
@@ -46,7 +46,7 @@ gray_fox = Animal.new(
   behaviour: "run",
   colour: "brown",
   tail: "bushy",
-  legs: "long",
+  legs: "long"
 )
 file = URI.open("https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Urocyon_cinereoargenteus.jpg/250px-Urocyon_cinereoargenteus.jpg")
 gray_fox.photo.attach(io: file, filename: "gray_fox.jpg", content_type: "image/jpg")
@@ -63,7 +63,7 @@ muskrat = Animal.new(
   behaviour: "swim",
   colour: "brown",
   tail: "scaly",
-  legs: "short",
+  legs: "short"
 )
 file = URI.open("https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/%D0%9E%D0%BD%D0%B4%D0%B0%D1%82%D1%80%D0%B0_%D0%B8_%D0%BB%D1%8E%D0%B1%D0%BE%D0%BF%D1%8B%D1%82%D0%BD%D1%8B%D0%B5_%D0%BF%D1%82%D0%B5%D0%BD%D1%86%D1%8B_-_cropped_-_Panoramio.jpg/799px-%D0%9E%D0%BD%D0%B4%D0%B0%D1%82%D1%80%D0%B0_%D0%B8_%D0%BB%D1%8E%D0%B1%D0%BE%D0%BF%D1%8B%D1%82%D0%BD%D1%8B%D0%B5_%D0%BF%D1%82%D0%B5%D0%BD%D1%86%D1%8B_-_cropped_-_Panoramio.jpg")
 muskrat.photo.attach(io: file, filename: "muskrat.jpg", content_type: "image/jpg")
@@ -80,7 +80,7 @@ beaver = Animal.new(
   behaviour: "swim",
   colour: "brown",
   tail: "scaly",
-  legs: "short",
+  legs: "short"
 )
 file = URI.open("https://images.takeshape.io/86ce9525-f5f2-4e97-81ba-54e8ce933da7/dev/1b40c283-e9ea-40a6-86eb-e0013372560b/american_beaver-Render.jpg?auto=compress%2Cformat&w=1200")
 beaver.photo.attach(io: file, filename: "beaver.jpg", content_type: "image/jpg")
@@ -96,7 +96,7 @@ capybara = Animal.new(
   behaviour: "walk",
   colour: "red",
   tail: "none",
-  legs: "short",
+  legs: "short"
 )
 file = URI.open("https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Bristol.zoo.capybara.arp.jpg/1200px-Bristol.zoo.capybara.arp.jpg")
 capybara.photo.attach(io: file, filename: "capybara.jpg", content_type: "image/jpg")
@@ -112,7 +112,7 @@ sea_otter = Animal.new(
   behaviour: "swim",
   colour: "brown",
   tail: "pointy",
-  legs: "short",
+  legs: "short"
 )
 file = URI.open("https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Sea_Otter_%28Enhydra_lutris%29_%2825169790524%29_crop.jpg/800px-Sea_Otter_%28Enhydra_lutris%29_%2825169790524%29_crop.jpg")
 sea_otter.photo.attach(io: file, filename: "sea_otter.jpg", content_type: "image/jpg")
@@ -128,7 +128,7 @@ mink = Animal.new(
   behaviour: "walk",
   colour: "brown",
   tail: "pointy",
-  legs: "short",
+  legs: "short"
 )
 file = URI.open("https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/MinkforWiki.jpg/1200px-MinkforWiki.jpg")
 mink.photo.attach(io: file, filename: "mink.jpg", content_type: "image/jpg")
@@ -144,7 +144,7 @@ nutria = Animal.new(
   behaviour: "walk",
   colour: "brown",
   tail: "pointy",
-  legs: "short",
+  legs: "short"
 )
 file = URI.open("https://www.umweltbundesamt.de/sites/default/files/styles/fb-image/public/medien/2332/bilder/nutria_800px-myocastor_coypus_philippe_amelant.jpg?itok=ayawqYVJ")
 nutria.photo.attach(io: file, filename: "nutria.jpg", content_type: "image/jpg")
@@ -161,7 +161,7 @@ ferret = Animal.new(
   behaviour: "walk",
   colour: "brown",
   tail: "bushy",
-  legs: "short",
+  legs: "short"
 )
 file = URI.open("https://cdn.britannica.com/59/161459-050-CD289312/ferret-mammals-wild-North-America-Reintroduction-programs-2008.jpg")
 ferret.photo.attach(io: file, filename: "ferret.jpg", content_type: "image/jpg")
@@ -179,11 +179,88 @@ rat = Animal.new(
   behaviour: "walk",
   colour: "brown",
   tail: "pointy",
-  legs: "short",
+  legs: "short"
 )
+
 file = URI.open("https://images.newscientist.com/wp-content/uploads/2017/07/14151046/rexfeatures_3272875a.jpg")
 rat.photo.attach(io: file, filename: "rat.jpg", content_type: "image/jpg")
 rat.save!
+
+# Lynx
+lynx = Animal.new(
+  name: "lynx",
+  details: "Lynx are long-legged, large-pawed cats with tufted ears,
+    hairy soles, and a broad, short head. The coat,
+    which forms a bushy ruff on the neck,
+    is tawny to cream in colour and somewhat mottled with brown and black;
+    the tail tip and ear tufts are black.
+    In winter the fur is dense and soft.",
+  classification: "mammal",
+  habitat: "forest",
+  behaviour: "walk",
+  colour: "brown",
+  tail: "pointy",
+  legs: "long"
+)
+
+file = URI.open("https://images.newscientist.com/wp-content/uploads/2021/01/19163325/european-lynx-_web.jpg?width=800")
+lynx.photo.attach(io: file, filename: "lynx.jpg", content_type: "image/jpg")
+lynx.save!
+
+# Badger
+badger = Animal.new(
+  name: "badger",
+  details: "Big families, big appetites and big personalities.
+    Badgers are a wood's ruling clan.
+    They’re playful, house proud and expert foragers.",
+  classification: "mammal",
+  habitat: "forest",
+  behaviour: "walk",
+  colour: "Black/White striped",
+  tail: "furry",
+  legs: "short"
+)
+
+file = URI.open("https://www.thoughtco.com/thmb/1RMKewaHXz-tw9e68kBdt_3T5Fc=/768x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/169447610-56a008a75f9b58eba4ae8fb7.jpg")
+badger.photo.attach(io: file, filename: "badger.jpg", content_type: "image/jpg")
+badger.save!
+
+# Pine Marten
+pine_marten = Animal.new(
+  name: "Pine Marten",
+  details: " Mostly found in the north of the UK,
+    particularly Scotland, the Pine Marten prefers woodland habitats,
+    climbing very well and living in tree holes and old bird nests.
+    It feeds on small rodents, birds, eggs, insects and fruit,",
+  classification: "mammal",
+  habitat: "forest",
+  behaviour: "walk",
+  colour: "brown",
+  tail: "fluffy",
+  legs: "short"
+)
+
+file = URI.open("https://ichef.bbci.co.uk/news/976/cpsprodpb/890A/production/_119928053_pinemarten.jpg")
+pine_marten.photo.attach(io: file, filename: "pine_marten.jpg", content_type: "image/jpg")
+pine_marten.save!
+
+# Red Squirrel
+squirrel = Animal.new(
+  name: "Red Squirrel",
+  details: " The red squirrel has a chestnut upper body,
+  with a cream underside, noticeable ear tufts and a fluffy tail,
+  which is almost the same length as its body",
+  classification: "mammal",
+  habitat: "forest",
+  behaviour: "walk",
+  colour: "red",
+  tail: "fluffy",
+  legs: "short"
+)
+
+file = URI.open("https://www.mammal.org.uk/wp-content/uploads/2021/09/rsq-768x768.jpg")
+red_squirrel.photo.attach(io: file, filename: "red_squirrel.jpg", content_type: "image/jpg")
+red_squirrel.save!
 
 
 Finding.create!(picture: "red_fox_spotting.jpg", date: "2020-12-14", address: "Schlosspark Heltorf, Heltorfer Schlossallee, Duesseldorf, Germany", latitude: 51.336731, longitude: 6.769210, user: user0, animal: red_fox)

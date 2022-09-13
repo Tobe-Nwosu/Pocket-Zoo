@@ -386,12 +386,12 @@ koala = Animal.new(
   up to twenty hours a day. They are asocial animals and their claws can scar you for life",
   classification: "mammal",
   habitat: "forest",
-  behaviour: "walk",
-  colour: "grey",
-  tail: "fluffy",
+  behaviour: "crawl",
+  colour: "white",
+  tail: "bushy",
   legs: "short"
 )
-file = URI.open("https://en.wikipedia.org/wiki/Koala#/media/File:Koala_climbing_tree.jpg")
+file = URI.open("https://fac.img.pmdstatic.net/fit/https.3A.2F.2Fi.2Epmdstatic.2Enet.2Ffac.2F2022.2F08.2F12.2F84d69884-bdcd-44a9-90c9-d3be0c414bf0.2Ejpeg/1120x747/quality/80/thumbnail.jpg")
 koala.photo.attach(io: file, filename: "koala.jpg", content_type: "image/jpg")
 koala.save!
 
@@ -402,13 +402,13 @@ kangaroo = Animal.new(
   and a small head. Like most marsupials, female kangaroos have a pouch called a
   marsupium in which joeys complete postnatal development.",
   classification: "mammal",
-  habitat: "forest",
-  behaviour: "jump",
-  colour: "light brown",
-  tail: "long",
+  habitat: "countryside",
+  behaviour: "run",
+  colour: "brown",
+  tail: "Pointy",
   legs: "long"
 )
-file = URI.open("https://fac.img.pmdstatic.net/fit/https.3A.2F.2Fi.2Epmdstatic.2Enet.2Ffac.2F2022.2F08.2F12.2F84d69884-bdcd-44a9-90c9-d3be0c414bf0.2Ejpeg/1120x747/quality/80/thumbnail.jpg")
+file = URI.open("https://media.npr.org/assets/img/2018/12/10/roger-the-kangaroo-sanctuary-alice-springs-2_custom-e0dfceba6d2665cc8cc0daa5a57eae2bcda46ad8-s1100-c50.jpg")
 kangaroo.photo.attach(io: file, filename: "Kangaroo.jpg", content_type: "image/jpg")
 kangaroo.save!
 
@@ -486,11 +486,11 @@ tardigrade = Animal.new(
   details: "Tardigrades also known as water bears. They are among the most resilient animals known with individual
   species able to survive extreme conditions such as exposure to extreme temperatures, pressures, air deprivation,
   radiation, dehydration, and starvation. Tardigrades are usually about 0.5 mm long when fully grown.",
-  classification: "???",
-  habitat: "???",
-  behaviour: "???",
-  colour: "???",
-  tail: "???",
+  classification: "microfauna",
+  habitat: "water",
+  behaviour: "swim",
+  colour: "brown",
+  tail: "none",
   legs: "short"
 )
 

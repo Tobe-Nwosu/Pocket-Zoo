@@ -1,5 +1,8 @@
 
 <div class="banner" style="background-image: url(<%= asset_path "wallpaperflare.com_wallpaper.jpg"%>)">
+
+<%= link_to "Friendslist", friendships_path, class: "btn btn-nav" %>
+
   <div class="homepage-logo">
     <%= image_tag "Pocket-Zoo-1.png" %>
   </div>
@@ -26,6 +29,7 @@
             <% end %>
           </div>
         </div>
+
       </div>
       <% 5.times do %>
         <div class="carousel-item">

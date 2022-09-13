@@ -492,7 +492,84 @@ tardigrade = Animal.new(
   colour: "???",
   tail: "???",
   legs: "short"
-  
+)
+
+# Lynx
+lynx = Animal.new(
+  name: "lynx",
+  details: "Lynx are long-legged, large-pawed cats with tufted ears,
+    hairy soles, and a broad, short head. The coat,
+    which forms a bushy ruff on the neck,
+    is tawny to cream in colour and somewhat mottled with brown and black;
+    the tail tip and ear tufts are black.
+    In winter the fur is dense and soft.",
+  classification: "mammal",
+  habitat: "forest",
+  behaviour: "walk",
+  colour: "brown",
+  tail: "pointy",
+  legs: "long"
+)
+
+file = URI.open("https://images.newscientist.com/wp-content/uploads/2021/01/19163325/european-lynx-_web.jpg?width=800")
+lynx.photo.attach(io: file, filename: "lynx.jpg", content_type: "image/jpg")
+lynx.save!
+
+# Badger
+badger = Animal.new(
+  name: "badger",
+  details: "Big families, big appetites and big personalities.
+    Badgers are a wood's ruling clan.
+    They’re playful, house proud and expert foragers.",
+  classification: "mammal",
+  habitat: "forest",
+  behaviour: "walk",
+  colour: "Black/White striped",
+  tail: "bushy",
+  legs: "short"
+)
+
+file = URI.open("https://www.thoughtco.com/thmb/1RMKewaHXz-tw9e68kBdt_3T5Fc=/768x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/169447610-56a008a75f9b58eba4ae8fb7.jpg")
+badger.photo.attach(io: file, filename: "badger.jpg", content_type: "image/jpg")
+badger.save!
+
+# Pine Marten
+pine_marten = Animal.new(
+  name: "Pine Marten",
+  details: " Mostly found in the north of the UK,
+    particularly Scotland, the Pine Marten prefers woodland habitats,
+    climbing very well and living in tree holes and old bird nests.
+    It feeds on small rodents, birds, eggs, insects and fruit,",
+  classification: "mammal",
+  habitat: "forest",
+  behaviour: "walk",
+  colour: "brown",
+  tail: "bushy",
+  legs: "short"
+)
+
+file = URI.open("https://ichef.bbci.co.uk/news/976/cpsprodpb/890A/production/_119928053_pinemarten.jpg")
+pine_marten.photo.attach(io: file, filename: "pine_marten.jpg", content_type: "image/jpg")
+pine_marten.save!
+
+# Red Squirrel
+squirrel = Animal.new(
+  name: "Red Squirrel",
+  details: " The red squirrel has a chestnut upper body,
+  with a cream underside, noticeable ear tufts and a fluffy tail,
+  which is almost the same length as its body",
+  classification: "mammal",
+  habitat: "forest",
+  behaviour: "walk",
+  colour: "red",
+  tail: "bushy",
+  legs: "short"
+)
+
+file = URI.open("https://www.mammal.org.uk/wp-content/uploads/2021/09/rsq-768x768.jpg")
+squirrel.photo.attach(io: file, filename: "red_squirrel.jpg", content_type: "image/jpg")
+squirrel.save!
+
 Finding.create!(picture: "red_fox_spotting.jpg", date: "2020-12-14", address: "Schlosspark Heltorf, Heltorfer Schlossallee, Duesseldorf, Germany", latitude: 51.336731, longitude: 6.769210, user: user0, animal: red_fox)
 Finding.create!(picture: "gray_fox_spotting.jpg", date: "2021-12-14", address: "Hermannsdenkmal, Grotenburg 5, Detmold, Germany", latitude: 51.910070, longitude: 8.840930, user: user0, animal: gray_fox)
 Finding.create!(picture: "rat_spotting.jpg", date: "2021-12-14", address: "Palito Restaurant, Berger Str. 14, Duesseldorf, Germany", latitude: 51.224450, longitude: 6.772480, user: user0, animal: rat)

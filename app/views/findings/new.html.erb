@@ -1,7 +1,7 @@
 
-<div class = "text-center">
-  <h1>You found a new animal!</h1>
-  <p>You saw a <%= @animal.name %> and didnt faint</p>
+<div class = "text-center mt-3">
+  <h1>Congratulations!</h1>
+  <p>You found a <%= @animal.name.downcase %> </p>
 </div>
 
 <div class="card-vertical">
@@ -9,11 +9,15 @@
   <div class="card-vertical-infos">
     <div class="card-vertical-description">
       <%= simple_form_for([@animal, @finding]) do |f| %>
-      <%= f.input :comment %>
-      <%= f.input :address %>
-      <%= f.input :photo %>
+      <%= f.input :comment, :label => "Notes" %>
+      <%= f.input :address, :label => "Where did you find it?", input_html: { class: "rounded-input" } %>
+      <%= f.input :photo, input_html: { class: "rounded-input" } %>
       <%= f.input :date, :as => :hidden, :input_html => { :value => Date.today.strftime("%a, %e %b %Y")} %>
-      <%= f.button :submit, class: "btn btn-highlight card-vertical-bottom" %>
+      <div class="d-flex justify-content-center">
+        <%= button_tag(type: 'submit', class: "btn btn-highlight card-vertical-bottom py-3 px-5") do %>
+          <i class="fa-solid fa-plus"></i>
+        <% end %>
+      </div>
     <% end %>
     </div>
   </div>
@@ -22,5 +26,8 @@
 
 
 
-
-<%= link_to "Back to the animal", animal_path(@animal), class: "btn btn-nav"  %>
+<div class="d-flex justify-content-center">
+  <%= link_to(:back) do %>
+    <button class="btn btn-nav px-5"><i class="fa-solid fa-arrow-left text-black"></i></button>
+  <% end %>
+</div>

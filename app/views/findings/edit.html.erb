@@ -3,16 +3,22 @@
 <div class="card-vertical">
   <div class="card-vertical-infos">
     <%# insert photo here if possible %>
-    <div class="card-vertical-description">
+    <div class="card-vertical-description p-0">
       <%= simple_form_for([@animal, @finding]) do |f| %>
-      <%= Date.today.strftime("%a, %e %b %Y") %>
+      <%= f.input :date, :as => :hidden, :input_html => { :value => @finding.date} %>
       <%= f.input :comment %>
-      <%= f.input :address %>
-      <%= f.input :photo %>
-      <%= f.button :submit, class: "btn btn-highlight card-vertical-bottom" %>
+      <%= f.input :address, input_html: { class: "rounded-input" } %>
+      <%= f.input :photo, input_html: { class: "rounded-input" } %>
+      <div class="d-flex justify-content-center">
+        <%= f.button :submit, 'Update', class: "btn btn-highlight card-vertical-bottom" %>
+      </div>
     <% end %>
     </div>
   </div>
 </div>
 
-<%= link_to "Back to the finding", findings_path, class: "btn btn-nav"  %>
+<div class="d-flex justify-content-center">
+  <%= link_to(:back) do %>
+    <button class="btn btn-nav px-5"><i class="fa-solid fa-arrow-left text-black"></i></button>
+  <% end %>
+</div>

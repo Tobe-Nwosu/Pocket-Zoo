@@ -1,1 +1,14 @@
 // Specific CSS for your home-page
+
+article {
+  background-color: #e8ebdd;
+}
+
+.homepage-logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+  img {
+    width: 100px;
+  }
+}

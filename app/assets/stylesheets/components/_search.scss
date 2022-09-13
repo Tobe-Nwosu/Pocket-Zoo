@@ -13,6 +13,7 @@
   height: 3.5rem;
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
   border: 1px solid #E7E7E7;
+  border-radius: 30px;
   width: 300px;
   display: block;
   margin-left: auto;
@@ -27,7 +28,11 @@
 
 .form-control{
 
-  border-radius: 30px;
+  // border-radius: 30px;
+}
+
+.search-bar {
+  background-color: #3F7D20;
 }
 
 @media only screen and (max-device-width: 415px) {

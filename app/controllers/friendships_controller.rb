@@ -2,6 +2,16 @@ class FriendshipsController < ApplicationController
   def index
     @friendships = policy_scope(Friendship)
     @friendships = Friendship.all
+    @users = User.all
+
+    if params[:query].present?
+      @users = @users.where('username ILIKE ?', "%#{params[:query]}%")
+    end
+
+    respond_to do |format|
+      format.html # Follow regular flow of Rails
+      format.text { render partial: 'foundfriends.html.erb', locals: { users: @users } }
+    end
   end
 
   def show

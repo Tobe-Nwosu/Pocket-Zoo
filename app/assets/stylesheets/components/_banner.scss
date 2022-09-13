@@ -2,7 +2,7 @@
   background-size: cover;
   background-position: center;
   padding: 150px 0;
-  height: 100vh;
+  height: calc(100vh - 111px);
   width: 100%;
   opacity: 0.85;
 }
@@ -15,7 +15,7 @@
   font-family: 'Luckiest Guy', cursive;
 }
 
-.banner p {
+.banner h2 {
   font-size: 20px;
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);

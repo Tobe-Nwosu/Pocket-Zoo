@@ -34,8 +34,8 @@ Rails.application.reloader.to_prepare do
     custom_fields: {
       category: 'animal_category',
       icon_name: 'magnifying-glass',
-      color: '348, 25%, 61%',
-      background_color: '348, 25%, 61%, 0.2'
+      color: '53, 93%, 37%',
+      background_color: '53, 93%, 37%, 0.2'
     },
     description: 'You have found 10 animals!'
   }, {
@@ -44,8 +44,8 @@ Rails.application.reloader.to_prepare do
     custom_fields: {
       category: 'animal_category',
       icon_name: 'magnifying-glass',
-      color: '348, 25%, 61%',
-      background_color: '348, 25%, 61%, 0.2'
+      color: '0, 0%, 75%',
+      background_color: '0, 0%, 75%, 0.2'
     },
     description: 'You have found 50 animals!'
   }, {
@@ -54,8 +54,8 @@ Rails.application.reloader.to_prepare do
     custom_fields: {
       category: 'animal_category',
       icon_name: 'magnifying-glass',
-      color: '348, 25%, 61%',
-      background_color: '348, 25%, 61%, 0.2'
+      color: '51, 100%, 50%',
+      background_color: '51, 100%, 50%, 0.2'
     },
     description: 'You have found 100 animals!'
   }, {
@@ -64,8 +64,8 @@ Rails.application.reloader.to_prepare do
     custom_fields: {
       category: 'animal_category',
       icon_name: 'otter',
-      color: '348, 25%, 61%',
-      background_color: '348, 25%, 61%, 0.2'
+      color: '203, 39%, 44%',
+      background_color: '203, 39%, 44%, 0.2'
     },
     description: 'You have found the first mammal!'
   }, {
@@ -74,8 +74,8 @@ Rails.application.reloader.to_prepare do
     custom_fields: {
       category: 'animal_category',
       icon_name: 'worm',
-      color: '348, 25%, 61%',
-      background_color: '348, 25%, 61%, 0.2'
+      color: '346, 84%, 61%',
+      background_color: '346, 84%, 61%, 0.2'
     },
     description: 'You have found the first reptile!'
   }, {
@@ -84,8 +84,8 @@ Rails.application.reloader.to_prepare do
     custom_fields: {
       category: 'animal_category',
       icon_name: 'feather',
-      color: '348, 25%, 61%',
-      background_color: '348, 25%, 61%, 0.2'
+      color: '165, 19%, 40%',
+      background_color: '165, 19%, 40%, 0.2'
     },
     description: 'You have found the first bird!'
   }, {
@@ -94,8 +94,8 @@ Rails.application.reloader.to_prepare do
     custom_fields: {
       category: 'animal_category',
       icon_name: 'spider',
-      color: '348, 25%, 61%',
-      background_color: '348, 25%, 61%, 0.2'
+      color: '182, 43%, 76%',
+      background_color: '182, 43%, 76%, 0.2'
     },
     description: 'You have found the first insect!'
   }, {
@@ -104,8 +104,8 @@ Rails.application.reloader.to_prepare do
     custom_fields: {
       category: 'animal_category',
       icon_name: 'skull',
-      color: '348, 25%, 61%',
-      background_color: '348, 25%, 61%, 0.2'
+      color: '76, 37%, 61%',
+      background_color: '76, 37%, 61%, 0.2'
     },
     description: 'You have deleted 3 animals you found!'
   }, {
@@ -114,8 +114,8 @@ Rails.application.reloader.to_prepare do
     custom_fields: {
       category: 'animal_category',
       icon_name: 'dna',
-      color: '348, 25%, 61%',
-      background_color: '348, 25%, 61%, 0.2'
+      color: '233, 100%, 86%',
+      background_color: '233, 100%, 86%, 0.2'
     },
     description: 'You have collected 42 mammals, 42 insects, 42 birds and 42 reptiles!'
   }].each do |attrs|

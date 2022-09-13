@@ -49,8 +49,8 @@
       <% current_user.badges.each do |badge| %>
         <div class="badge">
           <%# icon(badge.custom_fields[:icon_name], 'font-awesome', class: 'fa-solid badge-cover-img')%>
-          <div class="badge-cover-img">
-            <%= icon('fa-solid', badge.custom_fields[:icon_name], class: 'fa-3x', style:"color:hsl(badge.custom_fields[:color]);" )%>
+          <div class="badge-cover-img", style="background-color: hsla(<%= badge.custom_fields[:background_color] %>); border-color: hsl(<%= badge.custom_fields[:color] %>) ">
+            <%= icon('fa-solid', badge.custom_fields[:icon_name], class: 'fa-3x', style: "color: hsl(#{badge.custom_fields[:color]});")%>
           </div>
           <h2><%= badge.name %></h2>
           <p><%= badge.description %></p>

@@ -35,6 +35,7 @@ class FindingsController < ApplicationController
     else
       render :new, status: :unprocessable_entity
     end
+    flash[:notice] = "You received a new badge! Check out your achievements!" if config.add_observer 'ReputationChangeObserver'
   end
 
   def edit

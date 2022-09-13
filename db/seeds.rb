@@ -567,8 +567,8 @@ squirrel = Animal.new(
 )
 
 file = URI.open("https://www.mammal.org.uk/wp-content/uploads/2021/09/rsq-768x768.jpg")
-red_squirrel.photo.attach(io: file, filename: "red_squirrel.jpg", content_type: "image/jpg")
-red_squirrel.save!
+squirrel.photo.attach(io: file, filename: "red_squirrel.jpg", content_type: "image/jpg")
+squirrel.save!
 
 Finding.create!(picture: "red_fox_spotting.jpg", date: "2020-12-14", address: "Schlosspark Heltorf, Heltorfer Schlossallee, Duesseldorf, Germany", latitude: 51.336731, longitude: 6.769210, user: user0, animal: red_fox)
 Finding.create!(picture: "gray_fox_spotting.jpg", date: "2021-12-14", address: "Hermannsdenkmal, Grotenburg 5, Detmold, Germany", latitude: 51.910070, longitude: 8.840930, user: user0, animal: gray_fox)

@@ -6,19 +6,25 @@
         <% else %>
         <%= image_tag @finding.picture, class: "card-img-top card-vertical-cover-img", crop: :fill %>
         <% end %>
-
+  <% if @finding.user == current_user %>
+    <% name_placeholder = 'You' %>
+  <% else %>
+    <% name_placeholder = @finding.user.username %>
+  <% end %>
   <div class="card-vertical-infos">
     <div class="card-vertical-description">
-      <p>You found this animal on <strong><%= @finding.date %></strong>.</p>
+      <p><%= name_placeholder %> found this animal on <strong><%= @finding.date %></strong>.</p>
       <p>This animal was found at <strong><%= @finding.address %></strong>.</p>
       <br>
-      <p>You also added a comment: <br><%= @finding.comment %></p>
+      <p><%= name_placeholder %> also added this note: <br><em>"<%= @finding.comment %>"</em></p>
 
     </div>
-    <div class="d-flex justify-content-between">
-      <%= link_to '<i class="fa-solid fa-trash text-black"></i>'.html_safe, finding_path(@finding), class: "btn btn-ghost px-3 d-flex align-items-center ms-0", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
-      <%= link_to '<i class="fa-solid fa-pen-to-square"></i>'.html_safe, edit_finding_path(@finding), class: "btn btn-highlight px-3 py-2 m-0" %>
-    </div>
+    <% if @finding.user == current_user %>
+      <div class="d-flex justify-content-between">
+        <%= link_to '<i class="fa-solid fa-trash text-black"></i>'.html_safe, finding_path(@finding), class: "btn btn-ghost px-3 d-flex align-items-center ms-0", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+        <%= link_to '<i class="fa-solid fa-pen-to-square"></i>'.html_safe, edit_finding_path(@finding), class: "btn btn-highlight px-3 py-2 m-0" %>
+      </div>
+    <% end %>
   </div>
 </div>
 

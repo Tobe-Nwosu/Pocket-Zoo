@@ -7,12 +7,13 @@ class AnimalsController < ApplicationController
     if params.has_key?(:direct)
       @animals = Animal.search_by_name_and_details(params[:direct][:query])
     elsif params.has_key?(:animal)
-      @animals = Animal.where(classification: params[:animal][:classification],
-                              habitat: params[:animal][:habitat],
-                              behaviour: params[:animal][:behaviour],
-                              colour: params[:animal][:colour],
-                              tail: params[:animal][:tail],
-                              legs: params[:animal][:legs])
+      @animals = Animal.all
+      @animals = @animals.where(classification: params[:animal][:classification]) if params[:animal][:classification].present?
+      @animals = @animals.where(habitat: params[:animal][:habitat]) if params[:animal][:habitat].present?
+      @animals = @animals.where(behaviour: params[:animal][:behaviour]) if params[:animal][:behaviour].present?
+      @animals = @animals.where(colour: params[:animal][:colour]) if params[:animal][:colour].present?
+      @animals = @animals.where(tail: params[:animal][:tail]) if params[:animal][:tail].present?
+      @animals = @animals.where(legs: params[:animal][:legs]) if params[:animal][:legs].present?
     else
       @animals = Animal.all
     end

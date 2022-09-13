@@ -1,0 +1,58 @@
+.badges {
+  color: black;
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.badge {
+  background-color: white;
+  color: black;
+  margin: 0em 0em 2em 0em;
+  width: 6.5rem;
+  height: 12.5rem;
+  padding: 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.badge-cover-img {
+  object-fit: cover;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  border: #3F7D20 8px solid;
+  margin-top: 1rem;
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.badge .fa-solid {
+  color: #3F7D20;
+}
+
+.badge h2 {
+  height: 2rem;
+  width: 100%;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 1rem 0 0 0;
+  white-space: normal;
+  padding: 0 0.2rem;
+}
+
+.badge p {
+  width: 100%;
+  font-size: 12px;
+  margin: 1rem 0 0 0;
+  font-weight: normal;
+  white-space: normal;
+  padding: 0 0.5rem;
+  opacity: 0.7;
+}

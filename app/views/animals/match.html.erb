@@ -1,5 +1,17 @@
-<h1 class="text-center">Search for your animal!</h1>
-<p class="text-center">Please select one field for every question.</p>
+<h1 class="text-center mt-4">Search for your animal!</h1>
+
+<form action="/animals">
+  <div class="d-flex justify-content-center my-4">
+    <div class="input-group rounded w-75">
+      <input type="search" class="form-control rounded" placeholder="Search" name="direct[query]" id="search_query" aria-label="Search" aria-describedby="search-addon" />
+      <button class="input-group-text border-0 search-bar" id="search-addon">
+        <i class="fas fa-search"></i>
+      </button>
+    </div>
+  </div>
+</form>
+
+<h3 class="text-center">Not sure what it was? Search below!</h3>
 
 <form action="/animals">
   <fieldset>
@@ -141,7 +153,7 @@
         </div>
       </div>
   </fieldset>
-  <div class="d-flex justify-content-center">
-    <button type="submit" class="btn btn-highlight px-4">Go!</button>
+  <div class="d-flex justify-content-center mb-3">
+    <button type="submit" class="btn btn-highlight px-4 mb-5">Go!</button>
   </div>
 </form>

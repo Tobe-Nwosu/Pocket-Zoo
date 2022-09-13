@@ -24,6 +24,8 @@
   width: 4rem;
   border-radius: 50%;
   border: #3F7D20 8px solid;
+  //border: hsl(badge.custom_fields[:color]);
+  //background-color: hsla(badge.custom_fields[:background_color]);
   margin-top: 1rem;
   margin-left: 1.25rem;
   margin-right: 1.25rem;
@@ -35,6 +37,7 @@
 
 .badge .fa-solid {
   color: #3F7D20;
+  //color: hsl(badge.custom_fields[:color]);
 }
 
 .badge h2 {

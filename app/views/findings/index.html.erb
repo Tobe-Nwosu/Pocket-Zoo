@@ -50,7 +50,7 @@
         <div class="badge">
           <%# icon(badge.custom_fields[:icon_name], 'font-awesome', class: 'fa-solid badge-cover-img')%>
           <div class="badge-cover-img">
-            <%= icon('fa-solid', badge.custom_fields[:icon_name], class: 'fa-3x' )%>
+            <%= icon('fa-solid', badge.custom_fields[:icon_name], class: 'fa-3x', style:"color:hsl(badge.custom_fields[:color]);" )%>
           </div>
           <h2><%= badge.name %></h2>
           <p><%= badge.description %></p>

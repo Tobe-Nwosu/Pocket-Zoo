@@ -30,7 +30,6 @@ class FindingsController < ApplicationController
     @finding.user = current_user
     @animal = Animal.find(params[:animal_id])
     @finding.animal = @animal
-    user_badge_count = current_user.badges.count
     if @finding.save
       redirect_to finding_path(@finding)
       # Type in your custom notification for the pitch here

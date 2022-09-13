@@ -7,9 +7,9 @@ Rails.application.routes.draw do
   # root "articles#index"
   get '/match', to: 'animals#match', as: 'match'
   resources :users do
-    resources :friendships, only: %i[new create]
+   resources :friendships, only: %i[new create]
   end
-  resources :friendships, only: %i[ create index show destroy]
+  resources :friendships, only: %i[edit update index show destroy]
   resources :animals, only: %i[index match show] do
     resources :findings, only: %i[new create]
   end

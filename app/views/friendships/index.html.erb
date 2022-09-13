@@ -1,10 +1,17 @@
-<% @friendships.each do |f| %>
-<%= f.receiver.username%>
-<% if f.status %>
-<p><%= f.receiver.username%> is your friend<p>
+
+<% if @friendships.count > 0 %>
+<p> You have <%= @friendships.count %> friends <p>
 <% else %>
-<p><%= f.receiver.username%> is thinking about being your friend but has'nt decided yet<p>
-<% end %>
+<p> you have no friends go and make some you turd <p>
 <% end %>
 
-<%= @friendships.count %>
+<% @friendships.each do |f| %>
+<div class="cards">
+      <div class="card-horizontal">
+        <%= image_tag f.receiver.avatar, class: "card-horizontal img" %>
+        <div class="card-horizontal-infos">
+          <h2><%= f.receiver.username %></h2>
+        </div>
+      </div>
+</div>
+<% end %>

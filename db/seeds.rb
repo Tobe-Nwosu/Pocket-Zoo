@@ -22,10 +22,10 @@ puts " (-_-)    Huh ? !"
 puts "(     )                       *BANG* "
 puts '(") (") '
 
-user0 = User.create!(username: "L4ur4", email: "random@mail.com", password: 'oVGyU8OkLscwtOLiq', avatar: "Bel.png")
-user1 = User.create!(username: "N1c0l4", email: "nic@fie.com", password: 'p5VQO2p6NYOOdMP6E94Qmu', avatar: "Bol.jpg")
-user2 = User.create!(username: "T0b3", email: "even@more.com", password: '5b9cIXNwREWE5vpVJiRYwXb', avatar: "Bal.jpg")
-user3 = User.create!(username: "Ch4r1y", email: "random@even.com", password: 'WBvDylx03hqH5625ngro', avatar: "Boul.jpg")
+user0 = User.create!(username: "L4ur4", email: "random@mail.com", password: '123456', avatar: "Bel.png")
+user1 = User.create!(username: "N1c0l4", email: "nic@fie.com", password: '123456', avatar: "Bol.jpg")
+user2 = User.create!(username: "T0b3", email: "even@more.com", password: '123456', avatar: "Bal.jpg")
+user3 = User.create!(username: "Ch4r1y", email: "random@even.com", password: 'Imnevergettinghackedtho', avatar: "Boul.jpg")
 user4 = User.create!(username: "DuckLover123", email: "iamtheone@neo.com", admin: true, password: 'LauraGotBetter!', avatar: "Bil.jpg")
 
 slowworm = Animal.new(

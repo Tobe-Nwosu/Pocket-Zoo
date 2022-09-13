@@ -31,3 +31,6 @@
 
 en:
   hello: "Hello world"
+  merit:
+    granted_badge: "You received the badge '%{badge_name}' "
+    removed_badge: "You lost the badge '%{badge_name}'"

@@ -52,6 +52,10 @@ class FindingsController < ApplicationController
     @finding.animal = @animal
     if @finding.save
       redirect_to finding_path(@finding)
+      # Type in your custom notification for the pitch here
+      if finding.animal.classification == 'mammal'
+        flash[:notice] = "You received the badge 'Mammal Master'! Check out your achievements!"
+      end
     else
       render :new, status: :unprocessable_entity
     end

@@ -30,12 +30,16 @@ class FindingsController < ApplicationController
     @finding.user = current_user
     @animal = Animal.find(params[:animal_id])
     @finding.animal = @animal
+    user_badge_count = current_user.badges.count
     if @finding.save
       redirect_to finding_path(@finding)
+      # Type in your custom notification for the pitch here
+      if finding.animal.classification == 'mammal'
+        flash[:notice] = "You received the badge 'Mammal Master'! Check out your achievements!"
+      end
     else
       render :new, status: :unprocessable_entity
     end
-    flash[:notice] = "You received a new badge! Check out your achievements!" if config.add_observer 'ReputationChangeObserver'
   end
 
   def edit

@@ -1,9 +1,28 @@
 class FindingsController < ApplicationController
   def index
     # if findings is empty, show something else
-    @my_findings = policy_scope(Finding)
+    if params[:classification]
+      if params[:classification] == 'all'
+        @my_findings = Finding.where(user: current_user).order(id: params[:date_order])
+      else
+        query = Finding.joins(:animal).where(user: current_user)
+        @my_queried_findings = query.select do |finding|
+          finding.animal.classification == params[:classification]
+        end
+        @my_findings = Finding.where(id: @my_queried_findings.map.pluck(:id)).order(id: params[:date_order])
+      end
+    else
+      @my_findings = Finding.where(user: current_user).order(id: :desc)
+    end
+    if params[:name] && params[:name] != ''
+      query = Finding.joins(:animal).where(user: current_user)
+      @my_queried_finding = query.select do |finding|
+        finding.animal.name == params[:name].capitalize
+      end
+      @my_findings = Finding.where(id: @my_queried_finding.map.pluck(:id)).order(id: params[:date_order])
+    end
     @findings = Finding.all
-    @markers = @my_findings.geocoded.map do |finding|
+    @markers = Finding.where(user: current_user).order(id: :desc).geocoded.map do |finding|
       {
         lat: finding.latitude,
         lng: finding.longitude,
@@ -11,6 +30,7 @@ class FindingsController < ApplicationController
         image_url: helpers.asset_url("Pocket-Zoo-1.png")
       }
     end
+    skip_policy_scope
   end
 
   def show

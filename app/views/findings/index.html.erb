@@ -1,4 +1,4 @@
-<div data-controller="tabs">
+<div data-controller="tabs" class="mb-5 pb-5">
   <ul class="list-inline tabs-underlined mb-5" >
     <li data-action="click->tabs#changeTab" data-tabs-target="tablink" class="tab-underlined active" id="findings">
       <span>My finds</span>
@@ -12,6 +12,50 @@
   </ul>
 
   <div data-tabs-target="tabcontent findings">
+    <div class="filter">
+
+        <div class="container">
+        <div class="row">
+              <div id="filter-panel" class="collapse filter-panel">
+                  <div class="panel panel-default">
+                      <div class="panel-body">
+                          <form class="form-inline" role="form" action="/findings">
+                              <div class="form-group">
+                                <label class="filter-col" style="margin-right:0;" for="pref-perpage">Species:</label>
+                                <select name="classification" id="pref-perpage" class="form-control">
+                                  <option selected="selected" value="mammal">Mammal</option>
+                                  <option value="reptile">Reptile</option>
+                                  <option value="bird">Bird</option>
+                                  <option value="insect">Insect</option>
+                                  <option selected="selected" value="all">All</option>
+                                </select>
+                              </div> <!-- form group [rows] -->
+                              <div class="form-group">
+                                <label class="filter-col" style="margin-right:0;" for="pref-search">Search animal name:</label>
+                                <input type="text" name="name" class="form-control input-sm" id="pref-search">
+                              </div><!-- form group [search] -->
+                              <div class="form-group">
+                                <label class="filter-col" style="margin-right:0;" for="pref-orderby">Order by date:</label>
+                                <select name="date_order" id="pref-orderby" class="form-control">
+                                  <option value="desc">Most recent first</option>
+                                  <option value="asc">Most recent last</option>
+                                </select>
+                              </div> <!-- form group [order by] -->
+                              <div class="form-group">
+                                <button type="submit" class="btn btn-default filter-col">
+                                  <span class="glyphicon glyphicon-record"></span> Save Settings
+                                </button>
+                              </div>
+                          </form>
+                      </div>
+                  </div>
+              </div>
+              <button type="button" class="btn btn-highlight" data-toggle="collapse" data-target="#filter-panel">
+                  <span class="glyphicon glyphicon-cog"></span> Filter findings
+              </button>
+          </div>
+        </div>
+      </div>
     <div class="cards">
       <% @my_findings.each do |finding| %>
         <%= link_to(finding_path(finding)) do %>
@@ -22,7 +66,7 @@
             <%= image_tag finding.picture, class: "card-img-top" %>
           <% end %>
             <div class="card-horizontal-infos">
-              <h2><%= finding.animal.name %></h2>
+              <h2 class="mt-5"><%= finding.animal.name %></h2>
               <p><%= finding.address %></p>
               <span><%= finding.date %></span>
               <%# <div class="card-vertical-bottom">

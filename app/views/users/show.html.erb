@@ -4,7 +4,7 @@
         <div class="card-horizontal-infos">
           <h2><%= @user.username %></h2>
           <div>
-          <%= link_to "Friend", {:action => :create, :controller => :friendships}, :method => :post, class: "btn btn-nav" %>
+          <%= button_to "Friend", {:action => :create, :controller => :friendships}, :method => :post, class: "btn btn-nav" %>
           <%= link_to "Unfriend", friendship_path, class: 'btn btn-nav', data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
           </div>
         </div>

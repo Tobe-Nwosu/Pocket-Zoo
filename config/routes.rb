@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   resources :users do
     resources :friendships, only: %i[new create]
   end
-  resources :friendships, only: %i[new create index show destroy]
+  resources :friendships, only: %i[ create index show destroy]
   resources :animals, only: %i[index match show] do
     resources :findings, only: %i[new create]
   end

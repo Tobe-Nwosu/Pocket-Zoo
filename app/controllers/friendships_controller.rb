@@ -22,7 +22,7 @@ class FriendshipsController < ApplicationController
     if @friendship.save
       redirect_to root_path
     else
-      render :new, status: :unprocessable_entity
+      render root_path
     end
   end
 

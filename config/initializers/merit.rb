@@ -20,7 +20,7 @@ end
 Rails.application.reloader.to_prepare do
   [{
     id: 1,
-    name: 'just-registered',
+    name: 'Just Registered',
     custom_fields: {
       category: 'animal_category',
       icon_name: 'baby',
@@ -117,7 +117,7 @@ Rails.application.reloader.to_prepare do
       color: '233, 100%, 86%',
       background_color: '233, 100%, 86%, 0.2'
     },
-    description: 'You have collected 42 mammals, 42 insects, 42 birds and 42 reptiles!'
+    description: 'You have collected 42 animals of each species!'
   }].each do |attrs|
     Merit::Badge.create! attrs
   end

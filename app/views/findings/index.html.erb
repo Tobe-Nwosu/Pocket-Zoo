@@ -46,7 +46,18 @@
 
   <div data-tabs-target="tabcontent achievements" class="d-none">
     <div class="badges">
-      <% current_user.badges.each do |badge| %>
+      <%# Uncomment the badges you want to add to a profile %>
+      <%# <% current_user.add_badge(1) %>
+      <%# <% current_user.add_badge(2) %>
+      <%# <% current_user.add_badge(3) %>
+      <%# <% current_user.add_badge(4) %>
+      <%# <% current_user.add_badge(5) %>
+      <%# <% current_user.add_badge(6) %>
+      <%# <% current_user.add_badge(7) %>
+      <%# <% current_user.add_badge(8) %>
+      <%# <% current_user.add_badge(9) %>
+      <%# <% current_user.add_badge(10) %>
+      <%# <% current_user.badges.each do |badge| %>
         <div class="badge">
           <%# icon(badge.custom_fields[:icon_name], 'font-awesome', class: 'fa-solid badge-cover-img')%>
           <div class="badge-cover-img", style="background-color: hsla(<%= badge.custom_fields[:background_color] %>); border-color: hsl(<%= badge.custom_fields[:color] %>) ">

@@ -4,7 +4,7 @@ class Finding < ApplicationRecord
 
   validates :date, presence: true
   validates :address, presence: true
-  validates :photo, attached: true
+  # validates :photo, attached: true
   has_one_attached :photo
 
   geocoded_by :address

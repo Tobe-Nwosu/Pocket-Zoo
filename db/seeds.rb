@@ -408,7 +408,7 @@ kangaroo = Animal.new(
   tail: "Pointy",
   legs: "long"
 )
-file = URI.open("https://media.npr.org/assets/img/2018/12/10/roger-the-kangaroo-sanctuary-alice-springs-2_custom-e0dfceba6d2665cc8cc0daa5a57eae2bcda46ad8-s1100-c50.jpg")
+file = URI.open("https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Kangaroo_Australia_01_11_2008_-_retouch.JPG/800px-Kangaroo_Australia_01_11_2008_-_retouch.JPG")
 kangaroo.photo.attach(io: file, filename: "Kangaroo.jpg", content_type: "image/jpg")
 kangaroo.save!
 

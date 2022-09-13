@@ -8,47 +8,51 @@
   align-items: center;
 }
 
-// Cards with the picture on the top
 .badge {
   background-color: white;
   color: black;
   margin: 0em 0em 2em 0em;
-  width: 9rem;
-  // add shadow
+  width: 6.5rem;
+  height: 12.5rem;
+  padding: 0;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  position: relative;
-  white-space: normal;
 }
 
 .badge-cover-img {
   object-fit: cover;
-  padding: 1rem;
+  height: 4rem;
+  width: 4rem;
   border-radius: 50%;
   border: #3F7D20 8px solid;
-  color: #3F7D20;
-  margin: 0.3rem;
+  margin-top: 1rem;
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.badge-infos {
-  width: 100%;
-  padding: 14px;
-  align-items: center;
-  // display: block;
-  padding: 1em;
-  // margin-bottom: 0.6rem;
-  // position: relative;
+.badge .fa-solid {
+  color: #3F7D20;
 }
 
 .badge h2 {
-  font-size: 24px;
+  height: 2rem;
+  width: 100%;
+  font-size: 18px;
   font-weight: bold;
-  margin: 0;
+  margin: 1rem 0 0 0;
+  white-space: normal;
+  padding: 0 0.2rem;
 }
 
 .badge p {
-  font-size: 14px;
-  opacity: .7;
-  margin: 0;
-  // text-align: justify;
+  width: 100%;
+  font-size: 12px;
+  margin: 1rem 0 0 0;
   font-weight: normal;
+  white-space: normal;
+  padding: 0 0.5rem;
+  opacity: 0.7;
 }

@@ -49,12 +49,11 @@
       <% current_user.badges.each do |badge| %>
         <div class="badge">
           <%# icon(badge.custom_fields[:icon_name], 'font-awesome', class: 'fa-solid badge-cover-img')%>
-          <%= icon('fa-solid', badge.custom_fields[:icon_name], class: 'fa-3x badge-cover-img' )%>
-          <div class="badge-infos">
-            <h2><%= badge.name %></h2>
-            <br>
-            <p><%= badge.description %></p>
+          <div class="badge-cover-img">
+            <%= icon('fa-solid', badge.custom_fields[:icon_name], class: 'fa-3x' )%>
           </div>
+          <h2><%= badge.name %></h2>
+          <p><%= badge.description %></p>
         </div>
       <% end %>
     </div>

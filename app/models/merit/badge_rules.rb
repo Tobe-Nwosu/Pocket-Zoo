@@ -76,7 +76,7 @@ module Merit
       end
 
       grant_on 'findings#destroy', badge_id: 9, badge: 'Serial killer', to: :action_user do |finding|
-        finding.count == 3
+        finding.user.findings.count == 3
       end
 
 

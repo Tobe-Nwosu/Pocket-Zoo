@@ -500,7 +500,7 @@ tardigrade = Animal.new(
 
 # Lynx
 lynx = Animal.new(
-  name: "lynx",
+  name: "Lynx",
   details: "Lynx are long-legged, large-pawed cats with tufted ears,
     hairy soles, and a broad, short head. The coat,
     which forms a bushy ruff on the neck,
@@ -521,7 +521,7 @@ lynx.save!
 
 # Badger
 badger = Animal.new(
-  name: "badger",
+  name: "Badger",
   details: "Big families, big appetites and big personalities.
     Badgers are a wood's ruling clan.
     They’re playful, house proud and expert foragers.",

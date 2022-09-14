@@ -25,10 +25,10 @@ puts '(") (") '
 
 
 
-user0 = User.create!(username: "L4ur4", email: "random@mail.com", password: '123456', avatar: "Bel.png")
-user1 = User.create!(username: "N1c0l4", email: "nic@fie.com", password: '123456', avatar: "Bol.jpg")
-user2 = User.create!(username: "T0b3", email: "even@more.com", password: '123456', avatar: "Bal.jpg")
-user3 = User.create!(username: "Ch4r1y", email: "random@even.com", password: 'Imnevergettinghackedtho', avatar: "Boul.jpg")
+user0 = User.create!(username: "Laura", email: "random@mail.com", password: '123456', avatar: "Bel.png")
+user1 = User.create!(username: "Charly", email: "nic@fie.com", password: '123456', avatar: "Bol.jpg")
+user2 = User.create!(username: "Tobe", email: "even@more.com", password: '123456', avatar: "Bal.jpg")
+user3 = User.create!(username: "Nicola", email: "random@even.com", password: 'Imnevergettinghackedtho', avatar: "Boul.jpg")
 user4 = User.create!(username: "DuckLover123", email: "iamtheone@neo.com", admin: true, password: 'LauraGotBetter!', avatar: "Bil.jpg")
 
 slowworm = Animal.new(
@@ -574,12 +574,15 @@ file = URI.open("https://www.mammal.org.uk/wp-content/uploads/2021/09/rsq-768x76
 squirrel.photo.attach(io: file, filename: "red_squirrel.jpg", content_type: "image/jpg")
 squirrel.save!
 
+# For the pitch - User 0
+user0.add_badge(1) # registered
+user0.add_badge(5) # Found mammal
+
 Finding.create!(picture: "red_fox_spotting.jpg", date: Date.yesterday.strftime("%a, %e %b %Y"), address: "Schlosspark Heltorf, Heltorfer Schlossallee, Duesseldorf, Germany", latitude: 51.336731, longitude: 6.769210, user: user0, animal: red_fox)
 Finding.create!(picture: "gray_fox_spotting.jpg", date: Date.today.strftime("%a, %e %b %Y"), address: "Llanmadoc Hill, Wales", latitude: 51.910070, longitude: 8.840930, user: user0, animal: gray_fox)
 Finding.create!(picture: "rat_spotting.jpg", date: Date.today.strftime("%a, %e %b %Y"), address: "Palito Restaurant, Berger Str. 14, Duesseldorf, Germany", latitude: 51.224450, longitude: 6.772480, user: user0, animal: rat)
-Finding.create!(picture: "mypigeon.jpg", date: Date.today.strftime("%a, %e %b %Y"), address: "Uplands, Swansea", latitude: 51.618130, longitude: -3.966560, user: user0, animal: pigeon)
 
-# For the pitch
+# For the pitch - User 1
 Finding.create!(picture: "mysheep.jpg", date: Date.yesterday.strftime("%a, %e %b %Y"), address: "Rhossili Down, Wales", latitude: 51.569280, longitude: -4.287430, user: user1, animal: sheep)
 Finding.create!(picture: "myslug.jpg", date: Date.today.strftime("%a, %e %b %Y"), address: "Attica, Plymouth Street, Swansea", latitude: 51.618600, longitude: -3.947130, user: user1, animal: slug)
 Finding.create!(picture: "myslowworm.jpg", date: Date.today.strftime("%a, %e %b %Y"), address: "Rhossili Bay Beach, Wales", latitude: 53.291200, longitude: -3.698920, user: user1, animal: slowworm)

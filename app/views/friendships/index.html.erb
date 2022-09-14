@@ -25,6 +25,8 @@
             <%= image_tag f.receiver.avatar, class: "card-horizontal img" %>
             <div class="card-horizontal-infos">
               <h2><%= f.receiver.username %></h2>
+              <button type="button" class="btn btn-outline-dark">View Profile</button>
+              <button type="button" class="btn btn-outline-danger mt-2">Remove</button>
             </div>
           </div>
       <% end %>

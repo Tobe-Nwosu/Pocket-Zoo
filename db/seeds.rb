@@ -255,7 +255,7 @@ muskrat = Animal.new(
     Even though they share their name with rats, they are not related to them.",
   classification: "mammal",
   habitat: "beach",
-  behaviour: "swim",
+  behaviour: "walk",
   colour: "brown",
   tail: "scaly",
   legs: "short"
@@ -271,7 +271,7 @@ beaver = Animal.new(
     The beaver is the national animal of Canada.",
   classification: "mammal",
   habitat: "beach",
-  behaviour: "swim",
+  behaviour: "walk",
   colour: "brown",
   tail: "scaly",
   legs: "short"
@@ -285,7 +285,7 @@ capybara = Animal.new(
   details: "The Capybara lives in South America and is the largest rodent in the world.
     Even though it looks similar to a beaver and a muskrat, it is more closely related to guinea pigs.",
   classification: "mammal",
-  habitat: "forest",
+  habitat: "beach",
   behaviour: "walk",
   colour: "red",
   tail: "none",
@@ -302,7 +302,7 @@ sea_otter = Animal.new(
     To stay warm in the water, it has a thick layer of fur, the thickest amongst all animals.",
   classification: "mammal",
   habitat: "beach",
-  behaviour: "swim",
+  behaviour: "walk",
   colour: "brown",
   tail: "pointy",
   legs: "short"
@@ -350,7 +350,7 @@ ferret = Animal.new(
     Ferrets have been raised to live with humans for thousands of years.
     They were also bred to hunt rabbits, rats and mice.",
   classification: "mammal",
-  habitat: "forest",
+  habitat: "beach",
   behaviour: "walk",
   colour: "brown",
   tail: "bushy",
@@ -368,7 +368,7 @@ rat = Animal.new(
     But they are actually very clean and smart animals.
     A rat can get as big as 28cm long and 1.5kg heavy.",
   classification: "mammal",
-  habitat: "forest",
+  habitat: "beach",
   behaviour: "walk",
   colour: "brown",
   tail: "pointy",

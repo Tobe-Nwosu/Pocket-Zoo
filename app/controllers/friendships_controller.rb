@@ -45,6 +45,7 @@ class FriendshipsController < ApplicationController
   def destroy
     @friendship = Friendship.find(params[:id])
     authorize @friendship
+    raise
     @friendship.destroy
   end
 

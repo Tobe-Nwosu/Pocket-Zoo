@@ -15,8 +15,8 @@ export default class extends Controller {
       .then((data) => {
         console.log(data);
         // console.log(data.name);
-        // console.log(data.rain.1h);
-        // console.log(main.temp);
+        // console.log(data.rain);
+        console.log(data.first);
       });
   }
 }

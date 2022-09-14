@@ -5,7 +5,7 @@
           <h2><%= @user.username %></h2>
           <div>
           <%= link_to "Friend", user_friendships_path(@user) , data: {turbo_method: :post}, class: "btn btn-nav" %>
-          <%= link_to "Unfriend", friendship_path(@user), class: 'btn btn-nav', data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
+          <%= link_to "Unfriend", current_user.friendships_as_asker, class: 'btn btn-nav', data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
           </div>
         </div>
       </div>

@@ -391,7 +391,8 @@ koala = Animal.new(
   tail: "bushy",
   legs: "short"
 )
-file = URI.open("https://fac.img.pmdstatic.net/fit/https.3A.2F.2Fi.2Epmdstatic.2Enet.2Ffac.2F2022.2F08.2F12.2F84d69884-bdcd-44a9-90c9-d3be0c414bf0.2Ejpeg/1120x747/quality/80/thumbnail.jpg")
+
+file = URI.open("https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Koala_climbing_tree.jpg/800px-Koala_climbing_tree.jpg")
 koala.photo.attach(io: file, filename: "koala.jpg", content_type: "image/jpg")
 koala.save!
 
@@ -570,13 +571,13 @@ file = URI.open("https://www.mammal.org.uk/wp-content/uploads/2021/09/rsq-768x76
 squirrel.photo.attach(io: file, filename: "red_squirrel.jpg", content_type: "image/jpg")
 squirrel.save!
 
-Finding.create!(picture: "red_fox_spotting.jpg", date: "2020-12-14", address: "Schlosspark Heltorf, Heltorfer Schlossallee, Duesseldorf, Germany", latitude: 51.336731, longitude: 6.769210, user: user0, animal: red_fox)
-Finding.create!(picture: "gray_fox_spotting.jpg", date: "2021-12-14", address: "Hermannsdenkmal, Grotenburg 5, Detmold, Germany", latitude: 51.910070, longitude: 8.840930, user: user0, animal: gray_fox)
-Finding.create!(picture: "rat_spotting.jpg", date: "2021-12-14", address: "Palito Restaurant, Berger Str. 14, Duesseldorf, Germany", latitude: 51.224450, longitude: 6.772480, user: user0, animal: rat)
+Finding.create!(picture: "gray_fox_spotting.jpg", date: Date.yesterday, address: "Hermannsdenkmal, Grotenburg 5, Detmold, Germany", latitude: 51.910070, longitude: 8.840930, user: user0, animal: gray_fox)
+Finding.create!(picture: "red_fox_spotting.jpg", date: Date.today, address: "Schlosspark Heltorf, Heltorfer Schlossallee, Duesseldorf, Germany", latitude: 51.336731, longitude: 6.769210, user: user0, animal: red_fox)
+Finding.create!(picture: "rat_spotting.jpg", date: Date.today, address: "Palito Restaurant, Berger Str. 14, Duesseldorf, Germany", latitude: 51.224450, longitude: 6.772480, user: user0, animal: rat)
 
 # Animal.all.each do |animal|
-Finding.create!(picture: "mypigeon.jpg", date: "2021-11-05", address: "Attica, Plymouth Street, Swansea", latitude: 51.619028, longitude: -3.947579, user: user1, animal: pigeon)
-Finding.create!(picture: "mysheep.jpg", date: "2021-12-10", address: "Rhossili Bay", latitude: 51.5780, longitude: -4.3002, user: user1, animal: sheep)
-Finding.create!(picture: "myslug.jpg", date: "2022-06-08", address: "Attica, Plymouth Street, Swansea", latitude: 51.619028, longitude: -3.947579, user: user1, animal: slug)
-Finding.create!(picture: "myslowworm.jpg", date: "2022-09-07", address: "Rhossili Bay", latitude: 51.5780, longitude: -4.3002, user: user1, animal: slowworm)
+Finding.create!(picture: "mysheep.jpg", date: Date.yesterday, address: "Rhossili Bay", latitude: 51.5780, longitude: -4.3002, user: user1, animal: sheep)
+Finding.create!(picture: "myslowworm.jpg", date: Date.yesterday, address: "Rhossili Bay", latitude: 51.5780, longitude: -4.3002, user: user1, animal: slowworm)
+Finding.create!(picture: "mypigeon.jpg", date: Date.today, address: "Attica, Plymouth Street, Swansea", latitude: 51.619028, longitude: -3.947579, user: user1, animal: pigeon)
+Finding.create!(picture: "myslug.jpg", date: Date.today, address: "Attica, Plymouth Street, Swansea", latitude: 51.619028, longitude: -3.947579, user: user1, animal: slug)
 puts "All went according to plan, carry on"

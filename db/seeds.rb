@@ -250,7 +250,7 @@ gray_fox.save!
 
 muskrat = Animal.new(
   name: "Muskrat",
-  details: "The muskrat lives mostly in North America and is a very good swimmer.
+  details: "The muskrat lives mostly in North America and Europe and is a very good swimmer.
     It can be as big as a small dog and has a very long tail.
     Even though they share their name with rats, they are not related to them.",
   classification: "mammal",
@@ -430,7 +430,7 @@ aedes_albopictus.photo.attach(io: file, filename: "Aedes_albopictus.jpg", conten
 aedes_albopictus.save!
 
 # Tarantula
-tanrantula = Animal.new(
+tarantula = Animal.new(
   name: "Tarantula",
   details: "Like all arthropods, the tarantula is an invertebrate that relies on an exoskeleton for muscular support.
   Tarantula sizes can range from as small as the size of a marble to as large as a dinner plate when the legs
@@ -443,8 +443,8 @@ tanrantula = Animal.new(
   legs: "hairy"
 )
 file = URI.open("https://www.peta.org/wp-content/uploads/2021/12/tarantula-red-knee-1536x864.jpg")
-tanrantula.photo.attach(io: file, filename: "Tanrantula.jpg", content_type: "image/jpg")
-tanrantula.save!
+tarantula.photo.attach(io: file, filename: "Tanrantula.jpg", content_type: "image/jpg")
+tarantula.save!
 
 # Goat
 goat = Animal.new(
@@ -571,12 +571,28 @@ squirrel.photo.attach(io: file, filename: "red_squirrel.jpg", content_type: "ima
 squirrel.save!
 
 Finding.create!(picture: "red_fox_spotting.jpg", date: "2020-12-14", address: "Schlosspark Heltorf, Heltorfer Schlossallee, Duesseldorf, Germany", latitude: 51.336731, longitude: 6.769210, user: user0, animal: red_fox)
-Finding.create!(picture: "gray_fox_spotting.jpg", date: "2021-12-14", address: "Hermannsdenkmal, Grotenburg 5, Detmold, Germany", latitude: 51.910070, longitude: 8.840930, user: user0, animal: gray_fox)
+Finding.create!(picture: "gray_fox_spotting.jpg", date: "2021-12-14", address: "Llanmadoc Hill, Wales", latitude: 51.910070, longitude: 8.840930, user: user0, animal: gray_fox)
 Finding.create!(picture: "rat_spotting.jpg", date: "2021-12-14", address: "Palito Restaurant, Berger Str. 14, Duesseldorf, Germany", latitude: 51.224450, longitude: 6.772480, user: user0, animal: rat)
+Finding.create!(picture: "mypigeon.jpg", date: "2021-11-05", address: "Uplands, Swansea", latitude: 51.618130, longitude: -3.966560, user: user0, animal: pigeon)
 
-# Animal.all.each do |animal|
-Finding.create!(picture: "mypigeon.jpg", date: "2021-11-05", address: "Attica, Plymouth Street, Swansea", latitude: 51.619028, longitude: -3.947579, user: user1, animal: pigeon)
-Finding.create!(picture: "mysheep.jpg", date: "2021-12-10", address: "Rhossili Bay", latitude: 51.5780, longitude: -4.3002, user: user1, animal: sheep)
-Finding.create!(picture: "myslug.jpg", date: "2022-06-08", address: "Attica, Plymouth Street, Swansea", latitude: 51.619028, longitude: -3.947579, user: user1, animal: slug)
-Finding.create!(picture: "myslowworm.jpg", date: "2022-09-07", address: "Rhossili Bay", latitude: 51.5780, longitude: -4.3002, user: user1, animal: slowworm)
+
+
+# For the pitch
+Finding.create!(picture: "mysheep.jpg", date: "2021-12-10", address: "Rhossili Down, Wales", latitude: 51.569280, longitude: -4.287430, user: user1, animal: sheep)
+Finding.create!(picture: "myslug.jpg", date: "2022-06-08", address: "Attica, Plymouth Street, Swansea", latitude: 51.618600, longitude: -3.947130, user: user1, animal: slug)
+Finding.create!(picture: "myslowworm.jpg", date: "2022-09-07", address: "Rhossili Bay Beach, Wales", latitude: 53.291200, longitude: -3.698920, user: user1, animal: slowworm)
+
+# change picture
+Finding.create!(picture: "gray_fox_spotting.jpg", date: "2021-12-14", address: "Julimar State Forest, Australia", latitude: 51.910070, longitude: 8.840930, user: user0, animal: kangaroo)
+Finding.create!(picture: "gray_fox_spotting.jpg", date: "2021-12-14", address: "Blackwood State Forest, Australia", latitude: 51.910070, longitude: 8.840930, user: user0, animal: koala)
+Finding.create!(picture: "gray_fox_spotting.jpg", date: "2021-12-14", address: "Blackwood River National Park, Australia", latitude: 51.910070, longitude: 8.840930, user: user0, animal: tarantula)
+
+
+current_user.add_badge(1) # registered
+current_user.add_badge(2) # Found 5 animals
+current_user.add_badge(5) # Found mammal
+current_user.add_badge(6) # Found reptile
+current_user.add_badge(8) # Found insect
+
+
 puts "All went according to plan, carry on"

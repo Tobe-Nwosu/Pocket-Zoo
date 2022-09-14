@@ -255,7 +255,7 @@ muskrat = Animal.new(
     Even though they share their name with rats, they are not related to them.",
   classification: "mammal",
   habitat: "beach",
-  behaviour: "walk",
+  behaviour: "run",
   colour: "brown",
   tail: "scaly",
   legs: "short"
@@ -271,7 +271,7 @@ beaver = Animal.new(
     The beaver is the national animal of Canada.",
   classification: "mammal",
   habitat: "beach",
-  behaviour: "walk",
+  behaviour: "run",
   colour: "brown",
   tail: "scaly",
   legs: "short"
@@ -286,7 +286,7 @@ capybara = Animal.new(
     Even though it looks similar to a beaver and a muskrat, it is more closely related to guinea pigs.",
   classification: "mammal",
   habitat: "beach",
-  behaviour: "walk",
+  behaviour: "run",
   colour: "red",
   tail: "none",
   legs: "short"
@@ -302,7 +302,7 @@ sea_otter = Animal.new(
     To stay warm in the water, it has a thick layer of fur, the thickest amongst all animals.",
   classification: "mammal",
   habitat: "beach",
-  behaviour: "walk",
+  behaviour: "run",
   colour: "brown",
   tail: "pointy",
   legs: "short"
@@ -318,7 +318,7 @@ mink = Animal.new(
     It feeds on fish, frogs and even birds like sea gulls and cormorants, by drowning them. ",
   classification: "mammal",
   habitat: "beach",
-  behaviour: "walk",
+  behaviour: "run",
   colour: "brown",
   tail: "pointy",
   legs: "short"
@@ -334,7 +334,7 @@ nutria = Animal.new(
     In some regions, it is uhunted and trapped for its fur.",
   classification: "mammal",
   habitat: "beach",
-  behaviour: "walk",
+  behaviour: "run",
   colour: "brown",
   tail: "pointy",
   legs: "short"
@@ -351,7 +351,7 @@ ferret = Animal.new(
     They were also bred to hunt rabbits, rats and mice.",
   classification: "mammal",
   habitat: "beach",
-  behaviour: "walk",
+  behaviour: "run",
   colour: "brown",
   tail: "bushy",
   legs: "short"
@@ -369,7 +369,7 @@ rat = Animal.new(
     A rat can get as big as 28cm long and 1.5kg heavy.",
   classification: "mammal",
   habitat: "beach",
-  behaviour: "walk",
+  behaviour: "run",
   colour: "brown",
   tail: "pointy",
   legs: "short"
@@ -386,7 +386,7 @@ koala = Animal.new(
   up to twenty hours a day. They are asocial animals and their claws can scar you for life",
   classification: "mammal",
   habitat: "forest",
-  behaviour: "walk",
+  behaviour: "run",
   colour: "grey",
   tail: "fluffy",
   legs: "short"
@@ -471,7 +471,7 @@ chameleon = Animal.new(
     and crests or horns on their brow and snout.Some chameleon species are able to change their skin coloration.",
   classification: "Reptile",
   habitat: "forest",
-  behaviour: "walk",
+  behaviour: "run",
   colour: "green",
   tail: "long",
   legs: "short"
@@ -505,7 +505,7 @@ lynx = Animal.new(
     In winter the fur is dense and soft.",
   classification: "mammal",
   habitat: "forest",
-  behaviour: "walk",
+  behaviour: "run",
   colour: "brown",
   tail: "pointy",
   legs: "long"
@@ -523,7 +523,7 @@ badger = Animal.new(
     They’re playful, house proud and expert foragers.",
   classification: "mammal",
   habitat: "forest",
-  behaviour: "walk",
+  behaviour: "run",
   colour: "Black/White striped",
   tail: "bushy",
   legs: "short"
@@ -542,7 +542,7 @@ pine_marten = Animal.new(
     It feeds on small rodents, birds, eggs, insects and fruit,",
   classification: "mammal",
   habitat: "forest",
-  behaviour: "walk",
+  behaviour: "run",
   colour: "brown",
   tail: "bushy",
   legs: "short"
@@ -560,7 +560,7 @@ squirrel = Animal.new(
   which is almost the same length as its body",
   classification: "mammal",
   habitat: "forest",
-  behaviour: "walk",
+  behaviour: "run",
   colour: "red",
   tail: "bushy",
   legs: "short"

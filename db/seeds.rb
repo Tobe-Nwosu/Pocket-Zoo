@@ -22,6 +22,8 @@ puts " (-_-)    Huh ? !"
 puts "(     )                       *BANG* "
 puts '(") (") '
 
+Friendship.destroy_all
+
 user0 = User.create!(username: "L4ur4", email: "random@mail.com", password: '123456', avatar: "Bel.png")
 user1 = User.create!(username: "N1c0l4", email: "nic@fie.com", password: '123456', avatar: "Bol.jpg")
 user2 = User.create!(username: "T0b3", email: "even@more.com", password: '123456', avatar: "Bal.jpg")

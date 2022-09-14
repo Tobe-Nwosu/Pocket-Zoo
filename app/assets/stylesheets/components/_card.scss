@@ -60,11 +60,11 @@
 
 
 //***This span is for the date in /findings***
-.card-horizontal span {
+.card-vertical span {
   position: absolute;
   top: 0;
   right: 0px;
-  font-size: 13px;
+  font-size: 16px;
   color: white;
   font-weight: bold;
   background-color: #454955;
@@ -80,13 +80,13 @@
   width: 20.5rem;
   // add shadow
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  position: relative;
+  // position: relative;
 }
 
 .card-vertical-infos {
   padding: 14px;
   align-items: center;
-  // position: relative;
+  position: relative;
 }
 
 .card-vertical-description {
@@ -117,12 +117,21 @@
 .card-vertical-cover-img {
   height: 200px;
   width: 100%;
+  margin: 0;
+  object-fit: cover;
+}
+
+.card-vertical-cover-img-large {
+  height: 350px;
+  width: 100%;
+  margin: 0;
   object-fit: cover;
 }
 
 .card-vertical-bottom {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
+  width: 100%;
 }
 
 .card-slideshow {

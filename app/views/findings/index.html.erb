@@ -59,14 +59,14 @@
     <div class="cards">
       <% @my_findings.each do |finding| %>
         <%= link_to(finding_path(finding)) do %>
-          <div class="card-horizontal">
+          <div class="card-vertical">
           <% if finding.photo.attached? %>
             <%= cl_image_tag finding.photo.key, crop: :fill %>
           <% else %>
-            <%= image_tag finding.picture, class: "card-img-top" %>
+            <%= image_tag finding.picture, class: "card-vertical-cover-img" %>
           <% end %>
-            <div class="card-horizontal-infos">
-              <h2 class="mt-5"><%= finding.animal.name %></h2>
+            <div class="card-vertical-infos">
+              <h2 class=""><%= finding.animal.name %></h2>
               <p><%= finding.address %></p>
               <span><%= finding.date %></span>
               <%# <div class="card-vertical-bottom">

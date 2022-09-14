@@ -12,8 +12,8 @@
   background-color: white;
   color: black;
   margin: 0em 0em 2em 0em;
-  width: 6.5rem;
-  height: 12.5rem;
+  width: 10rem;
+  height: 10rem;
   padding: 0;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
@@ -25,8 +25,8 @@
   border-radius: 50%;
   border: #3F7D20 8px solid;
   margin-top: 1rem;
-  margin-left: 1.25rem;
-  margin-right: 1.25rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -38,7 +38,7 @@
 }
 
 .badge h2 {
-  height: 2rem;
+  height: 1.5rem;
   width: 100%;
   font-size: 18px;
   font-weight: bold;
@@ -50,7 +50,7 @@
 .badge p {
   width: 100%;
   font-size: 12px;
-  margin: 1rem 0 0 0;
+  margin: 0;
   font-weight: normal;
   white-space: normal;
   padding: 0 0.5rem;

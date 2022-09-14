@@ -10,8 +10,9 @@ class FriendshipsController < ApplicationController
 
     respond_to do |format|
       format.html # Follow regular flow of Rails
-      format.text { render partial: 'foundfriends.html.erb', locals: { users: @users } }
+      format.text { render partial: 'amazingpartial', locals: { users: @users } }
     end
+
   end
 
   def show
@@ -30,7 +31,7 @@ class FriendshipsController < ApplicationController
     @friendship.asker = current_user
     @friendship.receiver = User.find(params[:user_id])
     if @friendship.save
-      redirect_to root_path
+      redirect_to friendships_path
     else
       render root_path
     end

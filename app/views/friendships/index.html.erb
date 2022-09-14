@@ -1,69 +1,56 @@
 
 <div data-controller="friendtabs" class="mb-5 pb-5">
-  <ul class="list-inline tabs-underlined mb-5" >
-    <li data-action="click->friendtabs#changeTab" data-friendtabs-target="friendtablink" class="tab-underlined active" id="friendslist">
-      <span>Friends list</span>
-    </li>
-    <li data-action="click->friendtabs#changeTab" data-friendtabs-target="friendtablink"  class="tab-underlined" id="alllocations">
-      <span>Map</span>
-    </li>
-    <li data-action="click->friendtabs#changeTab" data-friendtabs-target="friendtablink" class="tab-underlined" id="findfriends">
-      <span>Find friends</span>
-    </li>
-  </ul>
+  <div>
+    <ul class="list-inline tabs-underlined mb-5" >
+      <li data-action="click->friendtabs#changeTab" data-friendtabs-target="friendtablink" data-find-friends-target="findfriendstablink" class="tab-underlined active" id="friendslist">
+        <span>Friends list</span>
+      </li>
+      <li data-action="click->friendtabs#changeTab" data-friendtabs-target="friendtablink" data-find-friends-target="findfriendstablink"  class="tab-underlined" id="alllocations">
+        <span>Map</span>
+      </li>
+      <li data-action="click->friendtabs#changeTab" data-friendtabs-target="friendtablink" data-find-friends-target="findfriendstablink" class="tab-underlined" id="findfriends">
+        <span>Find friends</span>
+      </li>
+    </ul>
 
-  <div data-friendtabs-target="friendtabcontent friendslist">
-    <% if @friendships.count > 0 %>
-      <p> You have <%= @friendships.count %> friends <p>
-    <% else %>
-      <p> you have no friends go and make some you turd <p>
-    <% end %>
-
-    <div class="cards">
-      <% @friendships.each do |f| %>
-          <div class="card-horizontal">
-            <%= image_tag f.receiver.avatar, class: "card-horizontal img" %>
-            <div class="card-horizontal-infos">
-              <h2><%= f.receiver.username %></h2>
-            </div>
-          </div>
+    <div data-friendtabs-target="friendtabcontent friendslist" data-find-friends-target="findfriendstabcontent friendslist">
+      <% if @friendships.count > 0 %>
+        <p> You have <%= @friendships.count %> friends <p>
+      <% else %>
+        <p> you have no friends go and make some you turd <p>
       <% end %>
-    </div>
-  </div>
 
-  <div data-friendtabs-target="friendtabcontent alllocations" class="d-none">
-    <h5 class="text-center mb-5">Your finds</h5>
-  </div>
-
-  <div data-friendtabs-target="friendtabcontent findfriends" class="d-none">
-    <h5>Find a friend</h5>
-    <div data-controller="find-friends">
-      <%= form_with url: friendships_path, method: :get, html: { class: 'mb-5', data: { find_friends_target: 'form' } } do |f| %>
-        <%= f.text_field :query,
-                        class: "form-control",
-                        placeholder: 'Type a username',
-                        value: params[:query],
-                        data: {
-                          find_friends_target: 'searchInput',
-                          action: "submit->find-friends#update"
-                        } %>
-      <% end %>
-      <%= render 'foundfriends', users: @users %>
-    </div>
-      <%# <div class="cards">
-        <% @users.each do |user| %>
-            <%# <div class="card-horizontal">
-              <%= image_tag user.avatar, class: "card-horizontal img" %>
-              <%# <div class="card-horizontal-infos">
-                <h2><%= user.username %></h2>
-                <%# <div>
-                <%# <%= button_to "Friend", user_friendships_path(user), :method => :post, class: "btn btn-nav" %>
-                <%# <%= link_to "Unfriend", friendships_path(user), class: 'btn btn-nav', data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
-                <%# </div>
+      <div class="cards">
+        <% @friendships.each do |f| %>
+            <div class="card-horizontal">
+              <%= image_tag f.receiver.avatar, class: "card-horizontal img" %>
+              <div class="card-horizontal-infos">
+                <h2><%= f.receiver.username %></h2>
               </div>
             </div>
         <% end %>
-      <%# </div> %>
+      </div>
+    </div>
+
+    <div data-friendtabs-target="friendtabcontent alllocations" data-find-friends-target="findfriendstabcontent alllocations" class="d-none">
+      <h5 class="text-center mb-5">Your finds</h5>
+    </div>
+
+    <div data-friendtabs-target="friendtabcontent findfriends" data-find-friends-target="findfriendstabcontent findfriends" class="d-none">
+      <%= turbo_frame_tag "search" do%>
+
+        <%= form_with url: friendships_path, method: :get, html: { class: 'mb-5 mx-4', data: { find_friends_target: 'form', action: "submit->find-friends#update" } } do |f| %>
+          <%= f.text_field :query,
+                          class: "form-control",
+                          placeholder: "Enter your friend's username",
+                          value: params[:query],
+                          data: {
+                            find_friends_target: 'searchInput',
+                          } %>
+        <% end %>
+        <%= render 'amazingpartial', users: @users %>
+      <% end %>
+      </div>
     </div>
   </div>
 </div>

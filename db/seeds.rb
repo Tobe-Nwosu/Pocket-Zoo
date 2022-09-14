@@ -287,7 +287,7 @@ capybara = Animal.new(
   classification: "mammal",
   habitat: "beach",
   behaviour: "run",
-  colour: "red",
+  colour: "brown",
   tail: "none",
   legs: "short"
 )

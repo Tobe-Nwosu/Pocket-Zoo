@@ -4,6 +4,9 @@
 
 import { application } from "./application"
 
+import FindFriendsController from "./find_friends_controller"
+application.register("find-friends", FindFriendsController)
+
 import FriendtabsController from "./friendtabs_controller"
 application.register("friendtabs", FriendtabsController)
 

@@ -3,15 +3,11 @@
 <div class="cards">
   <% @animals.each do |animal| %>
     <%= link_to(animal_path(animal)) do %>
-      <div class="card-horizontal">
-        <%= cl_image_tag animal.photo.key, crop: :fill, class: "card-horizontal img" %>
-        <div class="card-horizontal-infos">
+      <div class="card-vertical">
+        <%= cl_image_tag animal.photo.key, crop: :fill, class: "card-vertical-cover-img" %>
+        <div class="card-vertical-infos">
           <h2><%= animal.name %></h2>
           <p>The <%= animal.name %> is a <%= animal.classification%>.</p>
-          <div class="card-horizontal-bottom">
-            <%# <%= link_to "➡", animal_path(animal), :class => "btn btn-highlight" %>
-            <i class="btn btn-highlight">➡</i>
-          </div>
         </div>
       </div>
     <% end %>

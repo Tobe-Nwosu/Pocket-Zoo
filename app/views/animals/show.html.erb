@@ -1,6 +1,6 @@
 
 <div class="card-vertical">
-  <%= cl_image_tag @animal.photo.key, crop: :fill, class: "card-vertical-cover-img" %>
+  <%= cl_image_tag @animal.photo.key, crop: :fill, class: "card-vertical-cover-img-large" %>
   <div class="card-vertical-infos">
     <div class="card-vertical-description">
       <h2><%= @animal.name %></h2>
@@ -18,10 +18,4 @@
       <% end %>
     </div>
   </div>
-</div>
-
-<div class="d-flex flex-column align-items-center mb-3">
-  <%= link_to(:back) do %>
-    <button class="btn btn-nav px-5"><i class="fa-solid fa-arrow-left text-black"></i></button>
-  <% end %>
 </div>

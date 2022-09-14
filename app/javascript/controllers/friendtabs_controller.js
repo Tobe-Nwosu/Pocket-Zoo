@@ -4,7 +4,6 @@ import { Controller } from "@hotwired/stimulus"
 export default class extends Controller {
   static targets = ["friendtabcontent", "friendtablink", "friendslist", "alllocations", "findfriends"]
   connect() {
-    console.log('hi')
   }
 
   changeTab(event) {
@@ -16,14 +15,11 @@ export default class extends Controller {
       friendtablink.classList.remove('active'))
     event.currentTarget.classList.add('active')
     if (event.currentTarget.id === 'friendslist') {
-      console.log(event.currentTarget.id)
       this.friendslistTarget.classList.remove('d-none')
     } else if (event.currentTarget.id === 'alllocations') {
       this.alllocationsTarget.classList.remove('d-none')
-      console.log(this.alllocationsTarget)
     } else {
       this.findfriendsTarget.classList.remove('d-none')
-      console.log(this.findfriendsTarget)
     }
   }
 }

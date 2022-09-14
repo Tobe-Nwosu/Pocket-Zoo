@@ -4,6 +4,9 @@
 
 import { application } from "./application"
 
+import FindFriendsController from "./find_friends_controller"
+application.register("find-friends", FindFriendsController)
+
 import FriendtabsController from "./friendtabs_controller"
 application.register("friendtabs", FriendtabsController)
 
@@ -15,3 +18,6 @@ application.register("map", MapController)
 
 import TabsController from "./tabs_controller"
 application.register("tabs", TabsController)
+
+import WeatherapiController from "./weatherapi_controller"
+application.register("weatherapi", WeatherapiController)

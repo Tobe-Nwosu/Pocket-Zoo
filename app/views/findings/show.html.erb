@@ -13,11 +13,22 @@
   <% end %>
   <div class="card-vertical-infos">
     <div class="card-vertical-description">
+      <h2><%= @finding.animal.name %></h2>
       <p>This animal was found in <strong><%= @finding.address %></strong>.</p>
       <p><%= name_placeholder %> found this animal on <strong><%= @finding.date %></strong>.</p>
       <br>
       <p><%= name_placeholder %> also added this note: <br><em>"<%= @finding.comment %>"</em></p>
 
+    </div>
+    <div class="d-flex justify-content-center">
+      <button class="btn btn-nav" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        Details <i class="fa-solid fa-arrow-down text-black"></i>
+      </button>
+    </div>
+    <div class="collapse" id="collapseExample">
+      <div class="card card-body">
+        <%= @finding.animal.details %>
+      </div>
     </div>
     <% if @finding.user == current_user %>
       <div class="d-flex justify-content-between">
@@ -28,24 +39,7 @@
   </div>
 </div>
 
-<div class="card-vertical">
-  <%= cl_image_tag @finding.animal.photo.key, crop: :fill, class: "card-vertical-cover-img" %>
-  <div class="card-vertical-infos">
-    <div class="card-vertical-description">
-      <h2><%= @finding.animal.name %></h2>
-      <br>
-      <p><%= @finding.animal.details %></p>
-      <br>
-      <p>The <%= @finding.animal.name %> is a <%= @finding.animal.classification %>.</p>
-      <p>It lives at the <%= @finding.animal.habitat %> and likes to <%= @finding.animal.behaviour %></p>
-      <p>The <%= @finding.animal.name %>'s colour is <%= @finding.animal.colour %>.
-        His tail is very <%= @finding.animal.tail %> and its legs are <%= @finding.animal.legs %>.</p>
-    </div>
-  </div>
-</div>
-
 <div class="d-flex justify-content-center align-items-center flex-column">
-  <%= link_to "All finds", findings_path, class: "btn btn-highlight px-5" %>
   <%= link_to(:back) do %>
     <button class="btn btn-nav px-5"><i class="fa-solid fa-arrow-left text-black"></i></button>
   <% end %>

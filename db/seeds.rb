@@ -391,7 +391,8 @@ koala = Animal.new(
   tail: "bushy",
   legs: "short"
 )
-file = URI.open("https://fac.img.pmdstatic.net/fit/https.3A.2F.2Fi.2Epmdstatic.2Enet.2Ffac.2F2022.2F08.2F12.2F84d69884-bdcd-44a9-90c9-d3be0c414bf0.2Ejpeg/1120x747/quality/80/thumbnail.jpg")
+
+file = URI.open("https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Koala_climbing_tree.jpg/800px-Koala_climbing_tree.jpg")
 koala.photo.attach(io: file, filename: "koala.jpg", content_type: "image/jpg")
 koala.save!
 
@@ -408,7 +409,7 @@ kangaroo = Animal.new(
   tail: "Pointy",
   legs: "long"
 )
-file = URI.open("https://media.npr.org/assets/img/2018/12/10/roger-the-kangaroo-sanctuary-alice-springs-2_custom-e0dfceba6d2665cc8cc0daa5a57eae2bcda46ad8-s1100-c50.jpg")
+file = URI.open("https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Kangaroo_Australia_01_11_2008_-_retouch.JPG/800px-Kangaroo_Australia_01_11_2008_-_retouch.JPG")
 kangaroo.photo.attach(io: file, filename: "Kangaroo.jpg", content_type: "image/jpg")
 kangaroo.save!
 

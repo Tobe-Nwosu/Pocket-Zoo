@@ -578,9 +578,9 @@ squirrel.save!
 user0.add_badge(1) # registered
 user0.add_badge(5) # Found mammal
 
-Finding.create!(picture: "red_fox_spotting.jpg", date: Date.yesterday.strftime("%a, %e %b %Y"), address: "Schlosspark Heltorf, Heltorfer Schlossallee, Duesseldorf, Germany", latitude: 51.336731, longitude: 6.769210, user: user0, animal: red_fox)
+Finding.create!(picture: "red_fox_spotting.jpg", date: Date.yesterday.strftime("%a, %e %b %Y"), address: "Schlosspark Heltorf, Duesseldorf", latitude: 51.336731, longitude: 6.769210, user: user0, animal: red_fox)
 Finding.create!(picture: "gray_fox_spotting.jpg", date: Date.today.strftime("%a, %e %b %Y"), address: "Llanmadoc Hill, Wales", latitude: 51.910070, longitude: 8.840930, user: user0, animal: gray_fox)
-Finding.create!(picture: "rat_spotting.jpg", date: Date.today.strftime("%a, %e %b %Y"), address: "Palito Restaurant, Berger Str. 14, Duesseldorf, Germany", latitude: 51.224450, longitude: 6.772480, user: user0, animal: rat)
+Finding.create!(picture: "rat_spotting.jpg", date: Date.today.strftime("%a, %e %b %Y"), address: "Palito Restaurant, Duesseldorf", latitude: 51.224450, longitude: 6.772480, user: user0, animal: rat)
 
 # For the pitch - User 1
 Finding.create!(picture: "mysheep.jpg", date: Date.yesterday.strftime("%a, %e %b %Y"), address: "Rhossili Down, Wales", latitude: 51.569280, longitude: -4.287430, user: user1, animal: sheep)

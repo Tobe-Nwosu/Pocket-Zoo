@@ -16,7 +16,7 @@
               <% else %>
                 <%= image_tag finding.picture, class: "card-img-top" %>
               <% end %>
-              <div class="card-horizontal-infos">
+              <div class="card-slideshow-infos">
                 <p>
                   <%= finding.user.username %> found a
                   <br> <strong><%= finding.animal.name.downcase %> </strong>
@@ -39,7 +39,7 @@
                 <% else %>
                   <%= image_tag finding.picture, class: "card-img-top" %>
                 <% end %>
-                <div class="card-horizontal-infos">
+                <div class=".card-slideshow-infos">
                   <p>
                     <%= finding.user.username %> found a
                     <br> <strong><%= finding.animal.name.downcase %> </strong>

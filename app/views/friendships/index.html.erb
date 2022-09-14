@@ -1,4 +1,3 @@
-
 <div data-controller="friendtabs" class="mb-5 pb-5">
   <div>
     <ul class="list-inline tabs-underlined mb-5" >
@@ -20,13 +19,13 @@
         <p> you have no friends go and make some you turd <p>
       <% end %>
 
-      <div class="cards">
-        <% @friendships.each do |f| %>
-            <div class="card-horizontal">
-              <%= image_tag f.receiver.avatar, class: "card-horizontal img" %>
-              <div class="card-horizontal-infos">
-                <h2><%= f.receiver.username %></h2>
-              </div>
+    <div class="cards">
+      <% @friendships.each do |f| %>
+          <div class="card-horizontal">
+            <%= image_tag f.receiver.avatar, class: "card-horizontal img" %>
+            <div class="card-horizontal-infos">
+              <h2><%= f.receiver.username %></h2>
+              <%= link_to "View Profile", user_path(f.receiver.id), class: "btn btn-outline-success"%>
             </div>
         <% end %>
       </div>

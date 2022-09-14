@@ -15,3 +15,6 @@ application.register("map", MapController)
 
 import TabsController from "./tabs_controller"
 application.register("tabs", TabsController)
+
+import WeatherapiController from "./weatherapi_controller"
+application.register("weatherapi", WeatherapiController)

@@ -48,7 +48,7 @@ module Merit
       grant_on 'users#create', badge_id: 1, badge: 'just-registered', to: :action_user
 
       grant_on 'findings#create', badge_id: 2, badge: 'Junior Explorer', to: :action_user do |finding|
-        finding.user.findings.count >= 10
+        finding.user.findings.count >= 5
       end
 
       grant_on 'findings#create', badge_id: 3, badge: 'Explorer', to: :action_user do |finding|

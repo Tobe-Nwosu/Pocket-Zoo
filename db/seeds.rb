@@ -580,7 +580,6 @@ Finding.create!(picture: "mysheep.jpg", date: "2021-12-10", address: "Rhossili D
 Finding.create!(picture: "myslug.jpg", date: "2022-06-08", address: "Attica, Plymouth Street, Swansea", latitude: 51.618600, longitude: -3.947130, user: user1, animal: slug)
 Finding.create!(picture: "myslowworm.jpg", date: "2022-09-07", address: "Rhossili Bay Beach, Wales", latitude: 53.291200, longitude: -3.698920, user: user1, animal: slowworm)
 
-# change picture
 Finding.create!(picture: "kangaroo.jpg", date: "2021-12-14", address: "Julimar State Forest, Australia", latitude: -31.475964646278047, longitude: 116.18277505454235, user: user1, animal: kangaroo)
 Finding.create!(picture: "koala.jpg", date: "2021-12-14", address: "Blackwood State Forest, Australia", latitude: -33.91945919417612, longitude: 115.36033156720177, user: user1, animal: koala)
 Finding.create!(picture: "tarantula.jpg", date: "2021-12-14", address: "Blackwood River National Park, Australia", latitude: -34.086881590923774, longitude: 115.4157731782416, user: user1, animal: tarantula)

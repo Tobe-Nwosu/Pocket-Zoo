@@ -250,12 +250,12 @@ gray_fox.save!
 
 muskrat = Animal.new(
   name: "Muskrat",
-  details: "The muskrat lives mostly in North America and is a very good swimmer.
+  details: "The muskrat lives mostly in North America and Europe and is a very good swimmer.
     It can be as big as a small dog and has a very long tail.
     Even though they share their name with rats, they are not related to them.",
   classification: "mammal",
   habitat: "beach",
-  behaviour: "swim",
+  behaviour: "run",
   colour: "brown",
   tail: "scaly",
   legs: "short"
@@ -271,7 +271,7 @@ beaver = Animal.new(
     The beaver is the national animal of Canada.",
   classification: "mammal",
   habitat: "beach",
-  behaviour: "swim",
+  behaviour: "run",
   colour: "brown",
   tail: "scaly",
   legs: "short"
@@ -285,9 +285,9 @@ capybara = Animal.new(
   details: "The Capybara lives in South America and is the largest rodent in the world.
     Even though it looks similar to a beaver and a muskrat, it is more closely related to guinea pigs.",
   classification: "mammal",
-  habitat: "forest",
-  behaviour: "walk",
-  colour: "red",
+  habitat: "beach",
+  behaviour: "run",
+  colour: "brown",
   tail: "none",
   legs: "short"
 )
@@ -302,7 +302,7 @@ sea_otter = Animal.new(
     To stay warm in the water, it has a thick layer of fur, the thickest amongst all animals.",
   classification: "mammal",
   habitat: "beach",
-  behaviour: "swim",
+  behaviour: "run",
   colour: "brown",
   tail: "pointy",
   legs: "short"
@@ -318,7 +318,7 @@ mink = Animal.new(
     It feeds on fish, frogs and even birds like sea gulls and cormorants, by drowning them. ",
   classification: "mammal",
   habitat: "beach",
-  behaviour: "walk",
+  behaviour: "run",
   colour: "brown",
   tail: "pointy",
   legs: "short"
@@ -334,7 +334,7 @@ nutria = Animal.new(
     In some regions, it is uhunted and trapped for its fur.",
   classification: "mammal",
   habitat: "beach",
-  behaviour: "walk",
+  behaviour: "run",
   colour: "brown",
   tail: "pointy",
   legs: "short"
@@ -350,8 +350,8 @@ ferret = Animal.new(
     Ferrets have been raised to live with humans for thousands of years.
     They were also bred to hunt rabbits, rats and mice.",
   classification: "mammal",
-  habitat: "forest",
-  behaviour: "walk",
+  habitat: "beach",
+  behaviour: "run",
   colour: "brown",
   tail: "bushy",
   legs: "short"
@@ -368,8 +368,8 @@ rat = Animal.new(
     But they are actually very clean and smart animals.
     A rat can get as big as 28cm long and 1.5kg heavy.",
   classification: "mammal",
-  habitat: "forest",
-  behaviour: "walk",
+  habitat: "beach",
+  behaviour: "run",
   colour: "brown",
   tail: "pointy",
   legs: "short"
@@ -386,9 +386,9 @@ koala = Animal.new(
   up to twenty hours a day. They are asocial animals and their claws can scar you for life",
   classification: "mammal",
   habitat: "forest",
-  behaviour: "crawl",
-  colour: "white",
-  tail: "bushy",
+  behaviour: "run",
+  colour: "grey",
+  tail: "fluffy",
   legs: "short"
 )
 
@@ -431,7 +431,7 @@ aedes_albopictus.photo.attach(io: file, filename: "Aedes_albopictus.jpg", conten
 aedes_albopictus.save!
 
 # Tarantula
-tanrantula = Animal.new(
+tarantula = Animal.new(
   name: "Tarantula",
   details: "Like all arthropods, the tarantula is an invertebrate that relies on an exoskeleton for muscular support.
   Tarantula sizes can range from as small as the size of a marble to as large as a dinner plate when the legs
@@ -444,8 +444,8 @@ tanrantula = Animal.new(
   legs: "hairy"
 )
 file = URI.open("https://www.peta.org/wp-content/uploads/2021/12/tarantula-red-knee-1536x864.jpg")
-tanrantula.photo.attach(io: file, filename: "Tanrantula.jpg", content_type: "image/jpg")
-tanrantula.save!
+tarantula.photo.attach(io: file, filename: "Tanrantula.jpg", content_type: "image/jpg")
+tarantula.save!
 
 # Goat
 goat = Animal.new(
@@ -472,7 +472,7 @@ chameleon = Animal.new(
     and crests or horns on their brow and snout.Some chameleon species are able to change their skin coloration.",
   classification: "Reptile",
   habitat: "forest",
-  behaviour: "walk",
+  behaviour: "run",
   colour: "green",
   tail: "long",
   legs: "short"
@@ -506,7 +506,7 @@ lynx = Animal.new(
     In winter the fur is dense and soft.",
   classification: "mammal",
   habitat: "forest",
-  behaviour: "walk",
+  behaviour: "run",
   colour: "brown",
   tail: "pointy",
   legs: "long"
@@ -524,7 +524,7 @@ badger = Animal.new(
     They’re playful, house proud and expert foragers.",
   classification: "mammal",
   habitat: "forest",
-  behaviour: "walk",
+  behaviour: "run",
   colour: "Black/White striped",
   tail: "bushy",
   legs: "short"
@@ -543,7 +543,7 @@ pine_marten = Animal.new(
     It feeds on small rodents, birds, eggs, insects and fruit,",
   classification: "mammal",
   habitat: "forest",
-  behaviour: "walk",
+  behaviour: "run",
   colour: "brown",
   tail: "bushy",
   legs: "short"
@@ -561,7 +561,7 @@ squirrel = Animal.new(
   which is almost the same length as its body",
   classification: "mammal",
   habitat: "forest",
-  behaviour: "walk",
+  behaviour: "run",
   colour: "red",
   tail: "bushy",
   legs: "short"
@@ -571,13 +571,24 @@ file = URI.open("https://www.mammal.org.uk/wp-content/uploads/2021/09/rsq-768x76
 squirrel.photo.attach(io: file, filename: "red_squirrel.jpg", content_type: "image/jpg")
 squirrel.save!
 
-Finding.create!(picture: "gray_fox_spotting.jpg", date: Date.yesterday.strftime("%a, %e %b %Y"), address: "Hermannsdenkmal, Grotenburg 5, Detmold, Germany", latitude: 51.910070, longitude: 8.840930, user: user0, animal: gray_fox)
-Finding.create!(picture: "red_fox_spotting.jpg", date: Date.today.strftime("%a, %e %b %Y"), address: "Schlosspark Heltorf, Heltorfer Schlossallee, Duesseldorf, Germany", latitude: 51.336731, longitude: 6.769210, user: user0, animal: red_fox)
+Finding.create!(picture: "red_fox_spotting.jpg", date: Date.yesterday.strftime("%a, %e %b %Y"), address: "Schlosspark Heltorf, Heltorfer Schlossallee, Duesseldorf, Germany", latitude: 51.336731, longitude: 6.769210, user: user0, animal: red_fox)
+Finding.create!(picture: "gray_fox_spotting.jpg", date: Date.today.strftime("%a, %e %b %Y"), address: "Llanmadoc Hill, Wales", latitude: 51.910070, longitude: 8.840930, user: user0, animal: gray_fox)
 Finding.create!(picture: "rat_spotting.jpg", date: Date.today.strftime("%a, %e %b %Y"), address: "Palito Restaurant, Berger Str. 14, Duesseldorf, Germany", latitude: 51.224450, longitude: 6.772480, user: user0, animal: rat)
+Finding.create!(picture: "mypigeon.jpg", date: Date.today.strftime("%a, %e %b %Y"), address: "Uplands, Swansea", latitude: 51.618130, longitude: -3.966560, user: user0, animal: pigeon)
 
-# Animal.all.each do |animal|
-Finding.create!(picture: "mysheep.jpg", date: Date.yesterday.strftime("%a, %e %b %Y"), address: "Rhossili Bay", latitude: 51.5780, longitude: -4.3002, user: user1, animal: sheep)
-Finding.create!(picture: "myslowworm.jpg", date: Date.yesterday.strftime("%a, %e %b %Y"), address: "Rhossili Bay", latitude: 51.5780, longitude: -4.3002, user: user1, animal: slowworm)
-Finding.create!(picture: "mypigeon.jpg", date: Date.today.strftime("%a, %e %b %Y"), address: "Attica, Plymouth Street, Swansea", latitude: 51.619028, longitude: -3.947579, user: user1, animal: pigeon)
-Finding.create!(picture: "myslug.jpg", date: Date.today.strftime("%a, %e %b %Y"), address: "Attica, Plymouth Street, Swansea", latitude: 51.619028, longitude: -3.947579, user: user1, animal: slug)
+# For the pitch
+Finding.create!(picture: "mysheep.jpg", date: Date.yesterday.strftime("%a, %e %b %Y"), address: "Rhossili Down, Wales", latitude: 51.569280, longitude: -4.287430, user: user1, animal: sheep)
+Finding.create!(picture: "myslug.jpg", date: Date.today.strftime("%a, %e %b %Y"), address: "Attica, Plymouth Street, Swansea", latitude: 51.618600, longitude: -3.947130, user: user1, animal: slug)
+Finding.create!(picture: "myslowworm.jpg", date: Date.today.strftime("%a, %e %b %Y"), address: "Rhossili Bay Beach, Wales", latitude: 53.291200, longitude: -3.698920, user: user1, animal: slowworm)
+
+Finding.create!(picture: "kangaroo.jpg", date: Date.yesterday.strftime("%a, %e %b %Y"), address: "Julimar State Forest, Australia", latitude: -31.475964646278047, longitude: 116.18277505454235, user: user1, animal: kangaroo)
+Finding.create!(picture: "koala.jpg", date: Date.yesterday.strftime("%a, %e %b %Y"), address: "Blackwood State Forest, Australia", latitude: -33.91945919417612, longitude: 115.36033156720177, user: user1, animal: koala)
+Finding.create!(picture: "tarantula.jpg", date: Date.today.strftime("%a, %e %b %Y"), address: "Blackwood River National Park, Australia", latitude: -34.086881590923774, longitude: 115.4157731782416, user: user1, animal: tarantula)
+
+user1.add_badge(1) # registered
+user1.add_badge(2) # Found 5 animals
+user1.add_badge(5) # Found mammal
+user1.add_badge(6) # Found reptile
+user1.add_badge(8) # Found insect
+
 puts "All went according to plan, carry on"

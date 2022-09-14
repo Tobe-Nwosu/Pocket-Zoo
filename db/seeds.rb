@@ -391,6 +391,7 @@ koala = Animal.new(
   tail: "fluffy",
   legs: "short"
 )
+
 file = URI.open("https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Koala_climbing_tree.jpg/800px-Koala_climbing_tree.jpg")
 koala.photo.attach(io: file, filename: "koala.jpg", content_type: "image/jpg")
 koala.save!
@@ -402,10 +403,10 @@ kangaroo = Animal.new(
   and a small head. Like most marsupials, female kangaroos have a pouch called a
   marsupium in which joeys complete postnatal development.",
   classification: "mammal",
-  habitat: "forest",
-  behaviour: "jump",
-  colour: "light brown",
-  tail: "long",
+  habitat: "countryside",
+  behaviour: "run",
+  colour: "brown",
+  tail: "Pointy",
   legs: "long"
 )
 file = URI.open("https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Kangaroo_Australia_01_11_2008_-_retouch.JPG/800px-Kangaroo_Australia_01_11_2008_-_retouch.JPG")
@@ -486,11 +487,11 @@ tardigrade = Animal.new(
   details: "Tardigrades also known as water bears. They are among the most resilient animals known with individual
   species able to survive extreme conditions such as exposure to extreme temperatures, pressures, air deprivation,
   radiation, dehydration, and starvation. Tardigrades are usually about 0.5 mm long when fully grown.",
-  classification: "???",
-  habitat: "???",
-  behaviour: "???",
-  colour: "???",
-  tail: "???",
+  classification: "microfauna",
+  habitat: "water",
+  behaviour: "swim",
+  colour: "brown",
+  tail: "none",
   legs: "short"
 )
 
@@ -570,19 +571,19 @@ file = URI.open("https://www.mammal.org.uk/wp-content/uploads/2021/09/rsq-768x76
 squirrel.photo.attach(io: file, filename: "red_squirrel.jpg", content_type: "image/jpg")
 squirrel.save!
 
-Finding.create!(picture: "red_fox_spotting.jpg", date: "2020-12-14", address: "Schlosspark Heltorf, Heltorfer Schlossallee, Duesseldorf, Germany", latitude: 51.336731, longitude: 6.769210, user: user0, animal: red_fox)
-Finding.create!(picture: "gray_fox_spotting.jpg", date: "2021-12-14", address: "Llanmadoc Hill, Wales", latitude: 51.910070, longitude: 8.840930, user: user0, animal: gray_fox)
-Finding.create!(picture: "rat_spotting.jpg", date: "2021-12-14", address: "Palito Restaurant, Berger Str. 14, Duesseldorf, Germany", latitude: 51.224450, longitude: 6.772480, user: user0, animal: rat)
-Finding.create!(picture: "mypigeon.jpg", date: "2021-11-05", address: "Uplands, Swansea", latitude: 51.618130, longitude: -3.966560, user: user0, animal: pigeon)
+Finding.create!(picture: "red_fox_spotting.jpg", date: Date.yesterday.strftime("%a, %e %b %Y"), address: "Schlosspark Heltorf, Heltorfer Schlossallee, Duesseldorf, Germany", latitude: 51.336731, longitude: 6.769210, user: user0, animal: red_fox)
+Finding.create!(picture: "gray_fox_spotting.jpg", date: Date.today.strftime("%a, %e %b %Y"), address: "Llanmadoc Hill, Wales", latitude: 51.910070, longitude: 8.840930, user: user0, animal: gray_fox)
+Finding.create!(picture: "rat_spotting.jpg", date: Date.today.strftime("%a, %e %b %Y"), address: "Palito Restaurant, Berger Str. 14, Duesseldorf, Germany", latitude: 51.224450, longitude: 6.772480, user: user0, animal: rat)
+Finding.create!(picture: "mypigeon.jpg", date: Date.today.strftime("%a, %e %b %Y"), address: "Uplands, Swansea", latitude: 51.618130, longitude: -3.966560, user: user0, animal: pigeon)
 
 # For the pitch
-Finding.create!(picture: "mysheep.jpg", date: "2021-12-10", address: "Rhossili Down, Wales", latitude: 51.569280, longitude: -4.287430, user: user1, animal: sheep)
-Finding.create!(picture: "myslug.jpg", date: "2022-06-08", address: "Attica, Plymouth Street, Swansea", latitude: 51.618600, longitude: -3.947130, user: user1, animal: slug)
-Finding.create!(picture: "myslowworm.jpg", date: "2022-09-07", address: "Rhossili Bay Beach, Wales", latitude: 53.291200, longitude: -3.698920, user: user1, animal: slowworm)
+Finding.create!(picture: "mysheep.jpg", date: Date.yesterday.strftime("%a, %e %b %Y"), address: "Rhossili Down, Wales", latitude: 51.569280, longitude: -4.287430, user: user1, animal: sheep)
+Finding.create!(picture: "myslug.jpg", date: Date.today.strftime("%a, %e %b %Y"), address: "Attica, Plymouth Street, Swansea", latitude: 51.618600, longitude: -3.947130, user: user1, animal: slug)
+Finding.create!(picture: "myslowworm.jpg", date: Date.today.strftime("%a, %e %b %Y"), address: "Rhossili Bay Beach, Wales", latitude: 53.291200, longitude: -3.698920, user: user1, animal: slowworm)
 
-Finding.create!(picture: "kangaroo.jpg", date: "2021-12-14", address: "Julimar State Forest, Australia", latitude: -31.475964646278047, longitude: 116.18277505454235, user: user1, animal: kangaroo)
-Finding.create!(picture: "koala.jpg", date: "2021-12-14", address: "Blackwood State Forest, Australia", latitude: -33.91945919417612, longitude: 115.36033156720177, user: user1, animal: koala)
-Finding.create!(picture: "tarantula.jpg", date: "2021-12-14", address: "Blackwood River National Park, Australia", latitude: -34.086881590923774, longitude: 115.4157731782416, user: user1, animal: tarantula)
+Finding.create!(picture: "kangaroo.jpg", date: Date.yesterday.strftime("%a, %e %b %Y"), address: "Julimar State Forest, Australia", latitude: -31.475964646278047, longitude: 116.18277505454235, user: user1, animal: kangaroo)
+Finding.create!(picture: "koala.jpg", date: Date.yesterday.strftime("%a, %e %b %Y"), address: "Blackwood State Forest, Australia", latitude: -33.91945919417612, longitude: 115.36033156720177, user: user1, animal: koala)
+Finding.create!(picture: "tarantula.jpg", date: Date.today.strftime("%a, %e %b %Y"), address: "Blackwood River National Park, Australia", latitude: -34.086881590923774, longitude: 115.4157731782416, user: user1, animal: tarantula)
 
 user1.add_badge(1) # registered
 user1.add_badge(2) # Found 5 animals

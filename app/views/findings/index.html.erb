@@ -1,5 +1,5 @@
 <div data-controller="tabs" class="mb-5 pb-5">
-  <ul class="list-inline tabs-underlined mb-5" >
+  <ul class="list-inline tabs-underlined mb-3" >
     <li data-action="click->tabs#changeTab" data-tabs-target="tablink" class="tab-underlined active" id="findings">
       <span>My finds</span>
     </li>
@@ -12,9 +12,9 @@
   </ul>
 
   <div data-tabs-target="tabcontent findings">
-    <div class="filter">
+    <div class="filter d-flex justify-content-center">
 
-        <div class="container">
+        <div class="w-75">
         <div class="row">
               <div id="filter-panel" class="collapse filter-panel">
                   <div class="panel panel-default">
@@ -41,16 +41,16 @@
                                   <option value="asc">Most recent last</option>
                                 </select>
                               </div> <!-- form group [order by] -->
-                              <div class="form-group">
-                                <button type="submit" class="btn btn-default filter-col">
-                                  <span class="glyphicon glyphicon-record"></span> Save Settings
+                              <div class="form-group d-flex justify-content-center">
+                                <button type="submit" class="btn btn-highlight filter-col px-5">
+                                  <span class="glyphicon glyphicon-record"></span> Go!
                                 </button>
                               </div>
                           </form>
                       </div>
                   </div>
               </div>
-              <button type="button" class="btn btn-highlight" data-toggle="collapse" data-target="#filter-panel">
+              <button type="button" class="btn btn-nav" data-toggle="collapse" data-target="#filter-panel">
                   <span class="glyphicon glyphicon-cog"></span> Filter findings
               </button>
           </div>

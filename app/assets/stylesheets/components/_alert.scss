@@ -1,7 +1,21 @@
 .alert {
   position: fixed;
-  top: 16px;
+  bottom: 1rem;
   right: 1rem;
   left: 1rem;
   z-index: 1000;
+}
+
+.alert-warning {
+  background: #3F7D20;
+  color: white;
+  border: 1px solid #3F7D20;
+  border-radius: 5px;
+}
+
+.alert-info {
+  background: #3F7D20;
+  color: white;
+  border: 1px solid #3F7D20;
+  border-radius: 5px;
 }

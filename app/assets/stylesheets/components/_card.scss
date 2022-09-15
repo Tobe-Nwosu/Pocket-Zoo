@@ -145,3 +145,56 @@
 .slideshow-bg {
   // background-color: #0D0A0B;
 }
+
+
+.friends {
+  color: black;
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.friend {
+  background-color: white;
+  color: black;
+  margin: 0em 0em 2em 0em;
+  width: 10rem;
+  height: 16rem;
+  padding: 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.friend-cover-img {
+  height: 10rem;
+  width: 100%;
+  margin: 0;
+  object-fit: cover;
+}
+
+.friend .btn {
+  margin: 0.5rem;
+  text-align: center;
+}
+
+.friend h2 {
+  height: 1.5rem;
+  width: 100%;
+  font-size: 18px;
+  margin: 0.5rem 0.5rem 0.5rem 0;
+  white-space: normal;
+  padding: 0 0.2rem;
+  text-align: center;
+}
+
+.friend p {
+  width: 100%;
+  font-size: 12px;
+  margin: 0;
+  font-weight: normal;
+  white-space: normal;
+  padding: 0 0.5rem;
+  opacity: 0.7;
+}

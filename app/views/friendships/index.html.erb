@@ -2,7 +2,7 @@
   <div>
     <ul class="list-inline tabs-underlined mb-5" >
       <li data-action="click->friendtabs#changeTab" data-friendtabs-target="friendtablink" data-find-friends-target="findfriendstablink" class="tab-underlined active" id="friendslist">
-        <span>Friends list</span>
+        <span>Your friends</span>
       </li>
       <li data-action="click->friendtabs#changeTab" data-friendtabs-target="friendtablink" data-find-friends-target="findfriendstablink"  class="tab-underlined" id="alllocations">
         <span>Map</span>
@@ -13,20 +13,12 @@
     </ul>
 
     <div data-friendtabs-target="friendtabcontent friendslist" data-find-friends-target="findfriendstabcontent friendslist">
-      <% if @friendships.count > 0 %>
-        <p class="text-center"> You have <%= @friendships.count %> friends </p>
-      <% else %>
-        <p class="text-center">Go to find friends to add to your friends list</p>
-      <% end %>
-
-      <div class="cards">
+      <div class="friends">
       <% @friendships.each do |f| %>
-          <div class="card-horizontal">
-            <%= image_tag f.receiver.avatar, class: "card-horizontal img" %>
-            <div class="card-horizontal-infos">
-              <h2><%= f.receiver.username %></h2>
-              <%= link_to "View Profile", user_path(f.receiver.id), class: "btn btn-outline-success"%>
-            </div>
+          <div class="friend">
+            <%= image_tag f.receiver.avatar, class: "friend-cover-img" %>
+            <h2><%= f.receiver.username %></h2>
+            <%= link_to "View Profile", user_path(f.receiver.id), class: "btn btn-highlight btn-highlight-full-width"%>
           </div>
         <% end %>
       </div>

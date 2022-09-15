@@ -1,15 +1,66 @@
-<div class="cards">
-      <div class="card-horizontal">
-        <%= image_tag @user.avatar, class: "card-horizontal img" %>
-        <div class="card-horizontal-infos">
-          <h2><%= @user.username %></h2>
-          <div>
-          <% if @friendship %>
+
+<div data-controller="tabs" class="mb-5 pb-5">
+  <ul class="list-inline tabs-underlined mb-5" >
+    <li data-action="click->tabs#changeTab" data-tabs-target="tablink" class="tab-underlined active" id="findings">
+      <span>My finds</span>
+    </li>
+    <li data-action="click->tabs#changeTab" data-tabs-target="tablink" class="tab-underlined" id="achievements">
+      <span>Achievements</span>
+    </li>
+  </ul>
+
+
+  <div data-tabs-target="tabcontent findings">
+   <% if @friendship %>
             <%= link_to "Unfriend", friendship_path(@friendship), class: 'btn btn-nav', data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
           <% else %>
             <%= link_to "Friend", user_friendships_path(@user) , data: {turbo_method: :post}, class: "btn btn-nav" %>
           <% end %>
+    <div class="cards">
+      <% @user.findings.each do |finding| %>
+        <%= link_to(finding_path(finding)) do %>
+          <div class="card-horizontal">
+            <% if finding.photo.attached? %>
+              <%= cl_image_tag finding.photo.key, crop: :fill %>
+            <% else %>
+              <%= image_tag finding.picture, class: "card-img-top" %>
+            <% end %>
+            <div class="card-horizontal-infos">
+              <h2 class="mt-5"><%= finding.animal.name %></h2>
+              <p><%= finding.address %></p>
+              <span><%= finding.date %></span>
+              <%# <div class="card-vertical-bottom">
+              </div> %>
+            </div>
           </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+
+  <div data-tabs-target="tabcontent achievements" class="d-none">
+    <div class="badges">
+      <%# Uncomment the badges you want to add to a profile %>
+      <%# If you want to remove one, use "current_user.rm_badge(badge.id)" %>
+      <%# <% current_user.add_badge(1) %>
+      <%# <% current_user.add_badge(2) %>
+      <%# <% current_user.add_badge(3) %>
+      <%# <% current_user.add_badge(4) %>
+      <%# <% current_user.add_badge(5) %>
+      <%# <% current_user.add_badge(6) %>
+      <%# <% current_user.add_badge(7) %>
+      <%# <% current_user.add_badge(8) %>
+      <%# <% current_user.add_badge(9) %>
+      <%# <% current_user.add_badge(10) %>
+      <% @user.badges.each do |badge| %>
+        <div class="badge">
+          <div class="badge-cover-img", style="background-color: hsla(<%= badge.custom_fields[:background_color] %>); border-color: hsl(<%= badge.custom_fields[:color] %>) ">
+            <%= icon('fa-solid', badge.custom_fields[:icon_name], class: 'fa-3x', style: "color: hsl(#{badge.custom_fields[:color]});")%>
+          </div>
+          <h2><%= badge.name %></h2>
+          <p><%= badge.description %></p>
         </div>
-      </div>
+      <% end %>
+    </div>
+  </div>
 </div>

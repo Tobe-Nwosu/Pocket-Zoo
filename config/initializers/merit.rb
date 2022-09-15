@@ -4,7 +4,7 @@ Merit.setup do |config|
   config.checks_on_each_request = true
 
   # Add application observers to get notifications when reputation changes.
-  # config.add_observer 'MyObserverClassName'
+  # config.add_observer 'ReputationChangeObserver'
 
   # Define :user_model_name. This model will be used to grant badge if no
   # `:to` option is given. Default is 'User'.
@@ -37,7 +37,7 @@ Rails.application.reloader.to_prepare do
       color: '53, 93%, 37%',
       background_color: '53, 93%, 37%, 0.2'
     },
-    description: 'You have found 10 animals!'
+    description: 'You have found 5 animals!'
   }, {
     id: 3,
     name: 'Explorer',

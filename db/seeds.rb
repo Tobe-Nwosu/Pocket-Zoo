@@ -584,12 +584,13 @@ Finding.create!(picture: "rat_spotting.jpg", date: Date.today.strftime("%a, %e %
 
 # For the pitch - User 1
 Finding.create!(picture: "mysheep.jpg", date: Date.yesterday.strftime("%a, %e %b %Y"), address: "Rhossili Down, Wales", latitude: 51.569280, longitude: -4.287430, user: user1, animal: sheep)
-Finding.create!(picture: "myslug.jpg", date: Date.today.strftime("%a, %e %b %Y"), address: "Attica, Plymouth Street, Swansea", latitude: 51.618600, longitude: -3.947130, user: user1, animal: slug)
-Finding.create!(picture: "myslowworm.jpg", date: Date.today.strftime("%a, %e %b %Y"), address: "Rhossili Bay Beach, Wales", latitude: 53.291200, longitude: -3.698920, user: user1, animal: slowworm)
 
 Finding.create!(picture: "kangaroo.jpg", date: Date.yesterday.strftime("%a, %e %b %Y"), address: "Julimar State Forest, Australia", latitude: -31.475964646278047, longitude: 116.18277505454235, user: user1, animal: kangaroo)
 Finding.create!(picture: "koala.jpg", date: Date.yesterday.strftime("%a, %e %b %Y"), address: "Blackwood State Forest, Australia", latitude: -33.91945919417612, longitude: 115.36033156720177, user: user1, animal: koala)
 Finding.create!(picture: "tarantula.jpg", date: Date.today.strftime("%a, %e %b %Y"), address: "Blackwood River National Park, Australia", latitude: -34.086881590923774, longitude: 115.4157731782416, user: user1, animal: tarantula)
+
+Finding.create!(picture: "myslug.jpg", date: Date.today.strftime("%a, %e %b %Y"), address: "Attica, Plymouth Street, Swansea", latitude: 51.618600, longitude: -3.947130, user: user1, animal: slug)
+Finding.create!(picture: "myslowworm.jpg", date: Date.today.strftime("%a, %e %b %Y"), address: "Rhossili Bay Beach, Wales", latitude: 53.291200, longitude: -3.698920, user: user1, animal: slowworm)
 
 user1.add_badge(1) # registered
 user1.add_badge(2) # Found 5 animals

@@ -14,9 +14,9 @@
 
     <div data-friendtabs-target="friendtabcontent friendslist" data-find-friends-target="findfriendstabcontent friendslist">
       <% if @friendships.count > 0 %>
-        <p> You have <%= @friendships.count %> friends </p>
+        <p class="text-center"> You have <%= @friendships.count %> friends </p>
       <% else %>
-        <p> you have no friends go and make some you turd </p>
+        <p class="text-center">Go to find friends to add to your friends list</p>
       <% end %>
 
       <div class="cards">
@@ -39,7 +39,7 @@
     <div data-friendtabs-target="friendtabcontent findfriends" data-find-friends-target="findfriendstabcontent findfriends" class="d-none">
       <%= turbo_frame_tag "search" do%>
 
-        <%= form_with url: friendships_path, method: :get, html: { class: 'mb-5 mx-4', data: { find_friends_target: 'form', action: "submit->find-friends#update" } } do |f| %>
+        <%= form_with url: friendships_path, method: :get, html: { class: 'mb-5 mx-4', autocomplete: "off", data: { find_friends_target: 'form', action: "submit->find-friends#update" } } do |f| %>
           <%= f.text_field :query,
                           class: "form-control",
                           placeholder: "Enter your friend's username",

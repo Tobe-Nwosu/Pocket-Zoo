@@ -17,8 +17,10 @@
       <% @friendships.each do |f| %>
           <div class="friend">
             <%= image_tag f.receiver.avatar, class: "friend-cover-img" %>
-            <h2><%= f.receiver.username %></h2>
-            <%= link_to "View Profile", user_path(f.receiver.id), class: "btn btn-highlight btn-highlight-full-width"%>
+            <div class="friend-infos">
+              <h2><%= f.receiver.username %></h2>
+              <%= link_to "View Profile", user_path(f.receiver.id), class: "btn btn-highlight btn-highlight-full-width"%>
+            </div>
           </div>
         <% end %>
       </div>

@@ -12,10 +12,8 @@
       <p>The <%= @animal.name %>'s colour is <%= @animal.colour %>.
         His tail is very <%= @animal.tail %> and its legs are <%= @animal.legs %>.</p>
     </div>
-    <div class="card-vertical-bottom">
-      <%= link_to(new_animal_finding_path(@animal)) do %>
-        <button class="btn btn-highlight px-3"><i class="fa-solid fa-plus"></i></button>
-      <% end %>
-    </div>
+    <%= link_to(new_animal_finding_path(@animal)) do %>
+      <button class="btn btn-highlight btn-highlight-full-width"><i class="fa-solid fa-plus"></i></button>
+    <% end %>
   </div>
 </div>

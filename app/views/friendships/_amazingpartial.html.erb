@@ -11,7 +11,7 @@
                 <%= image_tag user.avatar, class: "card-horizontal img" %>
                 <div class="card-horizontal-infos">
                   <h2><%= user.username %></h2>
-                  <div class="mt-5">
+                  <div class="mt-5 d-flex justify-content-end">
                     <%# needs data: {{turbo_frame: "_top"} so it goes out of turbo frame %>
                     <%= button_to '<i class="fa-solid fa-user-plus"></i>'.html_safe, user_friendships_path(user), :method => :post, data: {turbo_frame: "_top"}, class: "btn btn-highlight px-3" %>
                   </div>

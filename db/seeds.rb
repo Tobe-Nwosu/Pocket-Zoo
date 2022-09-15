@@ -126,7 +126,7 @@ smoothsnake = Animal.new(
   tail: 'scaly',
   legs: 'none'
 )
-file = URI.open("https://www.new-forest-national-park.com/wp-content/uploads/2021/06/Smooth-snake-fact-file.jpeg")
+file = URI.open("https://www.sandlandschaften.de/zentralablage/bilder/arten/schlingnatter/Schlingnatter_CC_BY-SA_3_0_Christian_Fischer_original.jpg")
 smoothsnake.photo.attach(io: file, filename: "smoothsnake.jpg", content_type: "image/jpg")
 smoothsnake.save!
 

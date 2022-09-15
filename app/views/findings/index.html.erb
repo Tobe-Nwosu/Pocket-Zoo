@@ -61,7 +61,7 @@
         <%= link_to(finding_path(finding)) do %>
           <div class="card-vertical">
           <% if finding.photo.attached? %>
-            <%= cl_image_tag finding.photo.key, crop: :fill %>
+            <%= cl_image_tag finding.photo.key, class: "card-vertical-cover-img", crop: :fill %>
           <% else %>
             <%= image_tag finding.picture, class: "card-vertical-cover-img" %>
           <% end %>

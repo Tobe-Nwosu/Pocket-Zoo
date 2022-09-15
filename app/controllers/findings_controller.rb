@@ -27,7 +27,7 @@ class FindingsController < ApplicationController
         lat: finding.latitude,
         lng: finding.longitude,
         info_window: render_to_string(partial: "popup", locals: { finding: finding }),
-        image_url: helpers.asset_url("Pocket-Zoo-1.png")
+        image_url: helpers.asset_url("pawprint.png")
       }
     end
     skip_policy_scope

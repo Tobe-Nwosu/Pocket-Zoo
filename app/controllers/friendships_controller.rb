@@ -57,6 +57,7 @@ class FriendshipsController < ApplicationController
     @friendship = Friendship.find(params[:id])
     authorize @friendship
     @friendship.destroy
+    redirect_to friendships_path, status: :see_other
   end
 
   private

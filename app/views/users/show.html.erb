@@ -1,3 +1,4 @@
+
 <div data-controller="tabs" class="mb-5 pb-5">
   <ul class="list-inline tabs-underlined mb-5" >
     <li data-action="click->tabs#changeTab" data-tabs-target="tablink" class="tab-underlined active" id="findings">
@@ -10,6 +11,11 @@
 
 
   <div data-tabs-target="tabcontent findings">
+   <% if @friendship %>
+            <%= link_to "Unfriend", friendship_path(@friendship), class: 'btn btn-nav', data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
+          <% else %>
+            <%= link_to "Friend", user_friendships_path(@user) , data: {turbo_method: :post}, class: "btn btn-nav" %>
+          <% end %>
     <div class="cards">
       <% @user.findings.each do |finding| %>
         <%= link_to(finding_path(finding)) do %>

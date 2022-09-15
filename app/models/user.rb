@@ -10,8 +10,11 @@ class User < ApplicationRecord
 
   has_many :findings, dependent: :destroy
 
-
   # has_many :achievement ... ?
   validates :username, uniqueness: true
   validates :email, format: { with: /\A.*@.*\.com\z/ }
+
+  def friendship_with(user)
+    Friendship.find_by(asker: self, receiver: user) || Friendship.find_by(asker: user, receiver: self)
+  end
 end

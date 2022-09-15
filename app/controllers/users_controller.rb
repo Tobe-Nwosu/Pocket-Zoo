@@ -8,6 +8,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     authorize @user
+    @friendship = current_user.friendship_with(@user)
   end
 
 end

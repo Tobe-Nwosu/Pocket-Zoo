@@ -1,0 +1,21 @@
+.card-carousel {
+  border-radius: 8px;
+
+  img {
+    border-radius: 8px 0px 0px 8px;
+  }
+
+  .carousel-info {
+    background: linear-gradient(rgba(243, 240, 240, 0.4), rgba(171, 168, 168, 0.4));
+    border-radius: 0px 8px 8px 0px;
+  }
+
+  .carousel-info p {
+    word-wrap: break-word;
+    width: 150px;
+  }
+}
+
+.carousel-item {
+
+}

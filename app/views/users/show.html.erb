@@ -1,10 +1,10 @@
 <div data-controller="tabs" class="mb-5 pb-5">
   <ul class="list-inline tabs-underlined mb-5" >
     <li data-action="click->tabs#changeTab" data-tabs-target="tablink" class="tab-underlined active" id="findings">
-      <span>My finds</span>
+      <span><%= @user.username %>'s finds</span>
     </li>
     <li data-action="click->tabs#changeTab" data-tabs-target="tablink" class="tab-underlined" id="achievements">
-      <span>Achievements</span>
+      <span><%= @user.username %>'s achievements</span>
     </li>
   </ul>
 

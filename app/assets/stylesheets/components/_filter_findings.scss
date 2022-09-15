@@ -6,3 +6,25 @@
 .filter .container {
   width: auto;
 }
+
+.filter label {
+  margin-bottom: 5px;
+}
+
+.filter .form-group {
+  margin-bottom: 10px;
+}
+
+.filter .btn-nav {
+  margin: 0;
+}
+
+.filter .row > * {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.filter .btn-nav:hover {
+  background-color: white;
+  opacity: 0.8;
+}

@@ -19,7 +19,7 @@
       <% end %>
     </div>
     <div class="cards">
-      <% @user.findings.each do |finding| %>
+      <% @user.findings.order(id: :desc).each do |finding| %>
         <%= link_to(finding_path(finding)) do %>
           <div class="card-vertical">
             <% if finding.photo.attached? %>

@@ -7,16 +7,17 @@ export default class extends Controller {
     markers: Array,
   };
   connect() {
-    mapboxgl.accessToken = this.apiKeyValue;
-
-    this.map = new mapboxgl.Map({
-      container: this.element,
-      style: "mapbox://styles/mapbox/streets-v11", // style URL
-      // center: [49, 2.3], // starting position [lng, lat]
-      // zoom: 3, // starting zoom
-    });
-    this.#addMarkersToMap();
-    this.#fitMapToMarkers();
+    // setTimeout(() => {
+      mapboxgl.accessToken = this.apiKeyValue;
+      this.map = new mapboxgl.Map({
+        container: this.element,
+        style: "mapbox://styles/mapbox/streets-v11", // style URL
+        // center: [49, 2.3], // starting position [lng, lat]
+        // zoom: 3, // starting zoom
+      });
+      this.#addMarkersToMap();
+      this.#fitMapToMarkers();
+    // }, 2000);
   }
 
   #addMarkersToMap() {

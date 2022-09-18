@@ -17,30 +17,7 @@ data-action="click->weatherapi#fetchmeteo"
     <div class="carousel-inner slideshow-bg">
       <div class="carousel-item active">
         <div class="d-block w-100 d-flex justify-content-center">
-          <div class="card-horizontal card-slideshow w-75 my-0">
-            <% finding = Finding.all.sample %>
-            <%= link_to(finding_path(finding)) do %>
-              <% if finding.photo.attached? %>
-                <%= cl_image_tag finding.photo.key, crop: :fill %>
-              <% else %>
-                <%= image_tag finding.picture, class: "card-img-top" %>
-              <% end %>
-              <div class="card-horizontal-infos">
-                <p>
-                  <%= finding.user.username %> found a
-                  <br> <strong><%= finding.animal.name.downcase %> </strong>
-                  <br> in <%= finding.address %>
-                </p>
-              </div>
-            <% end %>
-          </div>
-        </div>
-
-      </div>
-      <% 5.times do %>
-        <div class="carousel-item">
-          <div class="d-block w-100 d-flex justify-content-center">
-            <div class="card-horizontal card-slideshow w-75 my-0">
+            <div class="card-horizontal card-slideshow card-carousel w-75 my-0">
               <% finding = Finding.all.sample %>
               <%= link_to(finding_path(finding)) do %>
                 <% if finding.photo.attached? %>
@@ -48,11 +25,34 @@ data-action="click->weatherapi#fetchmeteo"
                 <% else %>
                   <%= image_tag finding.picture, class: "card-img-top" %>
                 <% end %>
-                <div class="card-horizontal-infos">
+                <div class="card-horizontal-infos carousel-info">
                   <p>
                     <%= finding.user.username %> found a
-                    <br> <strong><%= finding.animal.name.downcase %> </strong>
-                    <br> in <%= finding.address %>
+                     <strong><%= finding.animal.name.downcase %> </strong>
+                     in <%= finding.address %>
+                  </p>
+                </div>
+              <% end %>
+            </div>
+        </div>
+
+      </div>
+      <% 5.times do %>
+        <div class="carousel-item">
+          <div class="d-block w-100 d-flex justify-content-center">
+            <div class="card-horizontal card-slideshow card-carousel w-75 my-0">
+              <% finding = Finding.all.sample %>
+              <%= link_to(finding_path(finding)) do %>
+                <% if finding.photo.attached? %>
+                  <%= cl_image_tag finding.photo.key, crop: :fill %>
+                <% else %>
+                  <%= image_tag finding.picture, class: "card-img-top" %>
+                <% end %>
+                <div class="card-horizontal-infos  carousel-info">
+                  <p>
+                    <%= finding.user.username %> found a
+                     <strong><%= finding.animal.name.downcase %> </strong>
+                     in <%= finding.address %>
                   </p>
                 </div>
               <% end %>
@@ -71,7 +71,7 @@ data-action="click->weatherapi#fetchmeteo"
       </button>
   </div>
   <div class="d-flex justify-content-center flex-column align-items-center">
-    <h2 class="my-5">Spotted something? Add it here</h2>
+    <h2 class="mt-5">Spotted something? Add it here</h2>
     <div class="home-add">
       <%= link_to '<i class="fa-solid fa-plus home-add"></i>'.html_safe, match_path, :class => "btn mt-1 mx-0" %>
     </div>

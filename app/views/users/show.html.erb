@@ -11,22 +11,24 @@
 
 
   <div data-tabs-target="tabcontent findings">
-   <% if @friendship %>
-            <%= link_to "Unfriend", friendship_path(@friendship), class: 'btn btn-nav', data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
-          <% else %>
-            <%= link_to "Friend", user_friendships_path(@user) , data: {turbo_method: :post}, class: "btn btn-nav" %>
-          <% end %>
+    <div class="d-flex justify-content-end">
+      <% if @friendship %>
+        <%= link_to "Unfriend", friendship_path(@friendship), class: 'btn btn-nav my-0', data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
+      <% else %>
+        <%= link_to "Friend", user_friendships_path(@user) , data: {turbo_method: :post}, class: "btn btn-nav" %>
+      <% end %>
+    </div>
     <div class="cards">
-      <% @user.findings.each do |finding| %>
+      <% @user.findings.order(id: :desc).each do |finding| %>
         <%= link_to(finding_path(finding)) do %>
-          <div class="card-horizontal">
+          <div class="card-vertical">
             <% if finding.photo.attached? %>
-              <%= cl_image_tag finding.photo.key, crop: :fill %>
+              <%= cl_image_tag finding.photo.key, class: "card-vertical-cover-img", crop: :fill %>
             <% else %>
-              <%= image_tag finding.picture, class: "card-img-top" %>
+              <%= image_tag finding.picture, class: "card-vertical-cover-img", crop: :fill %>
             <% end %>
-            <div class="card-horizontal-infos">
-              <h2 class="mt-5"><%= finding.animal.name %></h2>
+            <div class="card-vertical-infos">
+              <h2 class=""><%= finding.animal.name %></h2>
               <p><%= finding.address %></p>
               <span><%= finding.date %></span>
               <%# <div class="card-vertical-bottom">

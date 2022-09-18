@@ -1,7 +1,6 @@
 .tabs-underlined {
   display: flex;
   align-items: center;
-  margin-bottom:0px;
   li {
     width: 50%;
     text-align: center;
@@ -13,6 +12,7 @@
 .tabs-underlined .tab-underlined {
   color: black;
   padding: 8px;
+
   // margin: 8px;
   // opacity: .4;
   cursor: pointer;

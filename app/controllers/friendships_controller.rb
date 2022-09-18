@@ -1,7 +1,7 @@
 class FriendshipsController < ApplicationController
   def index
     @friendships = policy_scope(Friendship)
-    @friendships = Friendship.all
+    @friendships = Friendship.where(asker_id: current_user)
     @users = User.all
 
     if params[:query].present?

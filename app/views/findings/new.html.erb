@@ -14,20 +14,11 @@
       <%= f.input :photo, input_html: { class: "rounded-input" } %>
       <%= f.input :date, :as => :hidden, :input_html => { :value => Date.today.strftime("%a, %e %b %Y")} %>
       <div class="d-flex justify-content-center">
-        <%= button_tag(type: 'submit', class: "btn btn-highlight card-vertical-bottom py-3 px-5") do %>
+        <%= button_tag(type: 'submit', class: "btn btn-highlight btn-highlight-full-width") do %>
           <i class="fa-solid fa-plus"></i>
         <% end %>
       </div>
     <% end %>
     </div>
   </div>
-</div>
-
-
-
-
-<div class="d-flex justify-content-center">
-  <%= link_to(:back) do %>
-    <button class="btn btn-nav px-5"><i class="fa-solid fa-arrow-left text-black"></i></button>
-  <% end %>
 </div>

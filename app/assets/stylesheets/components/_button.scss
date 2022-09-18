@@ -32,6 +32,10 @@
   opacity: 0.6;
 }
 
+.btn-highlight-full-width {
+  width: 100%;
+}
+
 .btn-ghost {
   color: #454955;
   padding: 4px 8px;
@@ -66,7 +70,7 @@
 .home-add {
   a {
     border-radius: 50px;
-    padding: 30px;
+    padding: 20px;
     background-color: #3F7D20;
   }
     i {

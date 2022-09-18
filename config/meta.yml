@@ -1,0 +1,5 @@
+meta_product_name: "PocketZoo"
+meta_title: "PocketZoo - Discover your local wildlife"
+meta_description: "You discovered an animal during a walk and don't know what it is?
+  You want to share the animals you found with a friend? Then PocketZoo is the right place for you!"
+meta_image: "pocket_zoo_banner.png" # should exist in `app/assets/images/`

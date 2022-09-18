@@ -8,6 +8,9 @@ data-action="click->weatherapi#fetchmeteo"
 >
 <%# </div>
 </div> %>
+<% if current_user && current_user.admin? %>
+<%= link_to "All users", users_path, class: "btn-highlight" %>
+<% end %>
 
   <div class="homepage-logo">
     <%= image_tag "Pocket-Zoo-1.png" %>

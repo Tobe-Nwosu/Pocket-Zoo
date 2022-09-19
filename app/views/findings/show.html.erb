@@ -32,7 +32,7 @@
       </div>
       <br>
     </div>
-    <% if @finding.user == current_user %>
+    <% if @finding.user == current_user || current_user.admin? %>
       <div class="d-flex justify-content-between">
         <%= link_to '<i class="fa-solid fa-trash text-black"></i>'.html_safe, finding_path(@finding), class: "btn btn-ghost px-3 d-flex align-items-center ms-0", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
         <%= link_to '<i class="fa-solid fa-pen-to-square"></i>'.html_safe, edit_finding_path(@finding), class: "btn btn-highlight px-3 py-2 m-0" %>

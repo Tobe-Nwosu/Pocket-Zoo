@@ -3,7 +3,7 @@ class FindingsController < ApplicationController
     # if findings is empty, show something else
     if params[:classification]
       if params[:classification] == 'all'
-        @my_findings = Finding.where(user: current_user).order(id: params[:date_order])
+        current_user.admin? ? @my_findings = Finding.all : @my_findings = Finding.where(user: current_user).order(id: params[:date_order])
       else
         query = Finding.joins(:animal).where(user: current_user)
         @my_queried_findings = query.select do |finding|

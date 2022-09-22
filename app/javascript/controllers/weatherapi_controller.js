@@ -1,13 +1,15 @@
 import { Controller } from "@hotwired/stimulus";
+import { end } from "@popperjs/core";
 
 // Connects to data-controller="weatherapi"
 export default class extends Controller {
-  static targets = ["meteo"];
+  static targets = ["meteo", "image"];
   connect() {
     // console.log("hello from weather controller");
     let city = "lyon";
     this.url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=a160dd207198aea05a45393825008bdf&units=metric`;
-    this.fetchMeteo;
+    this.fetchMeteo();
+    this.displayImage();
   }
 
   fetchMeteo() {
@@ -16,13 +18,26 @@ export default class extends Controller {
       .then(this.displayMeteo.bind(this));
   }
 
+  displayImage() {
+    this.displayImage.bind(this);
+    this.imageTarget.innerHTML = "";
+    const html;
+    if (meteo.wind.speed > 0) {
+       html = `<img src="assets/sun.png">`;
+    } else {
+       html = `<img src="assets/moon.png">`;
+    }
+    return html;
+    this.imageTarget.insertAdjacentHTML("beforeend", html);
+  }
+
   displayMeteo(meteo) {
-    console.log(meteo);
+    // console.log(meteo);
     this.meteoTarget.innerHTML = "";
     const html = `
-    <img src="./assets/images/green-city.png"> <p> ${meteo.name} <p>
-    <img src="./assets/images/windock.png"> <p> ${meteo.wind.speed} km/h<p>
-    <img src="assets/images/hot.png"> <p> ${meteo.main.temp}°C <p>
+    <img src="assets/green-city.png"> <p> ${meteo.name} <p>
+    <img src="assets/windock.png"> <p> ${meteo.wind.speed} km/h<p>
+    <img src="assets/hot.png"> <p> ${meteo.main.temp}°C <p>
     `;
     this.meteoTarget.insertAdjacentHTML("beforeend", html);
   }

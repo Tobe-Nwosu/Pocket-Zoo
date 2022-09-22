@@ -12,12 +12,17 @@ article {
     width: 100px;
   }
 }
-// .top_container{
-//   margin-top:0;
-//   margin-right:0;
-// }
+.top_container{
+  color: rgb(1, 0, 0);
+  margin-top:0;
+  margin-right:0;
+}
 
-// .top_container img{
-//   width: 40px;
-//   height:40px;
-// }
+.top_container img{
+  width: 40px;
+  height:40px;
+}
+.btn-primary{
+background: #0d6dfd00;
+border-color: #0d6dfd00;
+}

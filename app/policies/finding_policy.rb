@@ -2,7 +2,7 @@ class FindingPolicy < ApplicationPolicy
   class Scope < Scope
     # NOTE: Be explicit about which records you allow access to!
     def resolve
-      scope.where(user: user).order(id: :desc)
+      user.admin? ? scope.all : scope.where(user: user).order(id: :desc)
     end
   end
 
@@ -10,15 +10,19 @@ class FindingPolicy < ApplicationPolicy
     true
   end
 
+  def new?
+    create?
+  end
+
   def create?
     true
   end
 
   def update?
-    record.user == user
+    user.admin? || record.user == user
   end
 
   def destroy?
-    record.user == user
+    user.admin? || record.user == user
   end
 end

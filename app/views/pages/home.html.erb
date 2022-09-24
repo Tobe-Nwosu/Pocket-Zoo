@@ -5,7 +5,7 @@ data-controller="weatherapi" style="background-image: url(<%= asset_path "wallpa
 data-action="click->weatherapi#fetchMeteo">
 
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#weatherModal" data-weatherapi-target="image">
+<button id="meteoImg" type="button" class="btn btn-primary" data-toggle="modal" data-target="#weatherModal" data-weatherapi-target="image">
 
 </button>
 
@@ -103,7 +103,7 @@ data-action="click->weatherapi#fetchMeteo">
         </button>
       </div>
       <div class="modal-body">
-        <ul data-weatherapi-target="meteo">
+        <ul data-weatherapi-target="meteo" id="meteoLogo">
         </ul>
       </div>
       <div class="modal-footer">

@@ -6,7 +6,7 @@ export default class extends Controller {
   static targets = ["meteo", "image"];
   connect() {
     // console.log("hello from weather controller");
-    let city = "lyon";
+    let city = "New York";
     this.url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=a160dd207198aea05a45393825008bdf&units=metric`;
     this.fetchMeteo();
   }
@@ -20,22 +20,34 @@ export default class extends Controller {
   displayMeteo(meteo) {
     this.imageTarget.innerHTML = "";
     let html = ``;
-    console.log(meteo);
-    console.log(meteo.timezone);
+    // console.log(meteo);
+    // console.log(meteo.timezone);
     let sunsetTime = meteo.sys.sunset;
     let dateSunset = new Date(sunsetTime * 1000);
     let sunset = dateSunset.getHours() + 1;
     let sunriseTime = meteo.sys.sunrise;
     let dateSunrise = new Date(sunriseTime * 1000);
     let sunrise = dateSunrise.getHours() + 1;
-    let date = new Date();
-    let hour = date.getHours();
-    console.log(sunset);
-    console.log(sunrise);
-    console.log(hour);
-    console.log(meteo.weather[0].main);
-    if ((meteo.weather[0].main = "Clouds")) {
+    let today = new Date();
+    let hour = today.getHours();
+    // console.log(sunset);
+    // console.log(sunrise);
+    // console.log(hour);
+    // console.log(meteo.weather[0].main);
+    if (hour < sunrise || hour > sunset) {
       html = `<img src="assets/moon.png">`;
+    } else if (hour > sunrise || hour < sunset) {
+      html = `<img src="assets/sun.png">`;
+    } else if (
+      (hour > sunrise || hour < sunset) &&
+      (meteo.weather[0].description = "Clouds")
+    ) {
+      html = `<img src="assets/clouds.png">`;
+    } else if (
+      (hour > sunrise || hour < sunset) &&
+      (meteo.weather[0].description = "Rain")
+    ) {
+      html = `<img src="assets/rain.png">`;
     } else {
       html = `<img src="assets/sun.png">`;
     }
@@ -50,12 +62,3 @@ export default class extends Controller {
     this.meteoTarget.insertAdjacentHTML("beforeend", html2);
   }
 }
-
-{
-  /* <p> ${meteo.weather[0].description}<p> */
-}
-// console.log(data.name);
-// console.log(data.wind.speed);
-// console.log(data.wind.speed);
-//
-// console.log(data.weather[0].description);

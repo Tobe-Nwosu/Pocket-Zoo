@@ -13,7 +13,7 @@ class UsersController < ApplicationController
 
   private
 
-  def user_ip
-    request.ip
+  def ip
+    @ip ||= super
   end
 end

@@ -5,9 +5,15 @@ import { end } from "@popperjs/core";
 export default class extends Controller {
   static targets = ["meteo", "image"];
   connect() {
-    // console.log("hello from weather controller");
-    let city = "New York";
-    this.url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=a160dd207198aea05a45393825008bdf&units=metric`;
+    // // Getting User IP
+    // fetch("https://ipinfo.io/json?token=2fcd5947e7154d")
+    //   .then((response) => response.json())
+    //   .then((jsonResponse) =>
+    //     console.log(jsonResponse.ip, jsonResponse.country)
+    //   );
+
+    let city = "Caen";
+    this.url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=a160dd207198aea05a45393825008bdf`;
     this.fetchMeteo();
   }
 
@@ -15,12 +21,13 @@ export default class extends Controller {
     fetch(this.url)
       .then((response) => response.json())
       .then(this.displayMeteo.bind(this));
+    // console.log(env["WEATHER_API_KEY"]);
   }
 
   displayMeteo(meteo) {
     this.imageTarget.innerHTML = "";
     let html = ``;
-    // console.log(meteo);
+    console.log(meteo);
     // console.log(meteo.timezone);
     let sunsetTime = meteo.sys.sunset;
     let dateSunset = new Date(sunsetTime * 1000);
@@ -36,19 +43,20 @@ export default class extends Controller {
     // console.log(meteo.weather[0].main);
     if (hour < sunrise || hour > sunset) {
       html = `<img src="assets/moon.png">`;
-    } else if (hour > sunrise || hour < sunset) {
-      html = `<img src="assets/sun.png">`;
-    } else if (
-      (hour > sunrise || hour < sunset) &&
-      (meteo.weather[0].description = "Clouds")
-    ) {
-      html = `<img src="assets/clouds.png">`;
-    } else if (
-      (hour > sunrise || hour < sunset) &&
-      (meteo.weather[0].description = "Rain")
-    ) {
-      html = `<img src="assets/rain.png">`;
-    } else {
+    } //  else if (hour > sunrise || hour < sunset) {
+    //   html = `<img src="assets/sun.png">`;
+    // } else if (
+    //   (hour > sunrise || hour < sunset) &&
+    //   (meteo.weather[0].description = "Clouds")
+    // ) {
+    //   html = `<img src="assets/clouds.png">`;
+    // } else if (
+    //   (hour > sunrise || hour < sunset) &&
+    //   (meteo.weather[0].description = "Rain")
+    // ) {
+    //   html = `<img src="assets/rain.png">`;
+    //}
+    else {
       html = `<img src="assets/sun.png">`;
     }
     this.imageTarget.insertAdjacentHTML("beforeend", html);

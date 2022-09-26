@@ -1,41 +1,15 @@
 
-<div class="banner" style="background-image: url(<%= asset_path "wallpaperflare.com_wallpaper.jpg"%>)">
 
-<%# <div class="top_container">
-<div
-data-controller="weatherapi"
-data-action="click->weatherapi#fetchMeteo"
-> %>
+<div class="top_container"
+data-controller="weatherapi" style="background-image: url(<%= asset_path "wallpaperflare.com_wallpaper.jpg"%>)"
+data-action="click->weatherapi#fetchMeteo">
+
 <!-- Button trigger modal -->
-<%# <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#weatherModal"> %>
-<%#= image_tag("sunClouds.png") %>
-<%# </button> %>
+<button id="meteoImg" type="button" class="btn btn-primary" data-toggle="modal" data-target="#weatherModal" data-weatherapi-target="image">
 
-<!-- Modal -->
-<%# <div class="modal fade" id="weatherModal" tabindex="-1" role="dialog" aria-labelledby="weatherModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-sm" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="weatherModalLabel">Weather</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <ul data-weatherapi-target="meteo">
-        </ul>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-</div> %>
+</button>
 
-
-
+<div class="banner">
 
 
 <% if current_user && current_user.admin? %>
@@ -109,4 +83,28 @@ data-action="click->weatherapi#fetchMeteo"
       <%= link_to '<i class="fa-solid fa-plus home-add"></i>'.html_safe, match_path, :class => "btn mt-1 mx-0" %>
     </div>
   </div>
+
+
+
+</div>
+<!-- Modal -->
+<div class="modal" id="weatherModal" tabindex="-1" role="dialog" aria-labelledby="weatherModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="weatherModalLabel">Weather</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <ul data-weatherapi-target="meteo" id="meteoLogo">
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 </div>

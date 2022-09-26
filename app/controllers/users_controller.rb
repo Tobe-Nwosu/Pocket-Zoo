@@ -11,4 +11,9 @@ class UsersController < ApplicationController
     @friendship = current_user.friendship_with(@user)
   end
 
+  private
+
+  def ip
+    @ip ||= super
+  end
 end
